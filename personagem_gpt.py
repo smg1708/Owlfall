@@ -1,159 +1,313 @@
-class Personagem:
-    def __init__(self, classe, nivel, vigor):
-        self.classe = classe
-        self.nivel = nivel
-        self.vigor = vigor
+class nivel_personagem:
+
+    def __init__(self):
         self.vida = 400
         self.sanidade = 12
         self.nen = 28
 
-    def Fortificador(self):
-        if self.classe == 1:
-            if self.nivel <= 4:
-                self.vida += 70
-                self.sanidade += 1
-            elif self.nivel <= 9:
-                self.vida += 140
-                self.sanidade += 2
-            elif self.nivel <= 14:
-                self.vida += 210
-                self.sanidade += 3
-            elif self.nivel <= 20:
-                self.vida += 280
-                self.sanidade += 4
+    def escolher_classe(self):
 
-            self.vida += self.nivel * 30 + (self.vigor * self.nivel)
-            self.sanidade += self.nivel * 1
-            self.nen += self.nivel * 128
-            print(f"[Fortificador] Nível: {self.nivel} | Vida: {self.vida} | Sanidade: {self.sanidade} | Nen: {self.nen}")
+        while True:
+            classe = int(input(""""
+                Qual a classe do seu personagem? 
+                \n
+                (1) Fortificador \n
+                (2) Transmutador \n
+                (3) Emissor \n 
+                (4) Conjurador \n
+                (5) Manipulador \n
+                (6) Especialista 
+                        
+                """))
+            self.classe = classe
+            
+            if classe in (1,2,3,4,5,6):
+                print("Carregando...")
+                break
+            else:
+                print("Escolha uma das opções acima")
+
+    def status(self):
+        self.nivel = int(input("Qual o nivel do seu personagem? \n"))
+        self.vigor = int(input("Qual o vigor do seu personagem? \n"))
+
+    def calcular(self):   
+        if self.classe == 1:
+            self.Fortificador()
+
+        if self.classe == 2:
+            self.Transmutador()
+
+        if self.classe == 3:
+            self.Emissor()
+
+        if self.classe == 4:
+            self.Conjurador()
+
+        if self.classe == 5:
+            self.Manipulador()
+
+        if self.classe == 6:
+            self.Especialista()
+
+    def Fortificador(self):
+
+        bonus_por_nivel = {
+            1:  (100, 3, 128),
+            2:  (30, 1, 128),
+            3:  (30, 1, 128),
+            4:  (30, 1, 128),
+            5:  (100, 3, 128),
+            6:  (30, 1, 128),
+            7:  (30, 1, 128),
+            8:  (30, 1, 128),
+            9:  (30, 1, 128),
+            10: (100, 3, 128),
+            11: (30, 1, 128),
+            12: (30, 1, 128),
+            13: (30, 1, 128),
+            14: (30, 1, 128),
+            15: (200, 6, 128),
+            16: (30, 1, 128),
+            17: (30, 1, 128),
+            18: (30, 1, 128),
+            19: (30, 1, 128),
+            20: (200, 6, 128)
+        }
+
+        vida_ganha = 0
+        san_ganha = 0
+        nen_ganho = 0
+
+        for lvl in range(1, self.nivel + 1):
+            vd, san, nen = bonus_por_nivel[lvl]
+            vida_ganha += vd
+            san_ganha += san
+            nen_ganho += nen
+
+        self.vida += vida_ganha
+        self.sanidade += san_ganha
+        self.nen += nen_ganho
+
+        self.vida += self.vigor
+        self.sanidade += self.vigor
 
     def Transmutador(self):
-        if self.classe == 2:
-            if self.nivel <= 4:
-                self.vida += 50
-                self.sanidade += 2
-            elif self.nivel <= 9:
-                self.vida += 100
-                self.sanidade += 4
-            elif self.nivel <= 14:
-                self.vida += 150
-                self.sanidade += 6
-            elif self.nivel <= 20:
-                self.vida += 200
-                self.sanidade += 8
 
-            self.vida += self.nivel * 25 + (self.vigor * self.nivel)
-            self.sanidade += self.nivel * 2
-            self.nen += self.nivel * 128
-            print(f"[Transmutador] Nível: {self.nivel} | Vida: {self.vida} | Sanidade: {self.sanidade} | Nen: {self.nen}")
+        bonus_por_nivel = {
+            1:  (70, 3, 128),
+            2:  (20, 2, 128),
+            3:  (20, 2, 128),
+            4:  (20, 2, 128),
+            5:  (70, 3, 128),
+            6:  (20, 2, 128),
+            7:  (20, 2, 128),
+            8:  (20, 2, 128),
+            9:  (20, 2, 128),
+            10: (70, 3, 128),
+            11: (20, 2, 128),
+            12: (20, 2, 128),
+            13: (20, 2, 128),
+            14: (20, 2, 128),
+            15: (140, 6, 128),
+            16: (20, 2, 128),
+            17: (20, 2, 128),
+            18: (20, 2, 128),
+            19: (20, 2, 128),
+            20: (140, 6, 128)
+        }
 
+        vida_ganha = 0
+        san_ganha = 0
+        nen_ganho = 0
+
+        for lvl in range(1, self.nivel + 1):
+            vd, san, nen = bonus_por_nivel[lvl]
+            vida_ganha += vd
+            san_ganha += san
+            nen_ganho += nen
+
+        self.vida += vida_ganha
+        self.sanidade += san_ganha
+        self.nen += nen_ganho
+
+        self.vida += self.vigor
+        self.sanidade += self.vigor 
+    
     def Emissor(self):
-        if self.classe == 3:
-            if self.nivel <= 4:
-                self.vida += 60
-                self.sanidade += 2
-            elif self.nivel <= 9:
-                self.vida += 120
-                self.sanidade += 4
-            elif self.nivel <= 14:
-                self.vida += 180
-                self.sanidade += 6
-            elif self.nivel <= 20:
-                self.vida += 240
-                self.sanidade += 8
 
-            self.vida += self.nivel * 28 + (self.vigor * self.nivel)
-            self.sanidade += self.nivel * 2
-            self.nen += self.nivel * 128
-            print(f"[Emissor] Nível: {self.nivel} | Vida: {self.vida} | Sanidade: {self.sanidade} | Nen: {self.nen}")
+        bonus_por_nivel = {
+            1:  (60, 4, 128),
+            2:  (20, 2, 128),
+            3:  (20, 2, 128),
+            4:  (20, 2, 128),
+            5:  (60, 4, 128),
+            6:  (20, 2, 128),
+            7:  (20, 2, 128),
+            8:  (20, 2, 128),
+            9:  (20, 2, 128),
+            10: (60, 4, 128),
+            11: (20, 2, 128),
+            12: (20, 2, 128),
+            13: (20, 2, 128),
+            14: (20, 2, 128),
+            15: (120, 8, 128),
+            16: (20, 2, 128),
+            17: (20, 2, 128),
+            18: (20, 2, 128),
+            19: (20, 2, 128),
+            20: (120, 8, 128)
+        }
 
+        vida_ganha = 0
+        san_ganha = 0
+        nen_ganho = 0
+
+        for lvl in range(1, self.nivel + 1):
+            vd, san, nen = bonus_por_nivel[lvl]
+            vida_ganha += vd
+            san_ganha += san
+            nen_ganho += nen
+
+        self.vida += vida_ganha
+        self.sanidade += san_ganha
+        self.nen += nen_ganho
+
+        self.vida += self.vigor
+        self.sanidade += self.vigor   
+    
     def Conjurador(self):
-        if self.classe == 4:
-            if self.nivel <= 4:
-                self.vida += 40
-                self.sanidade += 3
-            elif self.nivel <= 9:
-                self.vida += 80
-                self.sanidade += 6
-            elif self.nivel <= 14:
-                self.vida += 120
-                self.sanidade += 9
-            elif self.nivel <= 20:
-                self.vida += 160
-                self.sanidade += 12
 
-            self.vida += self.nivel * 20 + (self.vigor * self.nivel)
-            self.sanidade += self.nivel * 3
-            self.nen += self.nivel * 139
-            print(f"[Conjurador] Nível: {self.nivel} | Vida: {self.vida} | Sanidade: {self.sanidade} | Nen: {self.nen}")
+        bonus_por_nivel = {
+            1:  (50, 4, 138),
+            2:  (10, 2, 138),
+            3:  (10, 2, 138),
+            4:  (10, 2, 138),
+            5:  (50, 4, 138),
+            6:  (10, 2, 138),
+            7:  (10, 2, 138),
+            8:  (10, 2, 138),
+            9:  (10, 2, 138),
+            10: (50, 4, 138),
+            11: (10, 2, 138),
+            12: (10, 2, 138),
+            13: (10, 2, 138),
+            14: (10, 2, 138),
+            15: (100, 8, 138),
+            16: (10, 2, 138),
+            17: (10, 2, 138),
+            18: (10, 2, 138),
+            19: (10, 2, 138),
+            20: (100, 8, 138)
+        }
+
+        vida_ganha = 0
+        san_ganha = 0
+        nen_ganho = 0
+
+        for lvl in range(1, self.nivel + 1):
+            vd, san, nen = bonus_por_nivel[lvl]
+            vida_ganha += vd
+            san_ganha += san
+            nen_ganho += nen
+
+        self.vida += vida_ganha
+        self.sanidade += san_ganha
+        self.nen += nen_ganho
+
+        self.vida += self.vigor
+        self.sanidade += self.vigor
 
     def Manipulador(self):
-        if self.classe == 5:
-            if self.nivel <= 4:
-                self.vida += 40
-                self.sanidade += 4
-            elif self.nivel <= 9:
-                self.vida += 80
-                self.sanidade += 8
-            elif self.nivel <= 14:
-                self.vida += 120
-                self.sanidade += 12
-            elif self.nivel <= 20:
-                self.vida += 160
-                self.sanidade += 16
 
-            self.vida += self.nivel * 20 + (self.vigor * self.nivel)
-            self.sanidade += self.nivel * 4
-            self.nen += self.nivel * 128
-            print(f"[Manipulador] Nível: {self.nivel} | Vida: {self.vida} | Sanidade: {self.sanidade} | Nen: {self.nen}")
+        bonus_por_nivel = {
+            1:  (50, 5, 128),
+            2:  (10, 3, 128),
+            3:  (10, 3, 128),
+            4:  (10, 3, 128),
+            5:  (50, 5, 128),
+            6:  (10, 3, 128),
+            7:  (10, 3, 128),
+            8:  (10, 3, 128),
+            9:  (10, 3, 128),
+            10: (50, 5, 128),
+            11: (10, 3, 128),
+            12: (10, 3, 128),
+            13: (10, 3, 128),
+            14: (10, 3, 128),
+            15: (100, 10, 128),
+            16: (10, 3, 128),
+            17: (10, 3, 128),
+            18: (10, 3, 128),
+            19: (10, 3, 128),
+            20: (100, 10, 128)
+        }
 
+        vida_ganha = 0
+        san_ganha = 0
+        nen_ganho = 0
+
+        for lvl in range(1, self.nivel + 1):
+            vd, san, nen = bonus_por_nivel[lvl]
+            vida_ganha += vd
+            san_ganha += san
+            nen_ganho += nen
+
+        self.vida += vida_ganha
+        self.sanidade += san_ganha
+        self.nen += nen_ganho
+
+        self.vida += self.vigor
+        self.sanidade += self.vigor  
+    
     def Especialista(self):
-        if self.classe == 6:
-            if self.nivel <= 4:
-                self.vida += 30
-                self.sanidade += 3
-            elif self.nivel <= 9:
-                self.vida += 60
-                self.sanidade += 6
-            elif self.nivel <= 14:
-                self.vida += 90
-                self.sanidade += 9
-            elif self.nivel <= 20:
-                self.vida += 120
-                self.sanidade += 12
 
-            self.vida += self.nivel * 18 + (self.vigor * self.nivel)
-            self.sanidade += self.nivel * 3
-            self.nen += self.nivel * 159
-            print(f"[Especialista] Nível: {self.nivel} | Vida: {self.vida} | Sanidade: {self.sanidade} | Nen: {self.nen}")
+        bonus_por_nivel = {
+            1:  (20, 4, 158),
+            2:  (20, 2, 158),
+            3:  (20, 2, 158),
+            4:  (20, 2, 158),
+            5:  (20, 4, 158),
+            6:  (20, 2, 158),
+            7:  (20, 2, 158),
+            8:  (20, 2, 158),
+            9:  (20, 2, 158),
+            10: (20, 4, 158),
+            11: (20, 2, 158),
+            12: (20, 2, 158),
+            13: (20, 2, 158),
+            14: (20, 2, 158),
+            15: (40, 8, 158),
+            16: (20, 2, 158),
+            17: (20, 2, 158),
+            18: (20, 2, 158),
+            19: (20, 2, 158),
+            20: (40, 8, 158)
+        }
 
-classe = int(input(""""
-        Qual a classe do seu personagem? 
-        \n
-        (1) Fortificador \n
-        (2) Transmutador \n
-        (3) Emissor \n 
-        (4) Conjurador \n
-        (5) Manipulador \n
-        (6) Especialista 
-                
-        """))
-nivel = int(input("Digite o nível (1-20): "))
-vigor = int(input("Digite o vigor: "))
+        vida_ganha = 0
+        san_ganha = 0
+        nen_ganho = 0
 
-p = Personagem(classe, nivel, vigor)
+        for lvl in range(1, self.nivel + 1):
+            vd, san, nen = bonus_por_nivel[lvl]
+            vida_ganha += vd
+            san_ganha += san
+            nen_ganho += nen
 
-if classe == 1:
-    p.Fortificador()
-elif classe == 2:
-    p.Transmutador()
-elif classe == 3:
-    p.Emissor()
-elif classe == 4:
-    p.Conjurador()
-elif classe == 5:
-    p.Manipulador()
-elif classe == 6:
-    p.Especialista()
-else:
-    print("Classe inválida!")
+        self.vida += vida_ganha
+        self.sanidade += san_ganha
+        self.nen += nen_ganho
+
+        self.vida += self.vigor
+        self.sanidade += self.vigor  
+
+    def exibir_status(self):
+            print(f"Seu nivel é {self.nivel} \n vida: {self.vida} \n sanidade: {self.sanidade} \n nen: {self.nen}")
+
+p = nivel_personagem()
+
+p.escolher_classe()
+p.status()
+p.calcular()
+p.exibir_status()
