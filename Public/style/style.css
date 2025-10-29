@@ -4,7 +4,7 @@ body {
   font-family: Verdana
 }
 
-.div-header-index-nav {
+.div-header-index {
   color: white;
   font-weight: bold;
   background-image: url('../assets/fundo16.jpg');
@@ -14,39 +14,63 @@ body {
   height: 820px;
 }
 
-.div-container-index-nav {
+.div-container-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 5%;
 }
 
-.div-logo-index-nav a {
+.div-logo-navbar a {
   font-size: 36px;
   color: #FF9029;
   text-decoration: none;
 }
 
-.div-navbar-index-nav {
+.div-navbar {
   display: flex;
   align-items: center;
   gap: 40px;
 }
 
-.div-navbar-index-nav a {
+.div-navbar a {
   color: #FF9029;
   text-decoration: none;
   font-size: 16px;
 }
 
-.div-imagem-index-nav {
+.div-imagem-index {
   margin-top: 8%;
   margin-left: -12%;            
   width: 55%; 
+  position: absolute;
 }
 
 .div-traco-index {
-    background-color: #452302;
-    width: 100%;
-    height: 20px;
+  background-color: #452302;
+  width: 100%;
+  height: 20px;
 }
+
+.div-slogan-index h2 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.div-slogan-index p {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.div-header-index .div-slogan-index {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 60%;
+  padding-top: 150px;
+  color: rgb(143, 141, 17);
+  border-width: 150px;
+}
+
