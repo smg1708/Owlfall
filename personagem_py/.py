@@ -17,7 +17,7 @@ class nivel_personagem:
                 (4) Conjurador \n
                 (5) Manipulador \n
                 (6) Especialista 
-                        
+                            
                 """))
             self.classe = classe
             

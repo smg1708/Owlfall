@@ -1,29 +1,29 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Verdana
+  font-family: "Kavoon", serif;
 }
 
 .div-header-index {
   color: white;
-  font-weight: bold;
-  background-image: url('../assets/fundo16.jpg');
+  background-image: url('../assets/fundo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
-  height: 820px;
+  height: 520px;
 }
 
 .div-container-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 5%;
+  padding: 10px 5%;
+  background-color: #220101;
 }
 
 .div-logo-navbar a {
-  font-size: 36px;
-  color: #FF9029;
+  font-size: 32px;
+  color: #ffffff;
   text-decoration: none;
 }
 
@@ -34,27 +34,31 @@ body {
 }
 
 .div-navbar a {
-  color: #FF9029;
+  color: #ffffff;
   text-decoration: none;
   font-size: 16px;
 }
 
 .div-imagem-index {
-  margin-top: 8%;
-  margin-left: -12%;            
-  width: 55%; 
+  margin-top: 9.5%;
+  margin-left: -6%;            
+  width: 45%; 
   position: absolute;
 }
 
 .div-traco-index {
-  background-color: #452302;
+  background-color: #220101;
   width: 100%;
   height: 20px;
 }
 
+.div-slogan-index {
+  background-color: #220101;
+}
+
 .div-slogan-index h2 {
   margin: 0;
-  font-size: 36px;
+  font-size: 32px;
 }
 
 .div-slogan-index p {
