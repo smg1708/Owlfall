@@ -37,8 +37,8 @@ create table classe (
 	manipulador tinyint,
 	especialista tinyint
 );
-create table atributoNen (
-	idAtributoNen int primary key auto_increment,
+create table Nen (
+	Nen int primary key auto_increment,
 	fortificador int,
 	emissor int,
 	transmutador int,
@@ -85,7 +85,7 @@ create table ficha (
 	idFicha int auto_increment,
 	fkUsuario int,
 	fkAtributo int,
-	fkAtributoNen int,
+	fkNen int,
 	fkClasse int,
 	fkArma int,
 	fkHabilidade int,
@@ -98,16 +98,16 @@ create table ficha (
 	sanMax int,
 	nenAtual int,
 	nenMax int,
-	Primary key (idFicha, fkUsuario, fkAtributo, fkAtributoNen, fkClasse, fkArma, fkHabilidade, fkPericia),
+	Primary key (idFicha, fkUsuario, fkAtributo, fkNen, fkClasse, fkArma, fkHabilidade, fkPericia),
 	Constraint fkUsuario
 		Foreign key (fkUsuario)
 		References usuario(idUsuario),
 	Constraint fkAtributo
 		Foreign key (fkAtributo)
 		References atributo(idAtributo),
-	Constraint fkAtributoNen
-		Foreign key (fkAtributoNen)
-		References atributoNen(idAtributoNen),
+	Constraint fkNen
+		Foreign key (fkNen)
+		References Nen(Nen),
 	Constraint fkClasse
 		Foreign key (fkClasse)
 		References classe(idClasse),
@@ -139,3 +139,4 @@ create table fichaCampanha (
 		Foreign key (fkCampanha)
 		References campanha(idCampanha)
 );
+
