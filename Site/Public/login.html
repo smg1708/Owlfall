@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AquaTech | Login</title>
+    <title> Owlfall | Login </title>
 
     <script src="./js/sessao.js"></script>
 
     <link rel="stylesheet" type="text/css" href="style/style.css">
-    <link rel="icon" href="./assets/icon/favicon2.ico">
+    <link rel="icon" href="./assets/coruja.jpg" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
                 <a href="#"> OwlFall </a>
             </div>
             <div class="div-navbar">
-                <a href="#sobre"> Sobre </a>
+                <a href="index.html"> Sobre </a>
                 <a href="poder.html"> Poder </a>
                 <a href="personagens.html"> Personagens </a>
                 <a href="campanhas.html"> Campanhas </a>
@@ -34,45 +35,22 @@
         </div>
     </div>
 
-
-    <div class="login">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
+    <div class="fundo-login">
+        <div class="container-login">
+            <div id="imagem-esquerda">
+                <img src="assets/login.jpg" alt="">
             </div>
-        </div>
-        <div class="container">
-            <div class="card card-login">
-                <h2>Olá de volta!</h2>
-                <div class="formulario">
-                    <div class="campo">
-                        <span>E-mail:</span>
-                        <input id="email_input" type="text" placeholder="Login">
-                    </div>
-                    <div class="campo">
-                        <span>Senha:</span>
-                        <input id="senha_input" type="password" placeholder="******">
-                    </div>
-                    <button class="botao" onclick="entrar()">Entrar</button>
-                </div>
-
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
-                </div>
-
-                <div id="div_erros_login"></div>
+            <div id="login-direita">
+                <p>E-mail</p> 
+                <input id="input_email" type="email"> <br> <br>
+                <p>Senha</p>
+                <input id="input_senha" type="password"> <br> <br> <br>
+                <button>Login</button> <br>
+                <p>Ainda não tem um login?</p>
+                <a href="cadastro.html">Clique aqui</a>
             </div>
         </div>
     </div>
-
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-            <span class="version">v1.0.0</span>
-        </div>
-    </div>
-    <!--footer fim-->
 
 </body>
 
