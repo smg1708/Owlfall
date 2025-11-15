@@ -486,7 +486,7 @@ body {
 }
 
 .div-imagem-nav-poder {
-  margin-top: 10.9%;
+  margin-top: 14.5%;
   margin-left: -2%;            
   width: 40%; 
   position: absolute;
@@ -537,7 +537,7 @@ body {
 
 .div-fundo-poder {
   background-color: #000000;
-  height: 2800px;
+  height: 285vh;
   position: absolute;
 }
 
@@ -560,7 +560,7 @@ body {
   position: absolute;
   display: flex;
   margin-top: 45px;
-  margin-left: 950px;
+  margin-left: 51%;
 }
 
 .div-circulo-meio-poder {
@@ -568,7 +568,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-left: 930px;
+  margin-left: 49.9%;
 }
 .div-body-poder .img8-poder {
   height: 480px;
@@ -659,7 +659,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 866px;
+  height: 93.4vh;
 }
 
 .div-novo-personagem {
@@ -668,7 +668,7 @@ body {
   position: absolute;
   font-size: 15px;
   font-family: "Kavoon";
-  right: 15%;
+  right: 18%;
   top: 15%;
   color: #ffffff;
   background-color: #41210A;
@@ -679,6 +679,11 @@ body {
   padding: 150px 350px;
 }
 
+.div-box-personagens .div-pesquisa-personagem {
+  color: white;
+  padding-left: 25%;
+}
+
 .div-box-personagens span {
   font-size: 20px;
 }
@@ -686,7 +691,7 @@ body {
 .div-lupa-personagens img {
   position: absolute;
   width: 3%;
-  padding: 1.2% 0;
+  padding: 0.9% 0;
 }
 
 .div-pesquisa-personagem {
@@ -694,10 +699,11 @@ body {
   border-style: none;
   font-size: 20px;
   margin-top: 20px;
-  width: 502%;
+  width: 413%;
   height: 40px;
   background-color: #1e1e1e;
 } 
+
 
 /* .login {
 
@@ -755,7 +761,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 93vh;
+    min-height: 93.9vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -765,6 +771,11 @@ body {
     text-decoration: none;
     outline: none;
     color: white;
+  }
+
+  .registrar-login {
+    color: white;
+    text-decoration: none;
   }
 
   #imagem-esquerda{
@@ -805,22 +816,107 @@ body {
 
 /* Cadastro */
 
-.container-cadastro{
-    display: flex;
-    background-color: #87cefa;
-    width: 60%;
-    margin: 50px auto;
-    color: white;
-    padding: 20px;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    border-radius: 20px;
-    box-shadow: 0 4px 8px rgb(100, 99, 99);
+.div-header-login {
+  color: white;
 }
 
-.titulo-cadastro{
-    text-align: center;
+.div-container-navbar-login {
+  display: flex;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #0c0c0c;
+}
+
+.div-container-navbar-login .div-navbar {
+  padding-left: 28.5%;
+}
+
+.div-logo-navbar a {
+  font-size: 32px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.div-navbar {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.div-navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+
+.container-cadastro{
+    display: flex;
+    width: 45%;
+    margin: 0 auto;
+    height: auto;
+    background-color: #0c0c0cc9;
     color: white;
-    margin-top: 50px;
+    max-width: auto;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+  }
+  
+  .fundo-cadastro {
+    background-image: url('../assets/fundo_cadastro1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 93.9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cadastro-direita a {
+    text-decoration: none;
+    outline: none;
+    color: white;
+  }
+
+  .registrar-cadastro {
+    color: white;
+    text-decoration: none;
+  }
+
+  #imagem-esquerda{
+    width: 50%;
+  }
+  
+  #imagem-esquerda img{
+    width: 100%;
+    height: 50%;
+    border-radius: 2%;
+}
+
+#cadastro-direita{
+    width: 45%;
+    margin-right: 20px;
+}
+
+#cadastro-direita input{
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #000000;
+    border-radius: 20px;
+}
+
+#cadastro-direita input:focus{
+    outline: none;
+    border-color: #87cefa;
+    box-shadow: 0 0 0 2px #007bff40
+}
+
+#cadastro-direita button{
+    padding: 10px;
+    width: 95%;
+    background-color: #007bff40;
+    color: white;
+    border-radius: 20px;
 }
