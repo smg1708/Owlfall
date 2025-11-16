@@ -18,10 +18,10 @@
 
 <body onload="listar()">
   <!--header inicio-->
-    <div class="div-header-login">
-        <div class="div-container-navbar-login">
+    <div class="div-header-personagens">
+        <div class="div-container-navbar-personagens">
             <div class="div-logo-navbar">
-                <a href="#"> OwlFall </a>
+                <a href="index.html"> OwlFall </a>
             </div>
             <div class="div-navbar">
                 <a href="index.html"> Sobre </a>
@@ -40,12 +40,19 @@
                 <img src="assets/cadastro.jpg" alt="">
             </div>
             <div id="cadastro-direita">
-                <p>E-mail</p> 
+                <p>Digite seu nome</p> 
+                <input id="input_nome" type="text"> <br> <br>
+                <div>
+                <p>Digite seu e-mail</p> 
                 <input id="input_email" type="email"> <br> <br>
-                <p>Senha</p>
-                <input id="input_senha" type="password"> <br> <br> <br>
+                <p>Confirme o e-mail</p> 
+                <input id="input_email_confirmacao" type="email"> <br> <br>
+                <p>Digite sua senha</p>
+                <input id="input_senha" type="password"> <br> <br> 
+                <p>Confirme a senha</p> 
+                <input id="input_senha_confirmacao" type="email"> <br> <br>
                 <button>Login</button> <br> <br>
-                <p>Já tem um login?</p>
+                <span>Já tem um login?</span>
                 <a href="login.html" class="registrar-login">Clique aqui</a>
             </div>
         </div>

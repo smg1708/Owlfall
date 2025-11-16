@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OwlFall | Personagens</title>
+    <link rel="icon" href="assets/coruja.jpg">
+
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   
+    <div class="div-header-atributos">
+        <div class="div-container-navbar-atributos">
+            <div class="div-logo-navbar">
+                <a href="index.html"> OwlFall </a>
+            </div>
+            <div class="div-navbar">
+                <a href="index.html"> Sobre </a>
+                <a href="poder.html"> Poder </a>
+                <a href="personagens.html"> Personagens </a>
+                <a href="campanhas.html"> Campanhas </a>
+                <a href="login.html"> Login </a>
+            </div>
+        </div>
+        <div class="div-traco-atributos"></div>
+    </div>
+    <div>   
+        <div class="div-container-body-atributos">
+            <div class="div-botoes-atributos">
+                <button onclick="atributos()">Atributos</button>
+                <div class="div-traco-atributos-separando"></div>
+                <button onclick="classes()">Classe</button>
+                <div class="div-traco-atributos-separando"></div>
+                <button onclick="caracteristicas()">Toques Finais</button> <br>
+            </div>
+            
+            <div class="div-box-atributos">
+                <div class="div-texto-esquerda-atributos">
+                    <h2>Quando você cria um personagem, todos os seus atributos começam em 1 e você recebe 4 pontos para distribuir entre eles como quiser. Você também pode reduzir um atributo para 0 para receber 1 ponto adicional. O valor máximo inicial que você pode ter em cada atributo é 3.</h2>
+                </div>
+                <div class="div-atributos-direita">
+                    
+                    <img src="assets/atributos.png" alt="" id="img-atributos">
+
+                    <input type="number" id="inp_agilidade_atributo" value="1">  <br>
+                    <input type="number" id="inp_forca_atributo" value="1">
+                    <input type="number" id="inp_intelecto_atributo" value="1"> <br>
+                    <input type="number" id="inp_presenca_atributo" value="1"> 
+                    <input type="number" id="inp_vigor_atributo" value="1">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+
+    function atributos() {
+        window.location.href = "atributos.html"
+    }
+
+    function classes() {
+        window.location.href = "classes.html"
+    }
+
+    function caracteristicas() {
+        window.location.href = "caracteristicas.html"
+    }
+
+</script>

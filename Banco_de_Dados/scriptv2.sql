@@ -11,38 +11,36 @@ create table usuario (
 
 create table ficha (
 	idFicha int auto_increment,
-	fkUsuario int,
-	fkAtributo int,
-	fkNen int,
-	fkClasse int,
-	fkArma int,
-	fkHabilidade int,
-	fkPericia int,
-	nome varchar(80),
-	nivel int,
+	idUsuario int,
+	nome varchar(80) not null,
+	nivel int not null,
 	vdAtual int,
 	vdMax int,
 	sanAtual int,
 	sanMax int,
 	nenAtual int,
 	nenMax int,
-	Primary key (idFicha, fkUsuario),
-	Constraint fkUsuario
-		Foreign key (fkUsuario)
+	Primary key (idFicha, idUsuario),
+	Constraint idUsuario
+		Foreign key (idUsuario)
 		References usuario(idUsuario)
 );
 
 create table caracteristicas (
-	idCampanha int,
+	idCaracteristicas int,
     idFicha int,
     nome varchar(80),
 	tipo varchar(255),
-	descricao varchar(255)
+	descricao varchar(255),
+	Primary key (idFicha, idCaracteristicas),
+	Constraint idFicha
+		Foreign key (idFicha)
+		References ficha(idFicha)
 );
 
 create table campanha (
 	idCampanha int primary key auto_increment,
-	nome varchar(80),
+	nome varchar(80) not null,
 	descricao varchar(255)
 );
 
@@ -57,4 +55,3 @@ create table fichaCampanha (
 		Foreign key (fkCampanha)
 		References campanha(idCampanha)
 );
-
