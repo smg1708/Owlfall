@@ -315,9 +315,66 @@
                     </div>
 
                 </div>
-            </div>
+                </div>
+                <div class="box-personagem-caracteristicas-ficha">
+                    <div class="box-caracteristicas-abas">
+
+                        <div class="box-botoes-ficha">
+                            <button id="btn_habilidades" style="display: block;">Habilidades</button>
+                            <button id="btn_inventario">Inventário</button>
+                            <button id="btn_descricao">Descrição</button>
+                        </div>
+
+                        <div class="box-abas-caracteristicas" id="aba_habilidades">
+                            <h3>Nenhuma habilidade cadastrada.</h3>
+                        </div>
+
+                        <div class="box-abas-caracteristicas" id="aba_inventario">
+                            <h3>Inventário vazio.</h3>
+                        </div>
+
+                        <div class="box-abas-caracteristicas" id="aba_descricao">
+                            <h3>Adicione uma descrição do personagem.</h3>
+                        </div>
+
+                    </div>
+                </div>
+
         </div>
     </div>
 
 </body>
 </html>
+
+<script>
+    
+    var botaoHabilidades     = btn_habilidades;
+    var botaoInventario     = btn_inventario;
+    var botaoDescicao    = btn_descricao;
+
+    var abaHabilidades     = aba_habilidades;
+    var abaInventario     = aba_inventario;
+    var abaDescricao    = aba_descricao;
+
+    function esconderTudo() {
+        abaHabilidades.style.display = "none";
+        abaInventario.style.display = "none";
+        abaDescricao.style.display = "none";
+    }
+
+    botaoHabilidades.onclick = function() {
+        esconderTudo();
+        abaHabilidades.style.display = "block";
+    }
+
+    botaoInventario.onclick = function() {
+        esconderTudo();
+        abaInventario.style.display = "block";
+    }
+
+    botaoDescicao.onclick = function() {
+        esconderTudo();
+        abaDescricao.style.display = "block";
+    }
+
+</script>

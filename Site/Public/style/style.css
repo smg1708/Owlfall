@@ -1725,6 +1725,7 @@ input[type=number]::-webkit-inner-spin-button {
   height: 180%;
   right: 115%;
   top: -30%;
+  pointer-events: none;
 }
 
 .div-atributos-ficha {
@@ -1802,6 +1803,8 @@ input[type=number]::-webkit-inner-spin-button {
   font-family: arial;
   margin-top: 13%;
   margin-left: 22%;
+  position: relative;
+  
 }
 
 .box-personagem-ficha-tecnica h3 {
@@ -1826,6 +1829,7 @@ input[type=number]::-webkit-inner-spin-button {
   border: none; 
   outline: none; 
   border-bottom: 1px solid white;
+  position: relative;
 }
 
 .div-status-ficha {
@@ -1874,9 +1878,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .div-pericias-ficha {
     display: flex;
-    justify-content: space-between;
     width: 100%;
-    margin-top: 20px;
 }
 
 .coluna-pericias {
@@ -1930,4 +1932,41 @@ input[type=number]::-webkit-inner-spin-button {
   border-bottom: 1px solid white;
   color: white;
   outline: none;
+  position: relative;
+}
+
+.box-caracteristicas-abas {
+    position: absolute;
+    top: 22%;
+    right: 13%;
+    width: 23%;
+    color: white;
+    font-family: Arial;
+}
+
+.box-botoes-ficha {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.box-botoes-ficha button {
+    padding: 6px 10px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.box-botoes-ficha .ativo {
+    background: white;
+    color: black;
+}
+
+.box-abas-caracteristicas {
+    display: none;
+    padding: 10px;
+    border: 1px solid white;
+    min-height: 70vh;
 }
