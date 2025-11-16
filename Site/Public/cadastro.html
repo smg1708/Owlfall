@@ -1,178 +1,198 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+  <!DOCTYPE html>
+  <html lang="pt-br">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Owlfall | Cadastro</title>
+    <title>Owlfall | Cadastro</title>
 
-  <script src="./js/sessao.js"></script>
+    <script src="./js/sessao.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="style/style.css">
-  <link rel="icon" href="./assets/coruja.jpg" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="icon" href="./assets/coruja.jpg" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+  </head>
 
-<body onload="listar()">
-  <!--header inicio-->
-    <div class="div-header-personagens">
-        <div class="div-container-navbar-personagens">
-            <div class="div-logo-navbar">
-                <a href="index.html"> OwlFall </a>
-            </div>
-            <div class="div-navbar">
-                <a href="index.html"> Sobre </a>
-                <a href="poder.html"> Poder </a>
-                <a href="personagens.html"> Personagens </a>
-                <a href="campanhas.html"> Campanhas </a>
-                <a href="login.html"> Login </a>
-            </div>
-        </div>
-    </div>
-  <!--header fim-->
+  <body onload="listar()">
+    <!--header inicio-->
+      <div class="div-header-personagens">
+          <div class="div-container-navbar-personagens">
+              <div class="div-logo-navbar">
+                  <a href="index.html"> OwlFall </a>
+              </div>
+              <div class="div-navbar">
+                  <a href="index.html"> Sobre </a>
+                  <a href="poder.html"> Poder </a>
+                  <a href="personagens.html"> Personagens </a>
+                  <a href="campanhas.html"> Campanhas </a>
+                  <a href="login.html"> Login </a>
+              </div>
+          </div>
+      </div>
+    <!--header fim-->
 
-    <div class="fundo-cadastro">
+      <div class="fundo-cadastro">
         <div class="container-cadastro">
-            <div id="imagem-esquerda">
-                <img src="assets/cadastro.jpg" alt="">
+          <div id="imagem-esquerda">
+            <img src="assets/cadastro.jpg" alt="">
+          </div>
+          <div id="cadastro-direita">
+            <p>Digite seu nome</p> 
+            <input id="nome_input" type="text"> <br> <br>
+            <p>Digite seu e-mail</p> 
+            <input id="email_input" type="email"> <br> <br>
+            <p>Digite sua senha</p>
+            <input id="senha_input" type="password"> <br> <br> 
+            <p>Confirme a senha</p> 
+            <input id="confirmacao_senha_input" type="password"> <br> <br>
+            <button onclick="cadastrar()">Cadastrar</button> <br> <br>
+            <span>Já tem um login?</span>
+            <a href="login.html" class="registrar-login">Clique aqui</a>
+          </div>
+          <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
             </div>
-            <div id="cadastro-direita">
-                <p>Digite seu nome</p> 
-                <input id="input_nome" type="text"> <br> <br>
-                <div>
-                <p>Digite seu e-mail</p> 
-                <input id="input_email" type="email"> <br> <br>
-                <p>Confirme o e-mail</p> 
-                <input id="input_email_confirmacao" type="email"> <br> <br>
-                <p>Digite sua senha</p>
-                <input id="input_senha" type="password"> <br> <br> 
-                <p>Confirme a senha</p> 
-                <input id="input_senha_confirmacao" type="email"> <br> <br>
-                <button>Login</button> <br> <br>
-                <span>Já tem um login?</span>
-                <a href="login.html" class="registrar-login">Clique aqui</a>
-            </div>
+          </div>
+          <div id="div_aguardar" style="display:none;">
+            <span>Carregando...</span>
+          </div>
+          <div id="div_carregando"></div>
         </div>
-    </div>
+      </div>
 
-</body>
+  </body>
 
-</html>
+  </html>
 
-<script>
+  <script>
 
-  // Array para armazenar empresas cadastradas para validação de código de ativação 
-  let listaEmpresasCadastradas = [];
+    // Array para armazenar empresas cadastradas para validação de código de ativação 
+    let listaEmpresasCadastradas = [];
+    var caracteresEspeciais = ['@','#','$','%','&','*']
 
-  function cadastrar() {
-    // aguardar();
+    function cadastrar() {
 
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
-    var nomeVar = nome_input.value;
-    var emailVar = email_input.value;
-    var senhaVar = senha_input.value;
-    var confirmacaoSenhaVar = confirmacao_senha_input.value;
-    var codigoVar = codigo_input.value;
-    var idEmpresaVincular
+      //Recupere o valor da nova input pelo nome do id
+      // Agora vá para o método fetch logo abaixo
+      var nomeVar = nome_input.value;
+      var emailVar = email_input.value;
+      var senhaVar = senha_input.value;
+      var confirmacaoSenhaVar = confirmacao_senha_input.value;
+      var validacaoCaracter = ""
 
-    // Verificando se há algum campo em branco
-    if (
-      nomeVar == "" ||
-      emailVar == "" ||
-      senhaVar == "" ||
-      confirmacaoSenhaVar == "" ||
-      codigoVar == ""
-    ) {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
-
-      finalizarAguardar();
-      return false;
-    } else {
-      setInterval(sumirMensagem, 5000);
-    }
-
-    // Verificando se o código de ativação é de alguma empresa cadastrada
-    for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
-      if (listaEmpresasCadastradas[i].codigo_ativacao == codigoVar) {
-        idEmpresaVincular = listaEmpresasCadastradas[i].id
-        console.log("Código de ativação válido.");
-        break;
-      } else {
-        cardErro.style.display = "block";
-        mensagem_erro.innerHTML = "(Mensagem de erro para código inválido)";
+      // Verificando se há algum campo em branco
+      if (
+        nomeVar == "" ||
+        emailVar == "" ||
+        emailVar.includes('@') == false ||
+        senhaVar == "" ||
+        confirmacaoSenhaVar == ""
+      ) {
+        alert("Campos incorretos\n Verifique os campos e tente novamente");
         finalizarAguardar();
+        return false;
       }
+
+      for (var i = 0; i < caracteresEspeciais.length; i++) {
+        if (senhaVar.includes(caracteresEspeciais[i])) {
+          validacaoCaracter = "passou"
+        }
+      }
+
+      if (confirmacaoSenhaVar != senhaVar) {
+        alert("Senhas não coincidem")
+        return false;
+      } else if (senhaVar.length < 8) {
+        alert("Senha tem que ter 8 caracteres")
+        return false;
+      } else if (validacaoCaracter != "passou") {
+        alert("Senha tem que ter ao menos um caracter especial")
+        return false;
+      }
+
+    // Possivelmente não necessario
+
+      // // Verificando se o código de ativação é de alguma empresa cadastrada
+      // for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
+      //   if (listaEmpresasCadastradas[i].codigo_ativacao == codigoVar) {
+      //     idEmpresaVincular = listaEmpresasCadastradas[i].id
+      //     console.log("Código de ativação válido.");
+      //     break;
+      //   } else {
+      //     cardErro.style.display = "block";
+      //     mensagem_erro.innerHTML = "(Mensagem de erro para código inválido)";
+      //     finalizarAguardar();
+      //   }
+      // }
+
+      // Enviando o valor da nova input
+      fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // crie um atributo que recebe o valor recuperado aqui
+          // Agora vá para o arquivo routes/usuario.js
+          nomeServer: nomeVar,
+          emailServer: emailVar,
+          senhaServer: senhaVar,
+        }),
+      })
+        .then(function (resposta) {
+          console.log("resposta: ", resposta);
+
+          if (resposta.ok) {
+            cardErro.style.display = "block";
+
+            div_carregando.innerHTML =
+              alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
+
+            setTimeout(() => {
+              window.location = "login.html";
+            }, "2000");
+
+            limparFormulario();
+            finalizarAguardar();
+          } else {
+            throw "Houve um erro ao tentar realizar o cadastro!";
+          }
+        })
+        .catch(function (resposta) {
+          console.log(`#ERRO: ${resposta}`);
+          finalizarAguardar();
+        });
+
+      return false;
     }
 
-    // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        nomeServer: nomeVar,
-        emailServer: emailVar,
-        senhaServer: senhaVar,
-        idEmpresaVincularServer: idEmpresaVincular
-      }),
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
+// Provavelmente não necessario tambem
 
-        if (resposta.ok) {
-          cardErro.style.display = "block";
+    // // Listando empresas cadastradas 
+    // function listar() {
+    //   fetch("/empresas/listar", {
+    //     method: "GET",
+    //   })
+    //     .then(function (resposta) {
+    //       resposta.json().then((empresas) => {
+    //         empresas.forEach((empresa) => {
+    //           listaEmpresasCadastradas.push(empresa);
 
-          mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+    //           console.log("listaEmpresasCadastradas")
+    //           console.log(listaEmpresasCadastradas[0].codigo_ativacao)
+    //         });
+    //       });
+    //     })
+    //     .catch(function (resposta) {
+    //       console.log(`#ERRO: ${resposta}`);
+    //     });
+    // }
 
-          setTimeout(() => {
-            window.location = "login.html";
-          }, "2000");
-
-          limparFormulario();
-          finalizarAguardar();
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
-        }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
-      });
-
-    return false;
-  }
-
-  // Listando empresas cadastradas 
-  function listar() {
-    fetch("/empresas/listar", {
-      method: "GET",
-    })
-      .then(function (resposta) {
-        resposta.json().then((empresas) => {
-          empresas.forEach((empresa) => {
-            listaEmpresasCadastradas.push(empresa);
-
-            console.log("listaEmpresasCadastradas")
-            console.log(listaEmpresasCadastradas[0].codigo_ativacao)
-          });
-        });
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-      });
-  }
-
-  function sumirMensagem() {
-    cardErro.style.display = "none";
-  }
-</script>
+    // function sumirMensagem() {
+    //   cardErro.style.display = "none";
+    // }
+    
+  </script>

@@ -42,12 +42,16 @@
             </div>
             <div id="login-direita">
                 <p>E-mail</p> 
-                <input id="input_email" type="email"> <br> <br>
+                <input id="email_input" type="email"> <br> <br>
                 <p>Senha</p>
-                <input id="input_senha" type="password"> <br> <br> <br>
-                <button>Login</button> <br> <br>
+                <input id="senha_input" type="password"> <br> <br> <br>
+                <button onclick="entrar()">Login</button> <br> <br>
                 <span>Ainda não tem um login?</span>
                 <a href="cadastro.html" class="registrar-login">Clique aqui</a>
+            </div>
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro">
+                </div>
             </div>
         </div>
     </div>
@@ -60,14 +64,12 @@
 
 
     function entrar() {
-        aguardar();
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
         if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            alert("Campos incorretos\n Verifique os campos e tente novamente");
             finalizarAguardar();
             return false;
         }
@@ -98,17 +100,16 @@
                     console.log(JSON.stringify(json));
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
-                    sessionStorage.AQUARIOS = JSON.stringify(json.aquarios)
-
-                    setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
-                    }, 1000); // apenas para exibir o loading
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+                    
+                    window.location.href = "personagens.html";
+                    // apenas para exibir o loading
 
                 });
 
             } else {
 
+                alert("Houve um erro ao tentar realizar o login! \n Verifique suas credenciais")
                 console.log("Houve um erro ao tentar realizar o login!");
 
                 resposta.text().then(texto => {
