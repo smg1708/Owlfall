@@ -1968,5 +1968,12 @@ input[type=number]::-webkit-inner-spin-button {
     display: none;
     padding: 10px;
     border: 1px solid white;
-    min-height: 70vh;
+    min-height: 60vh;
+}
+
+.box-abas-caracteristicas input {
+  background-color: #1e1e1e;
+  border-color: transparent;
+  height: 100px;
+  width: 95%;
 }
