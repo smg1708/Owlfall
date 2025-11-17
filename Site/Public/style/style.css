@@ -1858,17 +1858,6 @@ input[type=number]::-webkit-inner-spin-button {
   text-align: center;
 }
 
-.vida-ficha {
-  background-color: red;
-}
-
-.sanidade-ficha {
-  background-color: rgb(109, 19, 212);
-}
-
-.nen-ficha {
-  background-color: #0f3f8d;
-}
 
 .box-personagem-ficha-pericias {
   padding-left: 45%;
@@ -1877,26 +1866,26 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .div-pericias-ficha {
-    display: flex;
-    width: 100%;
+  display: flex;
+  width: 100%;
 }
 
 .coluna-pericias {
-    width: 48%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .box-pericia-linha {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .box-pericia-linha span {
-    font-size: 16px;
-    min-width: 120px;
+  font-size: 16px;
+  min-width: 120px;
 }
 
 .inp-pericia-valor {
@@ -1908,9 +1897,9 @@ input[type=number]::-webkit-inner-spin-button {
     border-bottom: 1px solid white;
     color: white;
     outline: none;
-}
+  }
 
-.inp-pericia-bonus {
+  .inp-pericia-bonus {
   appearance: none;
   width: 60px;
   height: 25px;
@@ -1936,44 +1925,131 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .box-caracteristicas-abas {
-    position: absolute;
-    top: 22%;
-    right: 13%;
-    width: 23%;
-    color: white;
-    font-family: Arial;
+  position: absolute;
+  top: 22%;
+  right: 13%;
+  width: 23%;
+  color: white;
+  font-family: Arial;
 }
 
 .box-botoes-ficha {
-    display: flex;
-    gap: 6px;
-    margin-bottom: 12px;
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
 }
 
 .box-botoes-ficha button {
-    padding: 6px 10px;
-    border: 1px solid white;
-    background: transparent;
-    color: white;
-    cursor: pointer;
-    font-size: 14px;
+  padding: 6px 10px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .box-botoes-ficha .ativo {
-    background: white;
-    color: black;
+  background: white;
+  color: black;
 }
 
 .box-abas-caracteristicas {
-    display: none;
-    padding: 10px;
-    border: 1px solid white;
-    min-height: 60vh;
+  display: none;
+  padding: 10px;
+  border: 1px solid white;
+  min-height: 60vh;
 }
-
+  
 .box-abas-caracteristicas input {
   background-color: #1e1e1e;
   border-color: transparent;
   height: 100px;
   width: 95%;
+}
+
+.div-barra-vida {
+  background-color: red;
+  width: 260%;
+  height: 4vh;
+  margin-left: -75%;
+}
+
+.div-barra-vida .input-vida-ficha {
+  position: absolute ;
+  height: 32px;
+  width: 4%;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.div-barra-vida span {
+  font-size: 29px;
+  padding-left: 48%;
+}
+
+.input-esquerda-vida {
+  left: 52%;
+}
+
+.input-direita-vida {
+  left: 54.5%;
+  text-align: left;
+}
+
+.div-barra-sanidade {
+  background-color: rgb(109, 19, 212);
+  width: 260%;
+  height: 4vh;
+  margin-left: -75%;
+}
+
+.div-barra-sanidade .input-sanidade-ficha {
+  position: absolute ;
+  height: 32px;
+  width: 4%;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.div-barra-sanidade span {
+  font-size: 29px;
+  padding-left: 48%;
+}
+
+.input-esquerda-sanidade {
+  left: 52%;
+}
+
+.input-direita-sanidade {
+  left: 54.5%;
+  text-align: left;
+}
+
+.div-barra-nen {
+  background-color: #0f3f8d;
+  width: 260%;
+  height: 4vh;
+  margin-left: -75%;
+}
+
+.div-barra-nen .input-nen-ficha {
+  position: absolute ;
+  height: 32px;
+  width: 4%;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.div-barra-nen span {
+  font-size: 29px;
+  padding-left: 48%;
+}
+
+.input-esquerda-nen {
+  left: 52%;
+}
+
+.input-direita-nen {
+  left: 54.5%;
+  text-align: left;
 }
