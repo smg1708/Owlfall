@@ -384,6 +384,16 @@
             'atributos': atributos
         })
 
+      fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          dadosPersonagemServer: dadosPersonagem,
+        }),
+      })
+
         window.location.href = "ficha.html"
         
     }
