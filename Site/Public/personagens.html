@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title >OwlFall</title>
+    <title >OwlFall | Personagens</title>
     <link rel="icon" href="assets/coruja.jpg">
 
     <link rel="stylesheet" type="text/css" href="style/style.css">
@@ -17,7 +17,7 @@
     <div class="div-header-personagens">
         <div class="div-container-navbar-personagens">
             <div class="div-logo-navbar">
-                <a href="#"> OwlFall </a>
+                <a href="index.html"> OwlFall </a>
             </div>
             <div class="div-navbar">
                 <a href="index.html"> Sobre </a>
@@ -31,7 +31,7 @@
     </div>
     <div>   
         <div class="div-container-body-personagens">
-            <button onclick="CriarPersonagem()" class="div-novo-personagem">Novo Personagem</button>
+            <button onclick="criarPersonagem()" class="div-novo-personagem">Novo Personagem</button>
             <div class="div-box-personagens">
                 <span id="span_personagens_cont">Personagens: </span> <br>
                 <div class="div-lupa-personagens"><img src="assets/lupa.png" alt=""></div>
@@ -39,3 +39,12 @@
             </div>
         </div>
     </div>
+
+
+<script>
+
+    function criarPersonagem() {
+        window.location.href = "criando.html"
+    }
+
+</script>

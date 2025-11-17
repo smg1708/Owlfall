@@ -1,0 +1,66 @@
+-- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
+-- Você precisa executar os comandos no banco de dados para criar as tabelas,
+-- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
+
+/*
+comandos para mysql server
+*/
+
+CREATE DATABASE owlfall;
+
+use owlfall;
+
+create table usuario (
+	idUsuario int primary key auto_increment,
+	nome varchar(80) not null,
+	email varchar(80) not null unique,
+	senha varchar(45) not null
+);
+
+create table ficha (
+	idFicha int not null,
+	fkUsuario int not null,
+	nome varchar(80) not null,
+	nivel int not null,
+	imagem blob,
+	vdAtual int,
+	vdMax int,
+	sanAtual int,
+	sanMax int,
+	nenAtual int,
+	nenMax int,
+	Primary key (idFicha, fkUsuario),
+	Constraint fkUsuario
+		Foreign key (fkUsuario)
+		References usuario(idUsuario)
+);
+
+create table caracteristicas (
+	idCaracteristicas int not null,
+    fkFicha int not null,
+    nome varchar(80),
+	tipo varchar(255),
+	descricao varchar(255),
+	Primary key (fkFicha, idCaracteristicas),
+	Constraint fkFicha
+		Foreign key (fkFicha)
+		References ficha(idFicha)
+);
+
+create table campanha (
+	idCampanha int primary key auto_increment,
+	nome varchar(80) not null,
+	descricao varchar(255)
+);
+
+create table fichaCampanha (
+	fkFichaCampanha int not null,
+	fkCampanha int not null,
+	Primary key (fkFichaCampanha, fkCampanha),
+	Constraint fkFichaCampanha
+		Foreign key (fkFichaCampanha)
+		References ficha(idFicha),
+	Constraint fkCampanha
+		Foreign key (fkCampanha)
+		References campanha(idCampanha)
+);

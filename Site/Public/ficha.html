@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OwlFall | Ficha</title>
+    <link rel="icon" href="assets/coruja.jpg">
+
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   
+    <div class="div-header-ficha">
+        <div class="div-container-navbar-ficha">
+            <div class="div-logo-navbar">
+                <a href="index.html"> OwlFall </a>
+            </div>
+            <div class="div-navbar">
+                <a href="index.html"> Sobre </a>
+                <a href="poder.html"> Poder </a>
+                <a href="personagens.html"> Personagens </a>
+                <a href="campanhas.html"> Campanhas </a>
+                <a href="login.html"> Login </a>
+            </div>
+        </div>
+        <div class="div-traco-ficha"></div>
+    </div>
+    <div class="div-container-body-ficha">
+        <div class="box-personagem-ficha">
+            <img src="assets/icon_sem_personagem.jpg" alt="">
+            <h3>Personagem</h3> <input type="text" class="input-personagem" id="inp_personagem"> 
+            <h3>Jogador</h3> <input type="text" class="input-personagem" id="inp_jogador_ficha">
+        </div>
+        <div class="box-personagem-ficha-dados">
+                <div class="div-box-atributos-ficha">
+                    <div class="div-atributos-ficha">
+                        
+                        <img src="assets/atributos.png" alt="" id="img-atributos-ficha">
+
+                        <input type="number" id="inp_agilidade_ficha" value="1">
+                        <input type="number" id="inp_forca_ficha" value="1">
+                        <input type="number" id="inp_intelecto_ficha" value="1">
+                        <input type="number" id="inp_presenca_ficha" value="1"> 
+                        <input type="number" id="inp_vigor_ficha" value="1">
+                    </div>
+                </div>
+                <div class="box-personagem-ficha-tecnica">
+                    <span class="span-nivel">Nivel</span> 
+                    <select id="select_nivel">
+                        <option selected>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                    </select>
+                    <h3>Classe</h3> 
+                    <input type="text" class="area1 " id="inp_classe" value="Fortificador" style="font-size: 18px;">
+
+                    <div class="div-status-ficha">
+                        <h2 style="padding-left: 60px;">VIDA</h2>
+                        <div class="div-barra-vida">
+                            <input type="number" class="input-vida-ficha input-esquerda-vida" value="0"> <span> / </span> <input type="number" class="input-vida-ficha input-direita-vida" value="0">
+                        </div>
+                        <h2 style="padding-left: 60px;">SANIDADE</h2>
+                        <div class="div-barra-sanidade">
+                            <input type="number" class="input-sanidade-ficha input-esquerda-sanidade" value="0"> <span> / </span> <input type="number" class="input-sanidade-ficha input-direita-sanidade" value="0">
+                        </div>
+                        <h2 style="padding-left: 60px;">NEN</h2>
+                        <div class="div-barra-nen">
+                            <input type="number" class="input-nen-ficha input-esquerda-nen" value="0"> <span> / </span> <input type="number" class="input-nen-ficha input-direita-nen" value="0">
+                        </div>
+                    </div>
+                </div>
+                <div class="box-personagem-ficha-pericias">
+                    <h1>Pericias</h1>
+                <div class="div-pericias-ficha">
+                    <div class="coluna-pericias">
+
+                        
+                        <div class="box-pericia-linha">
+                            <span>Adestramento</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_adestramento">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        
+                        <div class="box-pericia-linha">
+                            <span>Artes</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_artes">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Acrob/Atlet</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_acrob_atlet">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Ciências</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_ciencias">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Diplomacia</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_diplomacia">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Enganação</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_enganacao">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Fortitude</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_fortitude">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Furtividade</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_furtividade">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Iniciativa</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_iniciativa">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Intimidação</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_intimidacao">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Investigação</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_investigacao">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Luta</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_luta">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Medicina</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_medicina">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Percepção</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_percepcao">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Pilotagem</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_pilotagem">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Pontaria</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_pontaria">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Profissão</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_profissao">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Reflexos</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_reflexos">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Sobrevivencia</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_sobrevivencia">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+
+                        <div class="box-pericia-linha">
+                            <span>Espirito</span>
+                            <input type="text" class="inp-pericia-valor">
+                            <select class="select-pericia" id="select_espirito">
+                                <option selected>0+</option>
+                                <option>5+</option>
+                                <option>10+</option>
+                                <option>15+</option>
+                            </select>
+                        </div>
+                        
+                    </div>
+
+                </div>
+                </div>
+                <div class="box-personagem-caracteristicas-ficha">
+                    <div class="box-caracteristicas-abas">
+
+                        <div class="box-botoes-ficha">
+                            <button id="btn_habilidades" style="display: block;">Habilidades</button>
+                            <button id="btn_inventario">Inventário</button>
+                            <button id="btn_descricao">Descrição</button>
+                        </div>
+
+                        <div class="box-abas-caracteristicas" id="aba_habilidades">
+                            <h3>Nenhuma habilidade cadastrada.</h3>
+                        </div>
+
+                        <div class="box-abas-caracteristicas" id="aba_inventario">
+                            <h3>Inventário vazio.</h3>
+                        </div>
+
+                        <div class="box-abas-caracteristicas" id="aba_descricao">
+                            <span>Aparência</span> <br>
+                            <input type="text" id="inp_aparencia"> <br> <br>
+                            <span>Personalidade</span> <br>
+                            <input type="text" id="inp_personalidade"> <br> <br>
+                            <span>Histórico</span> <br>
+                            <input type="text" id="inp_descricao"> <br> <br>
+                            <span>Objetivo</span> <br>
+                            <input type="text" id="inp_objetivo"> 
+                        </div>
+
+                    </div>
+                </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    
+    var botaoHabilidades     = btn_habilidades;
+    var botaoInventario     = btn_inventario;
+    var botaoDescicao    = btn_descricao;
+
+    var abaHabilidades     = aba_habilidades;
+    var abaInventario     = aba_inventario;
+    var abaDescricao    = aba_descricao;
+
+    function esconderTudo() {
+        abaHabilidades.style.display = "none";
+        abaInventario.style.display = "none";
+        abaDescricao.style.display = "none";
+    }
+
+    botaoHabilidades.onclick = function() {
+        esconderTudo();
+        abaHabilidades.style.display = "block";
+    }
+
+    botaoInventario.onclick = function() {
+        esconderTudo();
+        abaInventario.style.display = "block";
+    }
+
+    botaoDescicao.onclick = function() {
+        esconderTudo();
+        abaDescricao.style.display = "block";
+    }
+
+</script>

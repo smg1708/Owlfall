@@ -1,14 +1,14 @@
 
-/* Notebook */
+/* Notebook 
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Kavoon", serif;
-  overflow-x: hidden /* Não permite rolagem lateral */
+  font-family: "Kavoon", arial;
+  overflow-x: hidden /* Não permite rolagem lateral 
 }
 
-/* CSS - Index */
+ /* CSS - Index  */ /*
 
 .div-header-index {
   color: white;
@@ -27,7 +27,7 @@ body {
 }
 
 .div-container-navbar-index .div-navbar {
-  padding-left: 30.5%;
+  padding-left: 28.5%;
 }
 
 .div-logo-navbar a {
@@ -39,7 +39,7 @@ body {
 .div-navbar {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 11%;
 }
 
 .div-navbar a {
@@ -94,7 +94,7 @@ body {
   border-width: 150px;
 }
 
-/* CSS - Poder */
+ /* CSS - Poder  
 
 .div-header-poder {
   color: white;
@@ -125,7 +125,7 @@ body {
 .div-navbar {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 11%;
 }
 
 .div-navbar a {
@@ -261,7 +261,7 @@ body {
   padding-right: 21%;
 }
 
-/* Personagens */
+ /* Personagens  
 
 .div-header-personagens {
   color: white;
@@ -287,7 +287,7 @@ body {
 .div-navbar {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 11%;
 }
 
 .div-navbar a {
@@ -353,212 +353,19 @@ body {
   height: 40px;
   background-color: #1e1e1e;
 }
+*/
 
-/* LOGIN */
+/* PC  */
 
-.div-header-login {
-  color: white;
-}
-
-.div-container-navbar-login {
-  display: flex;
-  align-items: center;
-  padding: 10px 5%;
-  background-color: #0c0c0c;
-}
-
-.div-container-navbar-login .div-navbar {
-  padding-left: 21.5%;
-}
-
-.div-logo-navbar a {
-  font-size: 32px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.div-navbar {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.div-navbar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-/* .login {
-
-} */
-
-.login .container {
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.card {
-  width: 50%;
-  background-color: #e5e5e5;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  color: palevioletred;
-  flex-direction: column;
-  height: fit-content;
-  padding: 20px 25%;
-}
-
-.card h2 {
-  margin: 0;
-  font-size: 30px;
-}
-
-.formulario {
-  display: flex;
-  height: 90%;
-  width: 80%;
-  justify-content: space-around;
-  flex-direction: column;
-}
-
-.formulario span {
-  font-size: 15px;
-  font-weight: 800;
-}
-
-.formulario input {
-  border: 2px solid #32b9cd;
-  text-align: center;
-  border-radius: 10px;
-  margin: 0;
-}
-
-.formulario select {
-  border: 2px solid #32b9cd;
-  background-color: white;
-  color: gray;
-  height: 36px;
-  text-align: center;
-  border-radius: 10px;
-  margin: 0;
-}
-
-.campo {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  padding: 5px 0;
-}
-
-.botao {
-  cursor: pointer;
-  border: 0;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 18px;
-  color: #fff;
-  background-color: #ED145B;
-  width: 120px;
-  height: 30px;
-  align-self: center;
-  margin-top: 20px;
-}
-
-.loading-div {
-  width: 50px;
-  display: none;
-}
-
-.loading-div img {
-  height: 50px;
-  width: 50px;
-}
-
-#div_erros_login {
-  display: none
-}
-
-/* FORMULARIO */
-
-.alerta_erro{
-  display: flex;
-  justify-content: flex-end;
-}
-
-.card_erro {
-  display: none;
-  background-color: #fff;
-  color: black;
-  width: 230px;
-  position: fixed;
-  border-radius: 4px;
-  border: #ED145B 3px solid;
-  padding: 10px;
-  margin-right: 10%;
-}
-
-.card_erro #mensagem_erro{
-  font-weight: 500;
-  font-size: 20px;
-}
-
-.formulario .tipo_campo {
-  font-size: 20px;
-  font-weight: 600 !important;
-}
-
-.formulario {
-  display: flex;
-  flex-direction: column;
-}
-
-.formulario input {
-  margin-bottom: 10px;
-  border: 2px solid #32b9cd;
-  padding: 10px;
-  text-align: center;
-  border-radius: 10px;
-}
-
-.btn {
-  border: 0;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 15px;
-  color: white;
-  background-color: #ED145B;
-  width: 120px;
-  align-self: center;
-  margin-top: 5px;
-}
-
-.loading-div {
-  width: 50px;
-  margin: auto;
-  display: none;
-}
-
-.loading-div img {
-  height: 50px;
-  width: 50px;
-}
-
-/* PC */
-
-/*
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Kavoon", serif;
+  font-family: "Kavoon", arial;
+  overflow-x: hidden /* Não permite rolagem lateral */
 }
 
-/* CSS - Index 
+ /* CSS - Index  */
 
 .div-header-index {
   color: white;
@@ -577,7 +384,7 @@ body {
 }
 
 .div-container-navbar-index .div-navbar {
-  padding-left: 30.5%;
+  padding-left: 30%;
 }
 
 .div-logo-navbar a {
@@ -589,7 +396,7 @@ body {
 .div-navbar {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 11%;
 }
 
 .div-navbar a {
@@ -644,7 +451,7 @@ body {
   border-width: 150px;
 }
 
-/* CSS - Poder
+ /* CSS - Poder */
 
 .div-header-poder {
   color: white;
@@ -652,7 +459,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 680px;
+  height: 77vh;
 }
 
 .div-container-navbar-poder {
@@ -663,7 +470,7 @@ body {
 }
 
 .div-container-navbar-poder .div-navbar {
-  padding-left: 30.5%;
+  padding-left: 30%;
 }
 
 .div-logo-navbar a {
@@ -675,7 +482,7 @@ body {
 .div-navbar {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 11%;
 }
 
 .div-navbar a {
@@ -685,7 +492,7 @@ body {
 }
 
 .div-imagem-nav-poder {
-  margin-top: 10.9%;
+  margin-top: 14.5%;
   margin-left: -2%;            
   width: 40%; 
   position: absolute;
@@ -736,7 +543,7 @@ body {
 
 .div-fundo-poder {
   background-color: #000000;
-  height: 2800px;
+  min-height: 301vh;
   position: absolute;
 }
 
@@ -755,11 +562,12 @@ body {
 .div-traco-meio-poder {
   background-color: white;
   width: 10px;
-  height: 2550px;
+  height: 275vh;
   position: absolute;
   display: flex;
   margin-top: 45px;
-  margin-left: 950px;
+  margin-left: 50.95%;
+  border-radius: 5px;
 }
 
 .div-circulo-meio-poder {
@@ -767,7 +575,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  margin-left: 930px;
+  margin-left: 49.9%;
 }
 .div-body-poder .img8-poder {
   height: 480px;
@@ -810,7 +618,7 @@ body {
   padding-right: 25%;
 }
 
-/* Personagens 
+ /* Personagens  */
 
 .div-header-personagens {
   color: white;
@@ -824,7 +632,7 @@ body {
 }
 
 .div-container-navbar-personagens .div-navbar {
-  padding-left: 30.5%;
+  padding-left: 30%;
 }
 
 .div-logo-navbar a {
@@ -836,7 +644,7 @@ body {
 .div-navbar {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 11%;
 }
 
 .div-navbar a {
@@ -858,16 +666,16 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 866px;
+  height: 94vh;
 }
 
 .div-novo-personagem {
-  height: 40px;
+  height: 4.8%;
   border-radius: 5px;
   position: absolute;
   font-size: 15px;
   font-family: "Kavoon";
-  right: 15%;
+  right: 18%;
   top: 15%;
   color: #ffffff;
   background-color: #41210A;
@@ -875,7 +683,12 @@ body {
 }
 
 .div-box-personagens {
-  padding: 150px 350px;
+  padding: 9% 20.8%;
+}
+
+.div-box-personagens .div-pesquisa-personagem {
+  color: white;
+  padding-left: 25%;
 }
 
 .div-box-personagens span {
@@ -885,7 +698,7 @@ body {
 .div-lupa-personagens img {
   position: absolute;
   width: 3%;
-  padding: 0.7% 0;
+  padding: 0.9% 0;
 }
 
 .div-pesquisa-personagem {
@@ -893,7 +706,1355 @@ body {
   border-style: none;
   font-size: 20px;
   margin-top: 20px;
-  width: 502%;
-  height: 40px;
+  width: 438%;
+  height: 8%;
   background-color: #1e1e1e;
-} /*
+} 
+
+
+/* .login {
+
+} */
+
+.div-header-login {
+  color: white;
+}
+
+.div-container-navbar-login {
+  display: flex;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #0c0c0c;
+}
+
+.div-container-navbar-login .div-navbar {
+  padding-left: 30%;
+}
+
+.div-logo-navbar a {
+  font-size: 32px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.div-navbar {
+  display: flex;
+  align-items: center;
+  gap: 11%;
+}
+
+.div-navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.container-login{
+  display: flex;
+  width: 45%;
+  margin: 0 auto;
+  height: auto;
+  background-color: #0c0c0cc9;
+  color: white;
+  max-width: auto;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+  
+.fundo-login {
+  background-image: url('../assets/fundo_login2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 94.4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-direita a {
+  text-decoration: none;
+  outline: none;
+  color: white;
+}
+
+.registrar-login {
+  color: white;
+  text-decoration: none;
+}
+
+#imagem-esquerda{
+  width: 50%;
+}
+  
+#imagem-esquerda img{
+  width: 100%;
+  height: 50%;
+  border-radius: 2%;
+}
+
+#login-direita{
+  width: 45%;
+  margin-right: 20px;
+}
+
+#login-direita input{
+  padding: 10px;
+  width: 90%;
+  border-radius: 20px;
+  border-color: transparent;
+}
+
+#login-direita input:focus{
+  outline: none;
+}
+
+#login-direita button{
+  padding: 10px;
+  width: 95%;
+  background-color: #41662c;
+  color: white;
+  border-radius: 20px;
+  border-color: transparent;
+}
+
+/* Cadastro */
+
+.div-header-login {
+  color: white;
+}
+
+.div-container-navbar-login {
+  display: flex;
+  align-items: center;
+  padding: 0.7% 5%;
+  background-color: #0c0c0c;
+}
+
+.div-container-navbar-login .div-navbar {
+  padding-left: 28.5%;
+}
+
+.div-logo-navbar a {
+  font-size: 32px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.div-navbar {
+  display: flex;
+  align-items: center;
+  gap: 11%;
+}
+
+.div-navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.container-cadastro{
+  display: flex;
+  width: 45%;
+  padding: 2%;
+  margin: 0 auto;
+  height: auto;
+  background-color: #0c0c0cc9;
+  color: white;
+  max-width: auto;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  font-size: 15px;
+}
+  
+.fundo-cadastro {
+  background-image: url('../assets/fundo_cadastro1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 94.4vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registrar-cadastro {
+  color: white;
+  text-decoration: none;
+}
+
+#imagem-esquerda{
+  width: 50%;
+}
+  
+#imagem-esquerda img{
+  width: 100%;
+  height: 50%;
+  border-radius: 2%;
+}
+
+#cadastro-direita{
+  width: 45%;
+  margin-right: 20px;
+}
+
+#cadastro-direita input{
+  padding: 2.5%;
+  width: 90%;
+  border-radius: 20px;
+  border-color: transparent;
+}
+
+#cadastro-direita input:focus{
+  outline: none;
+}
+
+#cadastro-direita button{
+  padding: 10px;
+  width: 95%;
+  background-color: #007bff40;
+  color: white;
+  border-radius: 20px;
+  border-color: transparent;
+}
+
+/* Campanha */
+
+.div-header-campanhas {
+  color: white;
+}
+
+.div-container-navbar-campanhas {
+  display: flex;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #0c0c0c;
+}
+
+.div-container-navbar-campanhas .div-navbar {
+  padding-left: 30%;
+}
+
+.div-logo-navbar a {
+  font-size: 32px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.div-navbar {
+  display: flex;
+  align-items: center;
+  gap: 11%;
+}
+
+.div-navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.div-traco-campanhas {
+  background-color: #ffffff;
+  width: 100%;
+  height: 5px;
+}
+
+.div-container-body-campanhas {
+  display: flex;
+  color: white;
+  background-color: #121212;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 94vh;
+}
+
+.div-novo-campanhas {
+  height: 4.8%;
+  border-radius: 5px;
+  position: absolute;
+  font-size: 15px;
+  font-family: "Kavoon";
+  right: 18%;
+  top: 15%;
+  color: #ffffff;
+  background-color: #41210A;
+  border-style: none;
+}
+
+.div-box-campanhas {
+  padding: 9% 20.8%;
+}
+
+.div-box-campanhas .div-pesquisa-campanhas {
+  color: white;
+  padding-left: 25%;
+}
+
+.div-box-campanhas span {
+  font-size: 20px;
+}
+
+.div-lupa-campanhas img {
+  position: absolute;
+  width: 3%;
+  padding: 0.9% 0;
+}
+
+.div-pesquisa-campanhas {
+  border-radius: 5px;
+  border-style: none;
+  font-size: 20px;
+  margin-top: 20px;
+  width: 438%;
+  height: 8%;
+  background-color: #1e1e1e;
+} 
+
+/* Cria Personagem - Atributo */
+
+.div-header-atributos {
+  color: white;
+}
+
+.div-container-navbar-atributos {
+  display: flex;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #0c0c0c;
+}
+
+.div-container-navbar-atributos .div-navbar {
+  padding-left: 30%;
+}
+
+.div-logo-navbar a {
+  font-size: 32px;
+  text-decoration: none;
+}
+
+.div-navbar {
+  display: flex;
+  align-items: center;
+  gap: 11%;
+}
+
+.div-navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.div-traco-atributos {
+  background-color: #ffffff;
+  width: 100%;
+  height: 5px;
+}
+
+.div-container-body-atributos {
+  display: block;
+  color: white;
+  background-color: #121212;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 94vh;
+}
+
+.div-botoes-atributos {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 31.5%;
+  padding-top: 5%;
+  padding-left: 37.5%;
+  white-space: nowrap;
+}
+
+.div-botoes-atributos button {
+  color: white;
+  font-weight: bold;
+  border: none;
+  background: none;
+  font-size: 24px;
+}
+
+.div-traco-atributos-separando {
+  width: 50px;
+  height: 2px;
+  margin: 2.5% 0;
+  background-color: white;
+}
+
+.div-box-atributos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 4%;
+}
+
+.div-texto-esquerda-atributos {
+  font-size: 16px;
+  font-family: Arial;
+  margin-top: 5%;
+  padding-left: 19%;
+  padding-right: 50%;
+}
+
+.div-atributos-direita {
+  position: relative;
+}
+
+#img-atributos {
+  position: absolute;
+  width: 120%;
+  height: 240%;
+  left: 70%;
+}
+
+.div-atributos-direita {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  top: 25%;
+  left: 42%;
+}
+
+.div-atributos-direita input {
+  width: 12%;
+  color: white;
+  height: 50%;
+  font-size: 42px;
+  text-align: center;
+  background-color: transparent;
+  border-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+}
+
+#inp_agilidade_atributo {
+  position: absolute;
+  left: 122%;
+  bottom: 27%;
+}
+
+#inp_forca_atributo {
+  position: absolute;
+  left: 89%;
+  top: 65%;
+}
+
+#inp_intelecto_atributo {
+  position: absolute;
+  left: 155.5%;
+  top: 65%;
+}
+
+#inp_vigor_atributo {
+  position: absolute;
+  left: 145.8%;
+  top: 146%;
+}
+
+#inp_presenca_atributo {
+  position: absolute;
+  left: 98.6%;
+  top: 146%;
+}
+
+/* Cria Personagem - Classe */
+
+.div-header-classes {
+  color: white;
+}
+
+.div-container-navbar-classes {
+  display: flex;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #0c0c0c;
+}
+
+.div-container-navbar-classes .div-navbar {
+  padding-left: 30%;
+}
+
+.div-logo-navbar a {
+  font-size: 32px;
+  text-decoration: none;
+}
+
+.div-navbar {
+  display: flex;
+  align-items: center;
+  gap: 11%;
+}
+
+.div-navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.div-traco-classes {
+  background-color: #ffffff;
+  width: 100%;
+  height: 5px;
+}
+
+.div-container-body-classes {
+  display: block;
+  color: white;
+  background-color: #121212;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.div-botoes-classes {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 31.5%;
+  padding-top: 5%;
+  padding-left: 37.5%;
+  white-space: nowrap;
+}
+
+.div-botoes-classes button {
+  color: white;
+  font-weight: bold;
+  border: none;
+  background: none;
+  font-size: 24px;
+}
+
+.div-traco-classes-separando {
+  width: 50px;
+  height: 2px;
+  margin: 2.5% 0;
+  background-color: white;
+}
+
+.div-classes {
+  font-family: "Kavoon", arial;
+}
+
+.div-mundano p {
+  padding: 2% 27%;
+  white-space: nowrap;
+}
+
+.div-classes button{
+  background: none;
+  background-color: #41210A;
+  color: white;
+  border: 5px, solid;
+  border-radius: 10px;
+  border-color: transparent;
+  font-size: 16px;
+  font-family: "Kavoon", arial;
+  margin-left: 1%;
+}
+
+.boxPai-classes {
+  display: flex;
+  flex-direction: column;
+  gap: 30%;
+  padding: 0 10%;
+}
+
+.box1-classes-cima {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0%;
+  gap: 2%;
+}
+
+.box1-classes-baixo {
+  display: flex;
+  margin-top: 5%;
+  justify-content: space-between;
+  padding: 0 0%;
+  gap: 2%;
+}
+
+.div-traco-classes-box {
+  width: 93%;
+  margin-top: -5%;
+  margin-left: 3%;
+  height: 3px;
+  background-color: #41210A;
+}
+
+.div-mensagem-classes {
+  text-align: justify;
+}
+
+.box1-classes {
+  font-family: arial;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 50%;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+}
+
+.box1-classes h2, p {
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  line-height: 150%;
+}
+
+.box1-classes h2 {
+  font-size: 32px;
+}
+
+.box1-classes p {
+  font-size: 16px;
+}
+
+.box1-classes button {
+  margin-left: 22%;
+  margin-bottom: 5%;
+  width: 50%;
+}
+
+.box2-classes {
+  font-family: arial;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 50%;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+}
+
+.box2-classes h2, p {
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  line-height: 150%;
+}
+
+.box2-classes h2 {
+  font-size: 32px;
+}
+
+.box2-classes p {
+  font-size: 16px;
+}
+
+.box2-classes button {
+  margin-left: 22%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 50%;
+}
+
+.box3-classes {
+  font-family: arial;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 50%;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+}
+
+.box3-classes h2, p {
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  line-height: 150%;
+}
+
+.box3-classes h2 {
+  font-size: 32px;
+}
+
+.box3-classes p {
+  font-size: 16px;
+}
+
+.box3-classes button {
+  margin-left: 22%;
+  margin-bottom: 5%;
+  margin-top: 10%;
+  width: 50%;
+}
+
+.box4-classes {
+  font-family: arial;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 50%;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+}
+
+.box4-classes h2, p {
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  line-height: 150%;
+}
+
+.box4-classes h2 {
+  font-size: 32px;
+}
+
+.box4-classes p {
+  font-size: 16px;
+}
+
+.box4-classes button {
+  margin-left: 22%;
+  margin-bottom: 5%;
+  margin-top: 10%;
+  width: 50%;
+}
+
+.box5-classes {
+  font-family: arial;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 50%;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+}
+
+.box5-classes h2, p {
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  line-height: 150%;
+}
+
+.box5-classes h2 {
+  font-size: 32px;
+}
+
+.box5-classes p {
+  font-size: 16px;
+}
+
+.box5-classes button {
+  margin-left: 22%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  width: 50%;
+}
+
+.box6-classes {
+  font-family: arial;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  width: 50%;
+  border-radius: 5px;
+  background-color: #1e1e1e;
+}
+
+.box6-classes h2, p {
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  line-height: 150%;
+}
+
+.box6-classes h2 {
+  font-size: 32px;
+}
+
+.box6-classes p {
+  font-size: 16px;
+}
+
+.box6-classes button {
+  margin-left: 22%;
+  margin-bottom: 5%;
+  width: 50%;
+}
+
+/* Cria Personagem - Caracteristicas */
+
+.div-header-caracteristicas {
+  color: white;
+}
+
+.div-container-navbar-caracteristicas {
+  display: flex;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #0c0c0c;
+}
+
+.div-container-navbar-caracteristicas .div-navbar {
+  padding-left: 30%;
+}
+
+.div-logo-navbar a {
+  font-size: 32px;
+  text-decoration: none;
+}
+
+.div-navbar {
+  display: flex;
+  align-items: center;
+  gap: 11%;
+}
+
+.div-navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.div-traco-caracteristicas {
+  background-color: #ffffff;
+  width: 100%;
+  height: 5px;
+}
+
+.div-container-body-caracteristicas {
+  display: block;
+  color: white;
+  background-color: #121212;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 150vh;
+}
+
+.div-botoes-caracteristicas {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 0 31.5%;
+  padding-top: 5%;
+  padding-left: 37.5%;
+  white-space: nowrap;
+}
+
+.div-botoes-caracteristicas button {
+  color: white;
+  font-weight: bold;
+  border: none;
+  background: none;
+  font-size: 24px;
+}
+
+.div-traco-caracteristicas-separando {
+  width: 50px;
+  height: 2px;
+  margin: 2.5% 0;
+  background-color: white;
+}
+
+.div-caracteristicas {
+  font-family: "Kavoon", arial;
+}
+
+.div-caracteristicas-inicio p {
+  padding: 2% 22%;
+  padding-bottom: 1%;
+  white-space: nowrap;
+}
+
+.div-caracteristicas button{
+  background: none;
+  background-color: #41210A;
+  color: white;
+  border: 5px, solid;
+  border-radius: 10px;
+  border-color: transparent;
+  font-size: 16px;
+  font-family: "Kavoon", arial;
+  margin-left: 72%;
+  margin-bottom: 2%;
+}
+
+.div-box-caracteristicas {
+  padding: 0 27%;
+}
+
+#nome-espaco-caracteristicas {
+  margin-right: 29%;
+}
+
+.div-box-caracteristicas span {
+  font-size: 18px;
+}
+
+.div-box-caracteristicas input {
+  font-size: 18px;
+  color: white;
+  background-color: #1e1e1e;
+  border-style: none;
+  border-color: white;
+  height: 150px;
+  width: 108%;
+  margin-top: 1.5%;
+  line-height: normal;
+  padding: 5px 10px;
+}
+
+#inp_nome {
+  margin-right: 7%;
+  height: 35px;
+  width: 25.5%
+}
+
+#inp_jogador  {
+  margin-right: 7%;
+  height: 35px;
+  width: 25.5%
+}
+
+/* Ficha */
+
+.div-header-ficha {
+  color: white;
+}
+
+.div-container-navbar-ficha {
+  display: flex;
+  align-items: center;
+  padding: 10px 5%;
+  background-color: #0c0c0c;
+}
+
+.div-container-navbar-ficha .div-navbar {
+  padding-left: 30%;
+}
+
+.div-logo-navbar a {
+  font-size: 32px;
+  text-decoration: none;
+}
+
+.div-navbar {
+  display: flex;
+  align-items: center;
+  gap: 11%;
+}
+
+.div-navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.div-traco-ficha {
+  background-color: #ffffff;
+  width: 100%;
+  height: 5px;
+}
+
+.div-container-body-ficha {
+  display: block;
+  color: white;
+  background-color: #121212;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 94vh;
+}
+
+.box-personagem-ficha {
+  display: flex;
+  font-family: arial;
+  padding: 2% 20%;
+}
+
+.box-personagem-ficha img {
+  width: 5.5%;
+  margin-right: 2%;
+}
+
+.box-personagem-ficha h3 {
+  font-size: 14px;
+  color: #ffffff;
+  margin-right: 1.5%;
+  margin-top: 1.5%;
+}
+
+.box-personagem-ficha input {
+  font-size: 16px;
+}
+
+.input-personagem {
+  background-color: transparent;
+  border-color: transparent;
+  color: white;
+  border-style: none;
+  width: 10%;
+  height: 5%;
+  margin-right: 1.5%;
+  margin-top: 1.5%;
+  border: none; 
+  outline: none; 
+  border-bottom: 1px solid white;
+}
+
+.div-box-atributos-ficha {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 4%;
+}
+
+#img-atributos-ficha {
+  position: absolute;
+  width: 90%;
+  height: 180%;
+  right: 115%;
+  top: -30%;
+  pointer-events: none;
+}
+
+.div-atributos-ficha {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  top: 25%;
+  left: 42%;
+}
+
+.div-atributos-ficha input {
+  width: 8%;
+  color: white;
+  height: 20%;
+  font-size: 32px;
+  text-align: center;
+  background-color: transparent;
+  border-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#inp_agilidade_ficha {
+  position: absolute;
+  right: 155.6%;
+  bottom: 83%;
+}
+
+#inp_forca_ficha {
+  position: absolute;
+  right: 180.2%;
+  bottom: 50%;
+}
+
+#inp_intelecto_ficha {
+  position: absolute;
+  right: 130.2%;
+  bottom: 50%;
+}
+
+#inp_vigor_ficha {
+  position: absolute;
+  right: 137.6%;
+  top: 87%;
+}
+
+#inp_presenca_ficha {
+  position: absolute;
+  right: 173.6%;
+  top: 87%;
+}
+
+.span-nivel {
+  margin-right: 0.5%;
+  margin-top: 0.5%;
+}
+
+#select_nivel {
+  font-size: 16px;
+  text-align: center;
+  width: 3.5%;
+  height: 25px;
+  appearance: none;
+  margin-right: 2%;
+  margin-top: 0.2%;
+}
+
+#inp_classe {
+  font-size: 14px;
+  margin-top: 0.2%;
+}
+
+.box-personagem-ficha-tecnica {
+  display: flex;
+  font-family: arial;
+  margin-top: 13%;
+  margin-left: 22%;
+  position: relative;
+  
+}
+
+.box-personagem-ficha-tecnica h3 {
+  font-size: 16px;
+  color: #ffffff;
+  margin-right: 0.8%;
+  margin-top: 0.3%;
+}
+
+.box-personagem-ficha-pericias h1 {
+  margin-left: 8%;
+}
+
+.area1 {
+  background-color: transparent;
+  border-color: transparent;
+  color: white;
+  border-style: none;
+  width: 7%;
+  height: 20px;
+  margin-top: 0.3%;
+  border: none; 
+  outline: none; 
+  border-bottom: 1px solid white;
+  position: relative;
+}
+
+.div-status-ficha {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4%;
+  margin-left: -15%;
+  
+}
+
+.div-status-ficha h2 {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 2%;
+  margin-left: -40%;
+}
+
+.div-status-ficha input {
+  color: #ffffff;
+  font-size: 18px;
+  width: 150%;
+  height: 35px;
+  margin-left: -45%;
+  border-color: #ffffff99;
+  border-width: 1px;
+  text-align: center;
+}
+
+
+.box-personagem-ficha-pericias {
+  padding-left: 45%;
+  margin-top: -34.5%;
+  font-size: 9px;
+}
+
+.div-pericias-ficha {
+  display: flex;
+  width: 100%;
+}
+
+.coluna-pericias {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.box-pericia-linha {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.box-pericia-linha span {
+  font-size: 16px;
+  min-width: 120px;
+}
+
+.inp-pericia-valor {
+    width: 40px;
+    text-align: center;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    color: white;
+    outline: none;
+  }
+
+  .inp-pericia-bonus {
+  appearance: none;
+  width: 60px;
+  height: 25px;
+  text-align: center;
+  background-color: #121212;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  outline: none;
+}
+
+.select-pericia {
+  appearance: none;
+  width: 60px;
+  height: 25px;
+  text-align: center;
+  background-color: #121212;
+  border: none;
+  border-bottom: 1px solid white;
+  color: white;
+  outline: none;
+  position: relative;
+}
+
+.box-caracteristicas-abas {
+  position: absolute;
+  top: 22%;
+  right: 13%;
+  width: 23%;
+  color: white;
+  font-family: Arial;
+}
+
+.box-botoes-ficha {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.box-botoes-ficha button {
+  padding: 6px 10px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.box-botoes-ficha .ativo {
+  background: white;
+  color: black;
+}
+
+.box-abas-caracteristicas {
+  display: none;
+  padding: 10px;
+  border: 1px solid white;
+  min-height: 60vh;
+}
+  
+.box-abas-caracteristicas input {
+  background-color: #1e1e1e;
+  border-color: transparent;
+  height: 100px;
+  width: 95%;
+}
+
+.div-barra-vida {
+  background-color: red;
+  width: 260%;
+  height: 4vh;
+  margin-left: -75%;
+}
+
+.div-barra-vida .input-vida-ficha {
+  position: absolute ;
+  height: 32px;
+  width: 4%;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.div-barra-vida span {
+  font-size: 29px;
+  padding-left: 48%;
+}
+
+.input-esquerda-vida {
+  left: 52%;
+}
+
+.input-direita-vida {
+  left: 54.5%;
+  text-align: left;
+}
+
+.div-barra-sanidade {
+  background-color: rgb(109, 19, 212);
+  width: 260%;
+  height: 4vh;
+  margin-left: -75%;
+}
+
+.div-barra-sanidade .input-sanidade-ficha {
+  position: absolute ;
+  height: 32px;
+  width: 4%;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.div-barra-sanidade span {
+  font-size: 29px;
+  padding-left: 48%;
+}
+
+.input-esquerda-sanidade {
+  left: 52%;
+}
+
+.input-direita-sanidade {
+  left: 54.5%;
+  text-align: left;
+}
+
+.div-barra-nen {
+  background-color: #0f3f8d;
+  width: 260%;
+  height: 4vh;
+  margin-left: -75%;
+}
+
+.div-barra-nen .input-nen-ficha {
+  position: absolute ;
+  height: 32px;
+  width: 4%;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.div-barra-nen span {
+  font-size: 29px;
+  padding-left: 48%;
+}
+
+.input-esquerda-nen {
+  left: 52%;
+}
+
+.input-direita-nen {
+  left: 54.5%;
+  text-align: left;
+}

@@ -3,23 +3,16 @@ use owlfall;
 create table usuario (
 	idUsuario int primary key auto_increment,
 	nome varchar(80) not null,
-	apelido varchar(45),
-	dtNasc date not null,
 	email varchar(80) not null unique,
 	senha varchar(45) not null
 );
 
 create table ficha (
-	idFicha int auto_increment,
-	fkUsuario int,
-	fkAtributo int,
-	fkNen int,
-	fkClasse int,
-	fkArma int,
-	fkHabilidade int,
-	fkPericia int,
-	nome varchar(80),
-	nivel int,
+	idFicha int not null,
+	fkUsuario int not null,
+	nome varchar(80) not null,
+	nivel int not null,
+	imagem blob,
 	vdAtual int,
 	vdMax int,
 	sanAtual int,
@@ -33,28 +26,31 @@ create table ficha (
 );
 
 create table caracteristicas (
-	idCampanha int,
-    idFicha int,
+	idCaracteristicas int not null,
+    fkFicha int not null,
     nome varchar(80),
 	tipo varchar(255),
-	descricao varchar(255)
+	descricao varchar(255),
+	Primary key (fkFicha, idCaracteristicas),
+	Constraint fkFicha
+		Foreign key (fkFicha)
+		References ficha(idFicha)
 );
 
 create table campanha (
 	idCampanha int primary key auto_increment,
-	nome varchar(80),
+	nome varchar(80) not null,
 	descricao varchar(255)
 );
 
 create table fichaCampanha (
-	fkFicha int,
-	fkCampanha int,
-	Primary key (fkFicha, fkCampanha),
-	Constraint fkFicha
-		Foreign key (fkFicha)
-		References ficha (idFicha),
+	fkFichaCampanha int not null,
+	fkCampanha int not null,
+	Primary key (fkFichaCampanha, fkCampanha),
+	Constraint fkFichaCampanha
+		Foreign key (fkFichaCampanha)
+		References ficha(idFicha),
 	Constraint fkCampanha
 		Foreign key (fkCampanha)
 		References campanha(idCampanha)
 );
-
