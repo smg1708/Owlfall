@@ -37,7 +37,7 @@ var criandoModel = require("../models/criandoModel");
 
 // }
 
-function finalizar(req, res) {
+function criarFicha(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var dados = req.body.dadosPersonagemServer;
 
@@ -47,7 +47,7 @@ function finalizar(req, res) {
     } else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        criandoModel.finalizar(dados)
+        criandoModel.criarFicha(dados)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -66,5 +66,5 @@ function finalizar(req, res) {
 }
 
 module.exports = {
-    finalizar
+    criarFicha
 }

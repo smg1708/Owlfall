@@ -214,7 +214,7 @@
                         Agora, vamos trabalhar na descrição de seu personagem, definindo aspectos como nome, gênero e idade. Esses aspectos não <br> 
                         possuem efeito em regras, mas deixam o jogo mais envolvente e divertido.
                     </p>
-                    <button onclick="finalizar()">Finalizar</button>
+                    <button onclick="criarFicha()">Finalizar</button>
                 </div>
 
                 <div class="div-box-caracteristicas">
@@ -366,7 +366,16 @@
 
     }
     
-    function finalizar() {
+    function criarFicha() {
+
+        if (classe == "") {
+            classe.push('mundano')
+            statusMax =  {
+                'vida': 150,
+                'sanidade': 8,
+                'nen': 0
+            }
+        }
 
         var nome = inp_nome.value
         var jogador = inp_jogador.value
@@ -397,7 +406,7 @@
             'objetivo': objetivo
         })
 
-      fetch("/ficha/cadastrar", {
+      fetch("/criando/criarFicha", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -4,8 +4,8 @@ var router = express.Router();
 var criandoController = require("../controllers/criandoController");
 
 //Recebendo os dados do html e direcionando para a função cadastrar de usuarioController.js
-router.post("/cadastrar", function (req, res) {
-    criandoController.finalizar(req, res);
+router.post("/criarFicha", function (req, res) {
+    criandoController.criarFicha(req, res);
 })
 
 // router.post("/autenticar", function (req, res) {

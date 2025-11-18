@@ -10,7 +10,7 @@ var database = require("../database/config")
 // }
 
 // Coloque os mesmos parâmetros aqui. Vá para a var instrucaoSql
-function finalizar(dados) {
+function criarFicha(dados) {
     // console.log("ACESSEI OS DADOS MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha);
     
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
@@ -22,28 +22,30 @@ function finalizar(dados) {
     `;
     
     console.log("Executando a instrução SQL: \n" + sqlFicha);
-    return database.executar(sqlFicha).then(resultado => {
-        var idFicha = resultado.insertId;
-        // console.log("ACESSEI OS DADOS MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha);
+    return database.executar(sqlFicha)
+        .then(resultado => {
+            var idFicha = resultado.insertId;
+            // console.log("ACESSEI OS DADOS MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha);
 
 
-        var sqlCarac = `
-            INSERT INTO caracteristicas (fkFicha, nome, tipo, descricao) VALUES (${idFicha}, 'classe', 'texto', "${dados[0].classe}");
-            INSERT INTO caracteristicas (fkFicha, nome, tipo, descricao) VALUES (${idFicha}, 'aparencia', 'texto', "${dados[0].aparencia}");
-            INSERT INTO caracteristicas (fkFicha, nome, tipo, descricao) VALUES (${idFicha}, 'personalidade', 'texto', "${dados[0].personalidade}");
-            INSERT INTO caracteristicas (fkFicha, nome, tipo, descricao) VALUES (${idFicha}, 'descricao', 'texto', "${dados[0].descricao}");
-            INSERT INTO caracteristicas (fkFicha, nome, tipo, descricao) VALUES (${idFicha}, 'objetivo', 'texto', "${dados[0].objetivo}");
-            INSERT INTO caracteristicas (fkFicha, nome, tipo, descricao) VALUES (${idFicha}, 'agilidade', 'atributo', "${dados[0].atributos[0]}");
-            INSERT INTO caracteristicas (fkFicha, nome, tipo, descricao) VALUES (${idFicha}, 'forca', 'atributo', "${dados[0].atributos[1]}");
-            INSERT INTO caracteristicas (fkFicha, nome, tipo, descricao) VALUES (${idFicha}, 'intelecto', 'atributo', "${dados[0].atributos[2]}");
-            INSERT INTO caracteristicas (fkFicha, nome, tipo, descricao) VALUES (${idFicha}, 'presenca', 'atributo', "${dados[0].atributos[3]}");
-            INSERT INTO caracteristicas (fkFicha, nome, tipo, descricao) VALUES (${idFicha}, 'vigor', 'atributo', "${dados[0].atributos[4]}");
-        `;
-        console.log("Executando a instrução SQL: \n" + sqlCarac);
-        return database.executar(sqlCarac);
-    });
+            var sqlCarac = `
+                INSERT INTO caracteristicas (fkFicha, nome, tipo, descricao) VALUES 
+                ('${idFicha}', 'classe', 'classe', "${dados[0].classe}"),
+                ('${idFicha}', 'aparencia', 'texto', "${dados[0].aparencia}"),
+                ('${idFicha}', 'personalidade', 'texto', "${dados[0].personalidade}"),
+                ('${idFicha}', 'descricao', 'texto', "${dados[0].descricao}"),
+                ('${idFicha}', 'objetivo', 'texto', "${dados[0].objetivo}"),
+                ('${idFicha}', 'agilidade', 'atributo', "${dados[0].atributos[0]}"),
+                ('${idFicha}', 'forca', 'atributo', "${dados[0].atributos[1]}"),
+                ('${idFicha}', 'intelecto', 'atributo', "${dados[0].atributos[2]}"),
+                ('${idFicha}', 'presenca', 'atributo', "${dados[0].atributos[3]}"),
+                ('${idFicha}', 'vigor', 'atributo', "${dados[0].atributos[4]}");
+            `;
+            console.log("Executando a instrução SQL: \n" + sqlCarac);
+            return database.executar(sqlCarac);
+        });
 }
 
 module.exports = {
-    finalizar
+    criarFicha
 };
