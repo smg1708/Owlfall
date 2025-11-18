@@ -18,7 +18,7 @@ create table usuario (
 );
 
 create table ficha (
-	idFicha int not null,
+	idFicha int primary key auto_increment,
 	fkUsuario int not null,
 	nome varchar(80) not null,
 	nivel int not null,
@@ -29,19 +29,17 @@ create table ficha (
 	sanMax int,
 	nenAtual int,
 	nenMax int,
-	Primary key (idFicha, fkUsuario),
 	Constraint fkUsuario
 		Foreign key (fkUsuario)
 		References usuario(idUsuario)
 );
 
 create table caracteristicas (
-	idCaracteristicas int not null,
+	idCaracteristicas int primary key auto_increment not null,
     fkFicha int not null,
     nome varchar(80),
 	tipo varchar(255),
 	descricao varchar(255),
-	Primary key (fkFicha, idCaracteristicas),
 	Constraint fkFicha
 		Foreign key (fkFicha)
 		References ficha(idFicha)

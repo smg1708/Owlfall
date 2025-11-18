@@ -224,16 +224,16 @@
                     <input type="text" id="inp_jogador" placeholder="Nome do jogador"> <br> <br>
 
                     <span>Aparência</span> <br>
-                    <input type="text" id="inp_aparencia"> <br> <br>
+                    <textarea type="text" id="inp_aparencia" placeholder="Nome, gênero, idade, descrição fisica..."></textarea> <br> <br>
 
                     <span>Personalidade</span> <br>
-                    <input type="text" id="inp_personalidade"> <br> <br>
+                    <textarea type="text" id="inp_personalidade" placeholder="Traços marcantes, opinões, ideias..."></textarea> <br> <br>
 
                     <span>Histórico</span> <br>
-                    <input type="text" id="inp_descricao"> <br> <br>
+                    <textarea type="text" id="inp_descricao" placeholder="Infancia, relação com a familia, eventos bons e ruins..."></textarea> <br> <br>
 
                     <span>Objetivo</span> <br>
-                    <input type="text" id="inp_objetivo"> 
+                    <textarea type="text" id="inp_objetivo" placeholder="Qual o objetivo do seu personagem"></textarea> 
                 </div>
 
             </div>
@@ -367,6 +367,13 @@
     }
     
     function finalizar() {
+
+        var nome = inp_nome.value
+        var jogador = inp_jogador.value
+        var aparencia = inp_aparencia.value
+        var personalidade = inp_personalidade.value
+        var descricao = inp_descricao.value
+        var objetivo = inp_objetivo.value
         
         var atributos = []
 
@@ -379,12 +386,18 @@
         atributos.push(agilidade, forca, intelecto, presenca, vigor)
 
         dadosPersonagem.push( {
+            'nome': nome,
+            'jogador': jogador,
             'classe': classe[classe.length - 1],
             'statusMax': statusMax,
-            'atributos': atributos
+            'atributos': atributos,
+            'aparencia': aparencia,
+            'personalidade': personalidade,
+            'descricao': descricao,
+            'objetivo': objetivo
         })
 
-      fetch("/usuarios/cadastrar", {
+      fetch("/ficha/cadastrar", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -394,7 +407,6 @@
         }),
       })
 
-        window.location.href = "ficha.html"
         
     }
 
