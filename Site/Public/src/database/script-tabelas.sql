@@ -14,7 +14,8 @@ create table usuario (
 	idUsuario int primary key auto_increment,
 	nome varchar(80) not null,
 	email varchar(80) not null unique,
-	senha varchar(45) not null
+	senha varchar(45) not null,
+    imagem blob
 );
 
 create table ficha (
