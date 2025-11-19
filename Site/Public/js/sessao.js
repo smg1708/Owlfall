@@ -3,18 +3,32 @@ function validarSessao() {
     var email = sessionStorage.EMAIL_USUARIO;
     var nome = sessionStorage.NOME_USUARIO;
 
-    var b_usuario = document.getElementById("b_usuario");
+    if (!email || !nome) {
+        window.location = "../login.html"; 
+        return;
+    }
 
-    if (email != null && nome != null) {
+    var b_usuario = document.getElementById("b_usuario");
+    if(b_usuario) {
         b_usuario.innerHTML = nome;
-    } else {
-        window.location = "../login.html";
     }
 }
 
 function limparSessao() {
     sessionStorage.clear();
     window.location = "../login.html";
+}
+
+function verificarLoginAntes() {
+    var email = sessionStorage.EMAIL_USUARIO;
+    var nome  = sessionStorage.NOME_USUARIO;
+
+    if (!email || !nome) {
+        alert("Você precisa estar logado para criar um personagem ou campanha!");
+        window.location = "../login.html";
+        return false;
+    }
+    return true;
 }
 
 // carregamento (loading)

@@ -12,7 +12,7 @@ body {
 
 .div-header-index {
   color: white;
-  background-image: url('../assets/fundo_index.jpg');
+  background-image: url('../assets/imgs/fundo_index.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -98,7 +98,7 @@ body {
 
 .div-header-poder {
   color: white;
-  background-image: url('../assets/fundo.jpg');
+  background-image: url('../assets/imgs/fundo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -404,7 +404,7 @@ body {
 }
   
 .fundo-login {
-  background-image: url('../assets/fundo_login2.png');
+  background-image: url('../assets/imgs/fundo_login2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -510,7 +510,7 @@ body {
 }
   
 .fundo-cadastro {
-  background-image: url('../assets/fundo_cadastro1.png');
+  background-image: url('../assets/imgs/fundo_cadastro1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1721,7 +1721,7 @@ body {
 
 .div-header-index {
   color: white;
-  background-image: url('../assets/fundo_index.jpg');
+  background-image: url('../assets/imgs/fundo_index.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1807,7 +1807,7 @@ body {
 
 .div-header-poder {
   color: white;
-  background-image: url('../assets/fundo.jpg');
+  background-image: url('../assets/imgs/fundo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -2113,7 +2113,7 @@ body {
 }
   
 .fundo-login {
-  background-image: url('../assets/fundo_login2.png');
+  background-image: url('../assets/imgs/fundo_login2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2219,7 +2219,7 @@ body {
 }
   
 .fundo-cadastro {
-  background-image: url('../assets/fundo_cadastro1.png');
+  background-image: url('../assets/imgs/fundo_cadastro1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
