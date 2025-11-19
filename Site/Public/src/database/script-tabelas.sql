@@ -21,6 +21,7 @@ create table ficha (
 	idFicha int primary key auto_increment,
 	fkUsuario int not null,
 	nome varchar(80) not null,
+    jogador varchar(80),
 	nivel int not null,
 	imagem blob,
 	vdAtual int,

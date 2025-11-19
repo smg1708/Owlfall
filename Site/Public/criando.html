@@ -415,8 +415,14 @@
           dadosPersonagemServer: dadosPersonagem,
         }),
       })
+      .then(function(res) {
+        return res.json();
+      })
+      .then(function(resposta) {
+        sessionStorage.ID_FICHA = resposta.idFicha;
+        window.location.href = "ficha.html";
+      });
 
-        
     }
 
 

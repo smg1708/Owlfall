@@ -17,8 +17,8 @@ function criarFicha(dados) {
     //  e na ordem de inserção dos dados.
     
     var sqlFicha = `
-    INSERT INTO ficha (fkUsuario, nome, nivel, vdAtual, vdMax, sanAtual, sanMax, nenAtual, nenMax ) VALUES 
-        ('1', '${dados[0].nome}', '1','${dados[0].statusMax.vida}','${dados[0].statusMax.vida}','${dados[0].statusMax.sanidade}','${dados[0].statusMax.sanidade}','${dados[0].statusMax.nen}','${dados[0].statusMax.nen}');
+    INSERT INTO ficha (fkUsuario, nome, jogador, nivel, vdAtual, vdMax, sanAtual, sanMax, nenAtual, nenMax ) VALUES 
+        ('1', '${dados[0].nome}', '${dados[0].jogador}', '1','${dados[0].statusMax.vida}','${dados[0].statusMax.vida}','${dados[0].statusMax.sanidade}','${dados[0].statusMax.sanidade}','${dados[0].statusMax.nen}','${dados[0].statusMax.nen}');
     `;
     
     console.log("Executando a instrução SQL: \n" + sqlFicha);
@@ -42,7 +42,10 @@ function criarFicha(dados) {
                 ('${idFicha}', 'vigor', 'atributo', "${dados[0].atributos[4]}");
             `;
             console.log("Executando a instrução SQL: \n" + sqlCarac);
-            return database.executar(sqlCarac);
+            return database.executar(sqlCarac)
+                .then(() => {
+                    return {idFicha: idFicha};
+                });
         });
 }
 

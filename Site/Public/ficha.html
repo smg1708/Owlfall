@@ -79,15 +79,15 @@
                     <div class="div-status-ficha">
                         <h2 style="padding-left: 60px;">VIDA</h2>
                         <div class="div-barra-vida">
-                            <input type="number" class="input-vida-ficha input-esquerda-vida" value="0"> <span> / </span> <input type="number" class="input-vida-ficha input-direita-vida" value="0">
+                            <input type="number" class="input-vida-ficha input-esquerda-vida" value="0" id="inp_vida_atual"> <span> / </span> <input type="number" class="input-vida-ficha input-direita-vida" value="0" id="inp_vida_total">
                         </div>
                         <h2 style="padding-left: 60px;">SANIDADE</h2>
                         <div class="div-barra-sanidade">
-                            <input type="number" class="input-sanidade-ficha input-esquerda-sanidade" value="0"> <span> / </span> <input type="number" class="input-sanidade-ficha input-direita-sanidade" value="0">
+                            <input type="number" class="input-sanidade-ficha input-esquerda-sanidade" value="0" id="inp_sanidade_atual"> <span> / </span> <input type="number" class="input-sanidade-ficha input-direita-sanidade" value="0" id="inp_sanidade_total">
                         </div>
                         <h2 style="padding-left: 60px;">NEN</h2>
                         <div class="div-barra-nen">
-                            <input type="number" class="input-nen-ficha input-esquerda-nen" value="0"> <span> / </span> <input type="number" class="input-nen-ficha input-direita-nen" value="0">
+                            <input type="number" class="input-nen-ficha input-esquerda-nen" value="0" id="inp_nen_atual"> <span> / </span> <input type="number" class="input-nen-ficha input-direita-nen" value="0" id="inp_nen_total">
                         </div>
                     </div>
                 </div>
@@ -360,14 +360,51 @@
 </html>
 
 <script>
-    
-    var botaoHabilidades     = btn_habilidades;
-    var botaoInventario     = btn_inventario;
-    var botaoDescicao    = btn_descricao;
 
-    var abaHabilidades     = aba_habilidades;
-    var abaInventario     = aba_inventario;
-    var abaDescricao    = aba_descricao;
+    var idFicha = sessionStorage.ID_FICHA;
+    var enviarDados = {idFicha: idFicha};
+
+    fetch("/ficha/buscar/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(enviarDados)
+    }) 
+    .then(function (resposta) {
+        return resposta.json();
+    })
+    .then(function (dados) {
+
+        inp_personagem.value = dados.nome;
+        inp_jogador_ficha.value = dados.jogador;
+    
+        inp_agilidade_ficha.value = dados.agilidade;
+        inp_forca_ficha.value = dados.forca;
+        inp_intelecto_ficha.value = dados.intelecto;
+        inp_presenca_ficha.value = dados.presenca;
+        inp_vigor_ficha.value = dados.vigor;
+    
+        select_nivel.value = dados.nivel;
+        inp_classe.value = dados.classe;
+    
+        inp_vida_atual.value = dados.vida;
+        inp_vida_total.value = dados.vida;
+        inp_sanidade_atual.value = dados.sanidade;
+        inp_sanidade_total.value = dados.sanidade;
+        inp_nen_atual.value = dados.nen;
+        inp_nen_total.value = dados.nen;
+    
+        inp_aparencia.value = dados.aparencia;
+        inp_personalidade.value = dados.personalidade;
+        inp_descricao.value = dados.historia;
+        inp_objetivo.value = dados.objetivo;
+    });
+
+    var botaoHabilidades = btn_habilidades;
+    var botaoInventario = btn_inventario;
+    var botaoDescricao = btn_descricao;
+    var abaHabilidades = aba_habilidades;
+    var abaInventario = aba_inventario;
+    var abaDescricao = aba_descricao;
 
     function esconderTudo() {
         abaHabilidades.style.display = "none";
@@ -385,7 +422,7 @@
         abaInventario.style.display = "block";
     }
 
-    botaoDescicao.onclick = function() {
+    botaoDescricao.onclick = function() {
         esconderTudo();
         abaDescricao.style.display = "block";
     }
