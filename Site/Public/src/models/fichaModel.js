@@ -3,7 +3,7 @@ var database = require("../database/config")
 // function autenticar(email, senha) {
 //     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
 //     var instrucaoSql = `
-//         SELECT idUsuario, nome, email as Login FROM usuario WHERE email = '${email}' AND senha = '${senha}';
+//         SELECT idUsuario, nome, email as Login FROM usuario WHERE email = '${email}' and senha = '${senha}';
 //     `;
 //     console.log("Executando a instrução SQL: \n" + instrucaoSql);
 //     return database.executar(instrucaoSql);
@@ -17,56 +17,56 @@ function buscarFicha(idFicha) {
     //  e na ordem de inserção dos dados.
     
     var sql = `
-        SELECT 
+        select 
             f.nome,
             f.jogador,
             f.nivel,
             f.vdAtual AS vida,
             f.sanAtual AS sanidade,
             f.nenAtual AS nen,
-            c_classe.descricao AS classe,
-            c_aparencia.descricao AS aparencia,
-            c_personalidade.descricao AS personalidade,
-            c_descricao.descricao AS historia,
-            c_objetivo.descricao AS objetivo,
-            c_agilidade.descricao AS agilidade,
-            c_forca.descricao AS forca,
-            c_intelecto.descricao AS intelecto,
-            c_presenca.descricao AS presenca,
-            c_vigor.descricao AS vigor
-        FROM ficha f
+            c.descricao AS classe,
+            c.descricao AS aparencia,
+            c.descricao AS personalidade,
+            c.descricao AS historia,
+            c.descricao AS objetivo,
+            c.descricao AS agilidade,
+            c.descricao AS forca,
+            c.descricao AS intelecto,
+            c.descricao AS presenca,
+            c.descricao AS vigor
+        from ficha f
         
-        JOIN caracteristicas c_classe 
-            ON c_classe.fkFicha = f.idFicha AND c_classe.nome = 'classe'
+        join caracteristicas c 
+            on c.fkFicha = f.idFicha and 
 
-        JOIN caracteristicas c_aparencia 
-            ON c_aparencia.fkFicha = f.idFicha AND c_aparencia.nome = 'aparencia'
+        join caracteristicas c 
+            on c.fkFicha = f.idFicha and c.nome = 'aparencia'
 
-        JOIN caracteristicas c_personalidade 
-            ON c_personalidade.fkFicha = f.idFicha AND c_personalidade.nome = 'personalidade'
+        join caracteristicas c 
+            on c.fkFicha = f.idFicha and c.nome = 'personalidade'
 
-        JOIN caracteristicas c_descricao 
-            ON c_descricao.fkFicha = f.idFicha AND c_descricao.nome = 'descricao'
+        join caracteristicas c 
+            on c.fkFicha = f.idFicha and c.nome = 'descricao'
 
-        JOIN caracteristicas c_objetivo 
-            ON c_objetivo.fkFicha = f.idFicha AND c_objetivo.nome = 'objetivo'
+        join caracteristicas c 
+            on c.fkFicha = f.idFicha and c.nome = 'objetivo'
 
-        JOIN caracteristicas c_agilidade 
-            ON c_agilidade.fkFicha = f.idFicha AND c_agilidade.nome = 'agilidade'
+        join caracteristicas c 
+            on c.fkFicha = f.idFicha and c.nome = 'agilidade'
 
-        JOIN caracteristicas c_forca 
-            ON c_forca.fkFicha = f.idFicha AND c_forca.nome = 'forca'
+        join caracteristicas c 
+            on c.fkFicha = f.idFicha and c.nome = 'forca'
 
-        JOIN caracteristicas c_intelecto 
-            ON c_intelecto.fkFicha = f.idFicha AND c_intelecto.nome = 'intelecto'
+        join caracteristicas c 
+            on c.fkFicha = f.idFicha and c.nome = 'intelecto'
 
-        JOIN caracteristicas c_presenca 
-            ON c_presenca.fkFicha = f.idFicha AND c_presenca.nome = 'presenca'
+        join caracteristicas c 
+            on c.fkFicha = f.idFicha and c.nome = 'presenca'
 
-        JOIN caracteristicas c_vigor 
-            ON c_vigor.fkFicha = f.idFicha AND c_vigor.nome = 'vigor'
+        join caracteristicas c 
+            on c.fkFicha = f.idFicha and c.nome = 'vigor'
 
-        WHERE f.idFicha = ${idFicha};
+        WHERE f.idFicha = ${idFicha}
     `;
     
     console.log("Executando a instrução SQL: \n" + sql);

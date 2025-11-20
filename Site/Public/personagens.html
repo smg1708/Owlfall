@@ -50,7 +50,7 @@
     var enviarDados = {idUsuario: idUsuario};
     var mensagem = "";
 
-    fetch("/ficha/mostrar/", {
+    fetch("/personagens/mostrar/", {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(enviarDados)
     }) 
@@ -60,6 +60,25 @@
     .then(function (fichas) {
 
         container_fichas.innerHTML = "";
+
+        for (var i = 0; i < fichas.length; i++) {
+            mensagem += `
+            <div class="div-box-ficha-personagens">
+                
+                <img src="">
+            
+                <div class="div-info-personagem">
+                    <span><b>${f.nome}</b></span>
+                    <span>Classe: ${f.classe || "???"}</span>
+            
+                   <button onclick="abrirFicha(${f.idFicha})">
+                       Acessar Ficha
+                   </button>
+               </div>
+            </div>
+            `
+        }
+        container_fichas.innerHTML = mensagem 
 
     })
 
@@ -85,17 +104,4 @@
 
 
 <!-- container.innerHTML += `
-    <div class="div-box-ficha-personagens">
-        
-        <img src="img/default.png">
-
-        <div class="div-info-personagem">
-            <span><b>${f.nome}</b></span>
-            <span>Classe: ${f.classe || "???"}</span>
-
-           <button onclick="abrirFicha(${f.idFicha})">
-               Acessar Ficha
-           </button>
-       </div>
-    </div>
 `; -->
