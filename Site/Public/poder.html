@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title >OwlFall | Poder</title>
-    <link rel="icon" href="assets/coruja.jpg">
+
+    <script src="./js/sessao.js"></script>
+    <link rel="icon" href="assets/icon/coruja.jpg">
 
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,13 +23,13 @@
             </div>
             <div class="div-navbar">
                 <a href="index.html"> Sobre </a>
-                <a href="#poder"> Poder </a>
-                <a href="personagens.html"> Personagens </a>
-                <a href="campanhas.html"> Campanhas </a>
+                <a href="poder.html"> Poder </a>
+                <a onclick="if (verificarLoginAntes()) personagens()" > Personagens </a>
+                <a onclick="if (verificarLoginAntes()) campanhas()" > Campanhas </a>
                 <a href="login.html"> Login </a>
             </div>
         </div>
-        <img src="assets/gon&killua.png" alt="" class="div-imagem-nav-poder">
+        <img src="assets/imgs/gon&killua.png" alt="" class="div-imagem-nav-poder">
         <div class="div-slogan-poder">
             <div class="div-card-inicio-poder">
                 <h2>Tipo de poder - Nen</h2>
@@ -45,42 +47,42 @@
                 <div class="div-traco-meio-poder"></div>
 
                 <div class="box-esquerda-poder">
-                    <img class="box-imagem-esquerda-poder"  src="assets/sobre_1_hunterxhunter.jpg" alt="">
+                    <img class="box-imagem-esquerda-poder"  src="assets/imgs/sobre_1_hunterxhunter.jpg" alt="">
                     <span class="box-text-direita-poder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt unde, ut earum quos quas dolor nam eius dolorem? Ducimus ratione harum dignissimos laboriosam velit vitae reiciendis tempora incidunt unde.</span>
                 </div>
 
                 <div class="box-direita-poder">
-                    <img class="box-imagem-direita-poder" src="assets/sobre_2_hunterxhunter.jpeg" alt="">
+                    <img class="box-imagem-direita-poder" src="assets/imgs/sobre_2_hunterxhunter.jpeg" alt="">
                     <span class="box-text-esquerda-poder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt unde, ut earum quos quas dolor nam eius dolorem? Ducimus ratione harum dignissimos laboriosam velit vitae reiciendis tempora incidunt unde.</span>
                 </div>
 
                 <div class="box-esquerda-poder">
-                    <img class="box-imagem-esquerda-poder"  src="assets/sobre_3_hunterxhunter.jpeg" alt="">
+                    <img class="box-imagem-esquerda-poder"  src="assets/imgs/sobre_3_hunterxhunter.jpeg" alt="">
                     <span class="box-text-direita-poder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt unde, ut earum quos quas dolor nam eius dolorem? Ducimus ratione harum dignissimos laboriosam velit vitae reiciendis tempora incidunt unde.</span>
                 </div>
 
                 <div class="box-direita-poder">
-                    <img class="box-imagem-direita-poder" src="assets/sobre_4_hunterxhunter.webp" alt="">
+                    <img class="box-imagem-direita-poder" src="assets/imgs/sobre_4_hunterxhunter.webp" alt="">
                     <span class="box-text-esquerda-poder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt unde, ut earum quos quas dolor nam eius dolorem? Ducimus ratione harum dignissimos laboriosam velit vitae reiciendis tempora incidunt unde.</span>
                 </div>
 
                 <div class="box-esquerda-poder">
-                    <img class="box-imagem-esquerda-poder"  src="assets/sobre_5_hunterxhunter.jpeg" alt="">
+                    <img class="box-imagem-esquerda-poder"  src="assets/imgs/sobre_5_hunterxhunter.jpeg" alt="">
                     <span class="box-text-direita-poder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt unde, ut earum quos quas dolor nam eius dolorem? Ducimus ratione harum dignissimos laboriosam velit vitae reiciendis tempora incidunt unde.</span>
                 </div>
 
                 <div class="box-direita-poder">
-                    <img class="box-imagem-direita-poder" src="assets/sobre_6_hunterxhunter.jpeg" alt="">
+                    <img class="box-imagem-direita-poder" src="assets/imgs/sobre_6_hunterxhunter.jpeg" alt="">
                     <span class="box-text-esquerda-poder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt unde, ut earum quos quas dolor nam eius dolorem? Ducimus ratione harum dignissimos laboriosam velit vitae reiciendis tempora incidunt unde.</span>
                 </div>
 
                 <div class="box-esquerda-poder">
-                    <img class="box-imagem-esquerda-poder"  src="assets/sobre_7_hunterxhunter.jpeg" alt="">
+                    <img class="box-imagem-esquerda-poder"  src="assets/imgs/sobre_7_hunterxhunter.jpeg" alt="">
                     <span class="box-text-direita-poder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt unde, ut earum quos quas dolor nam eius dolorem? Ducimus ratione harum dignissimos laboriosam velit vitae reiciendis tempora incidunt unde.</span>
                 </div>
 
                 <div class="box-direita-poder">
-                    <img class="box-imagem-direita-poder img8-poder" src="assets/sobre_8_hunterxhunter.jpeg" alt="">
+                    <img class="box-imagem-direita-poder img8-poder" src="assets/imgs/sobre_8_hunterxhunter.jpeg" alt="">
                     <span class="box-text-esquerda-poder">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nesciunt unde, ut earum quos quas dolor nam eius dolorem? Ducimus ratione harum dignissimos laboriosam velit vitae reiciendis tempora incidunt unde.</span>
                 </div>
 
@@ -91,3 +93,15 @@
 
 </body>
 </html>
+
+<script>
+
+    function personagens() {
+      window.location = "personagens.html"
+    }
+
+    function campanhas() {
+      window.location = "campanhas.html"
+    }
+
+</script>

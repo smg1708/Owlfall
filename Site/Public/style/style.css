@@ -12,7 +12,7 @@ body {
 
 .div-header-index {
   color: white;
-  background-image: url('../assets/fundo_index.jpg');
+  background-image: url('../assets/imgs/fundo_index.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -98,7 +98,7 @@ body {
 
 .div-header-poder {
   color: white;
-  background-image: url('../assets/fundo.jpg');
+  background-image: url('../assets/imgs/fundo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -325,11 +325,11 @@ body {
   border-style: none;
 }
 
-.div-box-personagens {
+.div-box-personagens-pesquisa {
   padding: 10% 15%;
 }
 
-.div-box-personagens span {
+.div-box-personagens-pesquisa span {
   font-size: 20px;
 }
 
@@ -364,7 +364,7 @@ body {
 
 .div-header-index {
   color: white;
-  background-image: url('../assets/fundo_index.jpg');
+  background-image: url('../assets/imgs/fundo_index.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -450,7 +450,7 @@ body {
 
 .div-header-poder {
   color: white;
-  background-image: url('../assets/fundo.jpg');
+  background-image: url('../assets/imgs/fundo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -661,32 +661,33 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 94vh;
+  min-height: 826px;
 }
 
 .div-novo-personagem {
-  height: 4.8%;
+  height: 48px;
   border-radius: 5px;
-  position: absolute;
+  position: relative;
   font-size: 15px;
   font-family: "Kavoon";
-  right: 18%;
-  top: 15%;
+  left: 76.5%;
+  top: 75px;
   color: #ffffff;
   background-color: #41210A;
   border-style: none;
 }
 
-.div-box-personagens {
-  padding: 9% 20.8%;
+.div-box-personagens-pesquisa {
+  padding: 2% 15%;
+  padding-top: 9%;
 }
 
-.div-box-personagens .div-pesquisa-personagem {
+.div-box-personagens-pesquisa .div-pesquisa-personagem {
   color: white;
-  padding-left: 25%;
+  padding-left: 5%;
 }
 
-.div-box-personagens span {
+.div-box-personagens-pesquisa span {
   font-size: 20px;
 }
 
@@ -701,15 +702,69 @@ body {
   border-style: none;
   font-size: 20px;
   margin-top: 20px;
-  width: 438%;
-  height: 8%;
+  width: 93.5%;
+  height: 55px;
   background-color: #1e1e1e;
 } 
 
+.div-container-body-personagens {
+    display: block;
+    background-color: #121212;
+    color: white;
+    padding-bottom: 50px;
+}
 
-/* .login {
+.div-container-fichas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 70%;
+    margin: 40px auto;
+}
 
-} */
+.div-box-ficha-personagens {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    height: 140px;
+}
+
+.div-box-ficha-personagens img {
+    width: 110px;
+    height: 110px;
+    border-radius: 10px;
+    object-fit: cover;
+    background-color: #333;
+}
+
+.div-info-personagem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.div-info-personagem span {
+    font-size: 18px;
+}
+
+.div-info-personagem button {
+    margin-top: 10px;
+    width: 120px;
+    background-color: #41210A;
+    color: white;
+    border: none;
+    padding: 8px 0;
+    border-radius: 8px;
+    font-family: "Kavoon";
+    font-size: 15px;
+}
+
+/* Login  */
 
 .div-header-login {
   color: white;
@@ -758,7 +813,7 @@ body {
 }
   
 .fundo-login {
-  background-image: url('../assets/fundo_login2.png');
+  background-image: url('../assets/imgs/fundo_login2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -864,7 +919,7 @@ body {
 }
   
 .fundo-cadastro {
-  background-image: url('../assets/fundo_cadastro1.png');
+  background-image: url('../assets/imgs/fundo_cadastro1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -881,6 +936,7 @@ body {
 
 #imagem-esquerda{
   width: 50%;
+  margin-right: 40px;
 }
   
 #imagem-esquerda img{

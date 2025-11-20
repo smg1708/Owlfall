@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title >OwlFall | Personagens</title>
-    <link rel="icon" href="assets/coruja.jpg">
+
+    <script src="./js/sessao.js"></script>
+    <link rel="icon" href="assets/icon/coruja.jpg">
 
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,8 +24,8 @@
             <div class="div-navbar">
                 <a href="index.html"> Sobre </a>
                 <a href="poder.html"> Poder </a>
-                <a href="#Personagens"> Personagens </a>
-                <a href="campanhas.html"> Campanhas </a>
+                <a onclick="if (verificarLoginAntes()) personagens()" > Personagens </a>
+                <a onclick="if (verificarLoginAntes()) campanhas()" > Campanhas </a>
                 <a href="login.html"> Login </a>
             </div>
         </div>
@@ -32,21 +34,68 @@
     <div>   
         <div class="div-container-body-personagens">
             <button onclick="criarPersonagem()" class="div-novo-personagem">Novo Personagem</button>
-            <div class="div-box-personagens">
+            <div class="div-box-personagens-pesquisa">
                 <span id="span_personagens_cont">Personagens: </span> <br>
-                <div class="div-lupa-personagens"><img src="assets/lupa.png" alt=""></div>
+                <div class="div-lupa-personagens"><img src="assets/imgs/lupa.png" alt=""></div>
                 <input type="text" placeholder="Buscar" class="div-pesquisa-personagem">
             </div>
-
-            
+            <div id="container_fichas" class="div-container-fichas"></div>
         </div>
     </div>
 
 
 <script>
 
-    function criarPersonagem() {
-        window.location.href = "criando.html"
+    var idUsuario = sessionStorage.ID_USUARIO;
+    var enviarDados = {idUsuario: idUsuario};
+    var mensagem = "";
+
+    fetch("/ficha/mostrar/", {
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(enviarDados)
+    }) 
+    .then(function (resposta) {
+        return resposta.json();
+    })
+    .then(function (fichas) {
+
+        container_fichas.innerHTML = "";
+
+    })
+
+    function personagens() {
+      window.location = "personagens.html"
     }
 
+    function campanhas() {
+        window.location = "campanhas.html"
+    }
+
+    function criarPersonagem() {
+        window.location = "criando.html"
+    }
+
+    function abrirFicha(idFicha) {
+        window.location = "ficha.html?id=" + idFicha;
+    }
+
+
 </script>
+
+
+
+<!-- container.innerHTML += `
+    <div class="div-box-ficha-personagens">
+        
+        <img src="img/default.png">
+
+        <div class="div-info-personagem">
+            <span><b>${f.nome}</b></span>
+            <span>Classe: ${f.classe || "???"}</span>
+
+           <button onclick="abrirFicha(${f.idFicha})">
+               Acessar Ficha
+           </button>
+       </div>
+    </div>
+`; -->

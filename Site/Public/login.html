@@ -11,7 +11,7 @@
     <script src="./js/sessao.js"></script>
 
     <link rel="stylesheet" type="text/css" href="style/style.css">
-    <link rel="icon" href="./assets/coruja.jpg" />
+    <link rel="icon" href="./assets/icon/coruja.jpg" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
 </head>
@@ -28,8 +28,8 @@
             <div class="div-navbar">
                 <a href="index.html"> Sobre </a>
                 <a href="poder.html"> Poder </a>
-                <a href="personagens.html"> Personagens </a>
-                <a href="campanhas.html"> Campanhas </a>
+                <a onclick="if (verificarLoginAntes()) personagens()" > Personagens </a>
+                <a onclick="if (verificarLoginAntes()) campanhas()" > Campanhas </a>
                 <a href="login.html"> Login </a>
             </div>
         </div>
@@ -38,7 +38,7 @@
     <div class="fundo-login">
         <div class="container-login">
             <div id="imagem-esquerda">
-                <img src="assets/login.jpg" alt="">
+                <img src="assets/imgs/login.jpg" alt="">
             </div>
             <div id="login-direita">
                 <p>E-mail</p> 
@@ -62,11 +62,19 @@
 
 <script>
 
+    function personagens() {
+    window.location = "personagens.html"
+    }
+
+    function campanhas() {
+    window.location = "campanhas.html"
+    }
 
     function entrar() {
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
+
 
         if (emailVar == "" || senhaVar == "") {
             alert("Campos incorretos\n Verifique os campos e tente novamente");

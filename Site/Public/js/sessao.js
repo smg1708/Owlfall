@@ -23,6 +23,18 @@ function aguardar() {
     divAguardar.style.display = "flex";
 }
 
+function verificarLoginAntes() {
+    var email = sessionStorage.EMAIL_USUARIO;
+    var nome  = sessionStorage.NOME_USUARIO;
+
+    if (!email || !nome) {
+        alert("Você precisa estar logado para acessar essa pagina!");
+        window.location = "../login.html";
+        return false;
+    }
+    return true;
+}
+
 function finalizarAguardar(texto) {
     var divAguardar = document.getElementById("div_aguardar");
     divAguardar.style.display = "none";

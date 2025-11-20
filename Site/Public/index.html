@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title >OwlFall | Home</title>
-    <link rel="icon" href="assets/coruja.jpg">
+
+    <script src="./js/sessao.js"></script>
+    <link rel="icon" href="assets/icon/coruja.jpg">
 
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,12 +24,12 @@
             <div class="div-navbar">
                 <a href="#sobre"> Sobre </a>
                 <a href="poder.html"> Poder </a>
-                <a href="personagens.html"> Personagens </a>
-                <a href="campanhas.html"> Campanhas </a>
+                <a onclick="if (verificarLoginAntes()) personagens()" > Personagens </a>
+                <a onclick="if (verificarLoginAntes()) campanhas()" > Campanhas </a>
                 <a href="login.html"> Login </a>
             </div>
         </div>
-        <img src="assets/gus.png" alt="" class="div-imagem-nav-index">
+        <img src="assets/imgs/gus.png" alt="" class="div-imagem-nav-index">
         <div class="div-slogan-index">
             <div class="div-card-inicio-index">
                 <h2>Fichas Digitais - Owl fall</h2>
@@ -36,3 +38,15 @@
         </div>
         
     </div>
+
+    <script>
+
+    function personagens() {
+      window.location = "personagens.html"
+    }
+
+    function campanhas() {
+      window.location = "campanhas.html"
+    }
+
+    </script>
