@@ -1,7 +1,7 @@
 var personagensModel = require("../models/personagensModel");
 
 function mostrar(req, res) {
-    var idUsuario = req.body.idUsuario;
+    var idUsuario = req.params.idUsuario;
 
     if (idUsuario == undefined) {
         res.status(400).send("Fichas não foram carregadas!");
