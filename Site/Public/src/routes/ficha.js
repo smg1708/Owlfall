@@ -13,11 +13,4 @@ router.get("/buscar", function (req, res) {
     fichaController.buscarFicha(req, res);
 })
 
-// router.post("/autenticar", function (req, res) {
-//     usuarioController.autenticar(req, res);
-// });
-
 module.exports = router;
-
-
-// upload.single('foto') vai buscar no json alguma propriedade chamada foto 
