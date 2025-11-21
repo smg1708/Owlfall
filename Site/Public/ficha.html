@@ -34,6 +34,7 @@
     <div class="div-container-body-ficha">
         <div class="box-personagem-ficha">
             <img src="assets/imgs/icon_sem_personagem.jpg" alt="" id="img_padrao_ficha">
+            <input type="file" id="inp_foto_personagem" class="foto-personagem" name="foto_personagem" onchange="salvarImagem()">
             <h3>Personagem</h3> <input type="text" class="input-personagem" id="inp_personagem"> 
             <h3>Jogador</h3> <input type="text" class="input-personagem" id="inp_jogador_ficha">
         </div>
@@ -393,6 +394,7 @@
           .then(function (dados) {
             console.log(dados);
             
+            img_padrao_ficha.src = `/assets/imgsBd/${dados[0].imagem}`
             inp_personagem.value = dados[0].nome;
             inp_jogador_ficha.value = dados[0].jogador;
         
@@ -441,37 +443,20 @@
     }
 
     function salvarImagem() {
-        fetch(`/ficha/imagem`, {
+        var foto = inp_foto_personagem
+        const formData = new FormData();
+        formData.append('idFicha', idFicha);
+        formData.append('foto_personagem', foto.files[0])
+        
+        fetch("/ficha/imagem", {
+            method: "PUT",
+            body: formData
         })
-          .then(function (resposta) {
-            return resposta.json();
-          })
-          .then(function (dados) {
-            console.log(dados);
-            
-            inp_personagem.value = dados[0].nome;
-            inp_jogador_ficha.value = dados[0].jogador;
-        
-            inp_agilidade_ficha.value = dados[0].agilidade;
-            inp_forca_ficha.value = dados[0].forca;
-            inp_intelecto_ficha.value = dados[0].intelecto;
-            inp_presenca_ficha.value = dados[0].presenca;
-            inp_vigor_ficha.value = dados[0].vigor;
-        
-            select_nivel.value = dados[0].nivel;
-            inp_classe.value = dados[0].classe;
-        
-            inp_vida_atual.value = dados[0].vida;
-            inp_vida_total.value = dados[0].vida;
-            inp_sanidade_atual.value = dados[0].sanidade;
-            inp_sanidade_total.value = dados[0].sanidade;
-            inp_nen_atual.value = dados[0].nen;
-            inp_nen_total.value = dados[0].nen;
-        
-            inp_aparencia.value = dados[0].aparencia;
-            inp_personalidade.value = dados[0].personalidade;
-            inp_descricao.value = dados[0].historia;
-            inp_objetivo.value = dados[0].objetivo;
-        });
+        .then(res => {
+        })
+        .catch(err => {
+            console.log(err);
+        })
     }
+    
 </script>

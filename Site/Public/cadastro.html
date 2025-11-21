@@ -56,9 +56,6 @@
             <div class="card_erro" id="cardErro">
             </div>
           </div>
-          <div id="div_aguardar" style="display:none;">
-            <span>Carregando...</span>
-          </div>
           <div id="div_carregando"></div>
         </div>
       </div>
@@ -156,8 +153,7 @@
           if (resposta.ok) {
             cardErro.style.display = "block";
 
-            div_carregando.innerHTML =
-              alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
+            div_carregando.innerHTML = alert("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
 
             setTimeout(() => {
               window.location = "login.html";

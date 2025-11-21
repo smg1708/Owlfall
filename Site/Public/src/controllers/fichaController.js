@@ -31,6 +31,19 @@ function buscarFicha(req, res) {
 
 }
 
+function salvarImagem(req, res) {
+  var idFicha = req.body.idFicha;
+  const imagem = req.file.filename;
+  
+  fichaModel.salvarImagem(idFicha, imagem)
+  .then(resultado => {
+    res.status(201).send("imagem enviada com sucesso");
+  }).catch(err => {
+    res.status(500).send(err);
+  });
+}
+
 module.exports = {
-    buscarFicha
+    buscarFicha,
+    salvarImagem
 }

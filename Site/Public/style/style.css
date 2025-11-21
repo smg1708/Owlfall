@@ -739,6 +739,7 @@ body {
     height: 110px;
     border-radius: 10px;
     object-fit: cover;
+    object-position: top;
     background-color: #333;
 }
 
@@ -1753,8 +1754,12 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .box-personagem-ficha img {
-  width: 5.5%;
-  margin-right: 2%;
+  width: 60px;
+  height: 60px;
+  margin-right: -2%;
+  object-fit: cover;
+  object-position: top;
+  border: 1px, solid, white;
 }
 
 .box-personagem-ficha h3 {
@@ -1766,6 +1771,14 @@ input[type=number]::-webkit-inner-spin-button {
 
 .box-personagem-ficha input {
   font-size: 16px;
+}
+
+.foto-personagem {
+  position: relative;
+  width: 60px;
+  top: 20px;
+  right: 47px;
+  opacity: 0;
 }
 
 .input-personagem {

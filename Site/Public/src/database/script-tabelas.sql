@@ -15,7 +15,7 @@ create table usuario (
 	nome varchar(80) not null,
 	email varchar(80) not null unique,
 	senha varchar(45) not null,
-    imagem blob
+	imagem varchar(255)
 );
 
 create table ficha (
@@ -24,7 +24,7 @@ create table ficha (
 	nome varchar(80) not null,
     jogador varchar(80),
 	nivel int not null,
-	imagem blob,
+	imagem varchar(255),
 	vdAtual int,
 	vdMax int,
 	sanAtual int,
