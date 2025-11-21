@@ -15,7 +15,7 @@ function mostrar(req, res) {
 
                     if (resultado.length > 0) {
                         console.log(resultado);
-                        res.json(resultado[0]);
+                        res.json(resultado);
                     }   else {
                         res.status(403).send("Fichas não foram carregadas!");
                     }
@@ -23,7 +23,7 @@ function mostrar(req, res) {
             ).catch(
                 function (erro) {
                     console.log(erro);
-                    console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
+                    console.log("\nHouve um erro ao tentar carregar! Erro: ", erro.sqlMessage);
                     res.status(500).json(erro.sqlMessage);
                 }
             );

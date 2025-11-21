@@ -1,10 +1,10 @@
 var fichaModel = require("../models/fichaModel");
 
 function buscarFicha(req, res) {
-    var idFicha = req.body.idFicha;
+    var idFicha = req.query.idFicha;
 
     if (idFicha == undefined) {
-        res.status(400).send("Dados indefinido(s)!");
+        res.status(400).send("Id indefinido(s)!");
     } else {
 
         fichaModel.buscarFicha(idFicha)
@@ -15,9 +15,9 @@ function buscarFicha(req, res) {
 
                     if (resultado.length > 0) {
                         console.log(resultado);
-                        res.json(resultado[0]);
+                        res.json(resultado);
                     }   else {
-                        res.status(403).send("Dados inválido(s)");
+                        res.status(403).send("Ficha nao encontrada");
                     }
                 }
             ).catch(

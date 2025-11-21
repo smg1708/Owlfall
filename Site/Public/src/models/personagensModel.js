@@ -17,14 +17,8 @@ function mostrar(idUsuario) {
     //  e na ordem de inserção dos dados.
     
     var sql = `
-        select 
-            f.idFicha,
-            f.imagem,
-            f.nome,
-            c.descricao
-        from ficha f join caracteristicas c
-            on c.fkFicha = f.idFicha 
-            where c.nome = 'classe' and f.fkUsuario = ${idUsuario}
+        select * from vw_selectFicha
+            where fkUsuario = ${idUsuario};
     `;
     
     console.log("Executando a instrução SQL: \n" + sql);

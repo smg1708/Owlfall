@@ -718,7 +718,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-    width: 70%;
+    width: 60%;
     margin: 40px auto;
 }
 
@@ -2061,11 +2061,11 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .input-esquerda-vida {
-  left: 52%;
+  left: 51%;
 }
 
 .input-direita-vida {
-  left: 54.5%;
+  left: 55%;
   text-align: left;
 }
 
@@ -2090,11 +2090,11 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .input-esquerda-sanidade {
-  left: 52%;
+  left: 51%;
 }
 
 .input-direita-sanidade {
-  left: 54.5%;
+  left: 55%;
   text-align: left;
 }
 
@@ -2119,10 +2119,10 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .input-esquerda-nen {
-  left: 52%;
+  left: 51%;
 }
 
 .input-direita-nen {
-  left: 54.5%;
+  left: 55%;
   text-align: left;
 }

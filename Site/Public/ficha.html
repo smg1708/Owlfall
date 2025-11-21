@@ -33,7 +33,7 @@
     </div>
     <div class="div-container-body-ficha">
         <div class="box-personagem-ficha">
-            <img src="assets/imgs/icon_sem_personagem.jpg" alt="">
+            <img src="assets/imgs/icon_sem_personagem.jpg" alt="" id="img_padrao_ficha">
             <h3>Personagem</h3> <input type="text" class="input-personagem" id="inp_personagem"> 
             <h3>Jogador</h3> <input type="text" class="input-personagem" id="inp_jogador_ficha">
         </div>
@@ -328,9 +328,9 @@
                     <div class="box-caracteristicas-abas">
 
                         <div class="box-botoes-ficha">
-                            <button id="btn_habilidades" style="display: block;">Habilidades</button>
-                            <button id="btn_inventario">Inventário</button>
-                            <button id="btn_descricao">Descrição</button>
+                            <button id="btn_habilidades" style="display: block;" onclick="bot_habilidades()">Habilidades</button>
+                            <button id="btn_inventario" onclick="bot_inventario()">Inventário</button>
+                            <button id="btn_descricao" onclick="bot_descricao()">Descrição</button>
                         </div>
 
                         <div class="box-abas-caracteristicas" id="aba_habilidades">
@@ -366,6 +366,15 @@
     var idFicha = sessionStorage.ID_FICHA;
     var enviarDados = {idFicha: idFicha};
 
+    var botaoHabilidades = btn_habilidades;
+    var botaoInventario = btn_inventario;
+    var botaoDescricao = btn_descricao;
+    var abaHabilidades = aba_habilidades;
+    var abaInventario = aba_inventario;
+    var abaDescricao = aba_descricao;
+
+    window.onload = carregarFicha;
+
     function personagens() {
       window.location = "personagens.html"
     }
@@ -374,47 +383,41 @@
       window.location = "campanhas.html"
     }
 
-    fetch("/ficha/buscar/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(enviarDados)
-    }) 
-    .then(function (resposta) {
-        return resposta.json();
-    })
-    .then(function (dados) {
+    function carregarFicha() {
 
-        inp_personagem.value = dados.nome;
-        inp_jogador_ficha.value = dados.jogador;
-    
-        inp_agilidade_ficha.value = dados.agilidade;
-        inp_forca_ficha.value = dados.forca;
-        inp_intelecto_ficha.value = dados.intelecto;
-        inp_presenca_ficha.value = dados.presenca;
-        inp_vigor_ficha.value = dados.vigor;
-    
-        select_nivel.value = dados.nivel;
-        inp_classe.value = dados.classe;
-    
-        inp_vida_atual.value = dados.vida;
-        inp_vida_total.value = dados.vida;
-        inp_sanidade_atual.value = dados.sanidade;
-        inp_sanidade_total.value = dados.sanidade;
-        inp_nen_atual.value = dados.nen;
-        inp_nen_total.value = dados.nen;
-    
-        inp_aparencia.value = dados.aparencia;
-        inp_personalidade.value = dados.personalidade;
-        inp_descricao.value = dados.historia;
-        inp_objetivo.value = dados.objetivo;
-    });
-
-    var botaoHabilidades = btn_habilidades;
-    var botaoInventario = btn_inventario;
-    var botaoDescricao = btn_descricao;
-    var abaHabilidades = aba_habilidades;
-    var abaInventario = aba_inventario;
-    var abaDescricao = aba_descricao;
+        fetch(`/ficha/buscar?idFicha=${idFicha}`, {
+        })
+          .then(function (resposta) {
+            return resposta.json();
+          })
+          .then(function (dados) {
+            console.log(dados);
+            
+            inp_personagem.value = dados[0].nome;
+            inp_jogador_ficha.value = dados[0].jogador;
+        
+            inp_agilidade_ficha.value = dados[0].agilidade;
+            inp_forca_ficha.value = dados[0].forca;
+            inp_intelecto_ficha.value = dados[0].intelecto;
+            inp_presenca_ficha.value = dados[0].presenca;
+            inp_vigor_ficha.value = dados[0].vigor;
+        
+            select_nivel.value = dados[0].nivel;
+            inp_classe.value = dados[0].classe;
+        
+            inp_vida_atual.value = dados[0].vida;
+            inp_vida_total.value = dados[0].vida;
+            inp_sanidade_atual.value = dados[0].sanidade;
+            inp_sanidade_total.value = dados[0].sanidade;
+            inp_nen_atual.value = dados[0].nen;
+            inp_nen_total.value = dados[0].nen;
+        
+            inp_aparencia.value = dados[0].aparencia;
+            inp_personalidade.value = dados[0].personalidade;
+            inp_descricao.value = dados[0].historia;
+            inp_objetivo.value = dados[0].objetivo;
+        });
+    }
 
     function esconderTudo() {
         abaHabilidades.style.display = "none";
@@ -422,19 +425,53 @@
         abaDescricao.style.display = "none";
     }
 
-    botaoHabilidades.onclick = function() {
+    function bot_habilidades() {
         esconderTudo();
         abaHabilidades.style.display = "block";
     }
 
-    botaoInventario.onclick = function() {
+    function bot_inventario() {
         esconderTudo();
         abaInventario.style.display = "block";
     }
 
-    botaoDescricao.onclick = function() {
+    function bot_descricao() {
         esconderTudo();
         abaDescricao.style.display = "block";
     }
 
+    function salvarImagem() {
+        fetch(`/ficha/imagem`, {
+        })
+          .then(function (resposta) {
+            return resposta.json();
+          })
+          .then(function (dados) {
+            console.log(dados);
+            
+            inp_personagem.value = dados[0].nome;
+            inp_jogador_ficha.value = dados[0].jogador;
+        
+            inp_agilidade_ficha.value = dados[0].agilidade;
+            inp_forca_ficha.value = dados[0].forca;
+            inp_intelecto_ficha.value = dados[0].intelecto;
+            inp_presenca_ficha.value = dados[0].presenca;
+            inp_vigor_ficha.value = dados[0].vigor;
+        
+            select_nivel.value = dados[0].nivel;
+            inp_classe.value = dados[0].classe;
+        
+            inp_vida_atual.value = dados[0].vida;
+            inp_vida_total.value = dados[0].vida;
+            inp_sanidade_atual.value = dados[0].sanidade;
+            inp_sanidade_total.value = dados[0].sanidade;
+            inp_nen_atual.value = dados[0].nen;
+            inp_nen_total.value = dados[0].nen;
+        
+            inp_aparencia.value = dados[0].aparencia;
+            inp_personalidade.value = dados[0].personalidade;
+            inp_descricao.value = dados[0].historia;
+            inp_objetivo.value = dados[0].objetivo;
+        });
+    }
 </script>

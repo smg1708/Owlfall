@@ -17,56 +17,8 @@ function buscarFicha(idFicha) {
     //  e na ordem de inserção dos dados.
     
     var sql = `
-        select 
-            f.nome,
-            f.jogador,
-            f.nivel,
-            f.vdAtual AS vida,
-            f.sanAtual AS sanidade,
-            f.nenAtual AS nen,
-            c.descricao AS classe,
-            c.descricao AS aparencia,
-            c.descricao AS personalidade,
-            c.descricao AS historia,
-            c.descricao AS objetivo,
-            c.descricao AS agilidade,
-            c.descricao AS forca,
-            c.descricao AS intelecto,
-            c.descricao AS presenca,
-            c.descricao AS vigor
-        from ficha f
-        
-        join caracteristicas c 
-            on c.fkFicha = f.idFicha and 
-
-        join caracteristicas c 
-            on c.fkFicha = f.idFicha and c.nome = 'aparencia'
-
-        join caracteristicas c 
-            on c.fkFicha = f.idFicha and c.nome = 'personalidade'
-
-        join caracteristicas c 
-            on c.fkFicha = f.idFicha and c.nome = 'descricao'
-
-        join caracteristicas c 
-            on c.fkFicha = f.idFicha and c.nome = 'objetivo'
-
-        join caracteristicas c 
-            on c.fkFicha = f.idFicha and c.nome = 'agilidade'
-
-        join caracteristicas c 
-            on c.fkFicha = f.idFicha and c.nome = 'forca'
-
-        join caracteristicas c 
-            on c.fkFicha = f.idFicha and c.nome = 'intelecto'
-
-        join caracteristicas c 
-            on c.fkFicha = f.idFicha and c.nome = 'presenca'
-
-        join caracteristicas c 
-            on c.fkFicha = f.idFicha and c.nome = 'vigor'
-
-        WHERE f.idFicha = ${idFicha}
+        select * from vw_carregarFicha
+            where idFicha = ${idFicha};
     `;
     
     console.log("Executando a instrução SQL: \n" + sql);
