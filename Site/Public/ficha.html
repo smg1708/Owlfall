@@ -6,6 +6,7 @@
     <title>OwlFall | Ficha</title>
 
     <script src="./js/sessao.js"></script>
+    <script src="./js/nivel.js"></script>
     <link rel="icon" href="assets/icon/coruja.jpg">
 
     <link rel="stylesheet" type="text/css" href="style/style.css">
@@ -53,7 +54,7 @@
                 </div>
                 <div class="box-personagem-ficha-tecnica">
                     <span class="span-nivel">Nivel</span> 
-                    <select id="select_nivel">
+                    <select id="select_nivel" onchange="mudarNivelmudarNivel()">
                         <option selected>0</option>
                         <option>1</option>
                         <option>2</option>
@@ -367,6 +368,29 @@
     var idFicha = sessionStorage.ID_FICHA;
     var enviarDados = {idFicha: idFicha};
 
+    var pericias = [{
+        'adestramento': select_adestramento.value,
+        'artes': select_artes.value, 
+        'acrob_atlet': select_acrob_atlet.value, 
+        'ciencias': select_ciencias.value, 
+        'diplomacia': select_diplomacia.value, 
+        'enganacao': select_enganacao.value, 
+        'fortitude': select_fortitude.value, 
+        'furtividade': select_furtividade.value, 
+        'iniciativa': select_iniciativa.value, 
+        'intimidacao': select_intimidacao.value, 
+        'investigacao': select_investigacao.value, 
+        'luta': select_luta.value, 
+        'medicina': select_medicina.value, 
+        'percepcao': select_percepcao.value, 
+        'pilotagem': select_pilotagem.value, 
+        'pontaria': select_pontaria.value, 
+        'profissao': select_profissao.value, 
+        'reflexos': select_reflexos.value, 
+        'sobrevivencia': select_sobrevivencia.value, 
+        'espirito': select_espirito.value
+    }]
+
     var botaoHabilidades = btn_habilidades;
     var botaoInventario = btn_inventario;
     var botaoDescricao = btn_descricao;
@@ -374,7 +398,12 @@
     var abaInventario = aba_inventario;
     var abaDescricao = aba_descricao;
 
-    window.onload = carregarFicha;
+    function chamarFuncoes() {
+        carregarFicha()
+        atualizarFicha()
+    }
+
+    window.onload = chamarFuncoes;
 
     function personagens() {
       window.location = "personagens.html"
@@ -418,6 +447,27 @@
             inp_personalidade.value = dados[0].personalidade;
             inp_descricao.value = dados[0].historia;
             inp_objetivo.value = dados[0].objetivo;
+
+            select_adestramento.value = dados[0].pericias[0].adestramento;
+            select_artes.value = dados[0].pericias[0].artes;
+            select_acrob_atlet.value = dados[0].pericias[0].atletismo_acrobacia;
+            select_ciencias.value = dados[0].pericias[0].ciencias;
+            select_diplomacia.value = dados[0].pericias[0].diplomacia;
+            select_enganacao.value = dados[0].pericias[0].enganacao;
+            select_fortitude.value = dados[0].pericias[0].fortitude;
+            select_furtividade.value = dados[0].pericias[0].furtividade;
+            select_iniciativa.value = dados[0].pericias[0].iniciativa;
+            select_intimidacao.value = dados[0].pericias[0].intimidacao;
+            select_investigacao.value = dados[0].pericias[0].investigacao;
+            select_luta.value = dados[0].pericias[0].luta;
+            select_medicina.value = dados[0].pericias[0].medicina;
+            select_percepcao.value = dados[0].pericias[0].percepcao;
+            select_pilotagem.value = dados[0].pericias[0].pilotagem;
+            select_pontaria.value = dados[0].pericias[0].pontaria;
+            select_profissao.value = dados[0].pericias[0].profissao;
+            select_reflexos.value = dados[0].pericias[0].reflexos;
+            select_sobrevivencia.value = dados[0].pericias[0].sobrevivencia;
+            select_espirito.value = dados[0].pericias[0].espirito;
         });
     }
 
@@ -426,17 +476,17 @@
         abaInventario.style.display = "none";
         abaDescricao.style.display = "none";
     }
-
+    
     function bot_habilidades() {
         esconderTudo();
         abaHabilidades.style.display = "block";
     }
-
+    
     function bot_inventario() {
         esconderTudo();
         abaInventario.style.display = "block";
     }
-
+    
     function bot_descricao() {
         esconderTudo();
         abaDescricao.style.display = "block";
@@ -459,4 +509,70 @@
         })
     }
     
+    function atualizarFicha() {
+
+        var dadosAtualizados = {
+            idFicha: idFicha,
+            nome: inp_personagem.value,
+            jogador: inp_jogador_ficha.value,
+            nivel: select_nivel.value,
+            vida: inp_vida_atual.value,
+            sanidade: inp_sanidade_atual.value,
+            nen: inp_nen_atual.value,
+            aparencia: inp_aparencia.value,
+            personalidade: inp_personalidade.value,
+            historia: inp_descricao.value,
+            objetivo: inp_objetivo.value,
+            
+            agilidade: inp_agilidade_ficha.value,
+            forca: inp_forca_ficha.value,
+            intelecto: inp_intelecto_ficha.value,
+            presenca: inp_presenca_ficha.value,
+            vigor: inp_vigor_ficha.value,
+            
+            adestramento: select_adestramento.value,
+            artes: select_artes.value,
+            acrob_atlet: select_acrob_atlet.value,
+            ciencias: select_ciencias.value,
+            diplomacia: select_diplomacia.value,
+
+            enganacao: select_enganacao.value,
+            fortitude: select_fortitude.value,
+            furtividade: select_furtividade.value,
+            iniciativa: select_iniciativa.value,
+            intimidacao: select_intimidacao.value,
+            investigacao: select_investigacao.value,
+            luta: select_luta.value,
+            medicina: select_medicina.value,
+            percepcao: select_percepcao.value,
+            pilotagem: select_pilotagem.value,
+            pontaria: select_pontaria.value,
+            profissao: select_profissao.value,
+            reflexos: select_reflexos.value,
+            sobrevivencia: select_sobrevivencia.value,
+            espirito: select_espirito.value
+        };
+
+        fetch("/ficha/atualizar", {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(dadosAtualizados)
+        })
+        .then(res => {
+        })
+        .catch(function (err) {
+            console.log(err);
+        });
+
+    }
+                
+    var vdTotalNivel = inp_vida_total.value
+    var sanTotalNivel = inp_sanidade_total.value
+    var nenTotalNivel = inp_nen_total.value
+    var vdGanha = 0
+    var sanGanha = 0
+    var nenGanha = 0
+
 </script>

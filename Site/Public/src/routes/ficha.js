@@ -13,4 +13,8 @@ router.get("/buscar", function (req, res) {
     fichaController.buscarFicha(req, res);
 })
 
+router.put("/atualizar", function (req, res) {
+    fichaController.atualizarFicha(req, res);
+})
+
 module.exports = router;

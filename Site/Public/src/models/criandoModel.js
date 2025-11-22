@@ -30,7 +30,27 @@ function criarFicha(dados) {
                 ('${idFicha}', 'forca', 'atributo', "${dados[0].atributos[1]}"),
                 ('${idFicha}', 'intelecto', 'atributo', "${dados[0].atributos[2]}"),
                 ('${idFicha}', 'presenca', 'atributo', "${dados[0].atributos[3]}"),
-                ('${idFicha}', 'vigor', 'atributo', "${dados[0].atributos[4]}");
+                ('${idFicha}', 'vigor', 'atributo', "${dados[0].atributos[4]}"),
+                ('${idFicha}', 'adestramento', 'pericia', "${dados[0].pericias[0].adestramento}"),
+                ('${idFicha}', 'artes', 'pericia', "${dados[0].pericias[0].artes}"),
+                ('${idFicha}', 'atletismo/acrobacia', 'pericia', "${dados[0].pericias[0].atletismo_acrobacia}"),
+                ('${idFicha}', 'ciencias', 'pericia', "${dados[0].pericias[0].ciencias}"),
+                ('${idFicha}', 'diplomacia', 'pericia', "${dados[0].pericias[0].diplomacia}"),
+                ('${idFicha}', 'enganacao', 'pericia', "${dados[0].pericias[0].enganacao}"),
+                ('${idFicha}', 'fortitude', 'pericia', "${dados[0].pericias[0].fortitude}"),
+                ('${idFicha}', 'furtividade', 'pericia', "${dados[0].pericias[0].furtividade}"),
+                ('${idFicha}', 'iniciativa', 'pericia', "${dados[0].pericias[0].iniciativa}"),
+                ('${idFicha}', 'intimidacao', 'pericia', "${dados[0].pericias[0].intimidacao}"),
+                ('${idFicha}', 'investigacao', 'pericia', "${dados[0].pericias[0].investigacao}"),
+                ('${idFicha}', 'luta', 'pericia', "${dados[0].pericias[0].luta}"),
+                ('${idFicha}', 'medicina', 'pericia', "${dados[0].pericias[0].medicina}"),
+                ('${idFicha}', 'percepcao', 'pericia', "${dados[0].pericias[0].percepcao}"),
+                ('${idFicha}', 'pilotagem', 'pericia', "${dados[0].pericias[0].pilotagem}"),
+                ('${idFicha}', 'pontaria', 'pericia', "${dados[0].pericias[0].pontaria}"),
+                ('${idFicha}', 'profissao', 'pericia', "${dados[0].pericias[0].profissao}"),
+                ('${idFicha}', 'reflexos', 'pericia', "${dados[0].pericias[0].reflexos}"),
+                ('${idFicha}', 'sobrevivencia', 'pericia', "${dados[0].pericias[0].sobrevivencia}"),
+                ('${idFicha}', 'espirito', 'pericia', "${dados[0].pericias[0].espirito}");
             `;
             console.log("Executando a instrução SQL: \n" + sqlCarac);
             return database.executar(sqlCarac)

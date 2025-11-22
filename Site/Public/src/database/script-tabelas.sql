@@ -31,9 +31,9 @@ create table ficha (
 	sanMax int,
 	nenAtual int,
 	nenMax int,
-	Constraint fkUsuario
-		Foreign key (fkUsuario)
-		References usuario(idUsuario)
+	constraint fkUsuario
+		foreign key (fkUsuario)
+		references usuario(idUsuario)
 );
 
 create table caracteristicas (
@@ -42,9 +42,9 @@ create table caracteristicas (
     nome varchar(80),
 	tipo varchar(255),
 	descricao varchar(255),
-	Constraint fkFicha
-		Foreign key (fkFicha)
-		References ficha(idFicha)
+	constraint fkFicha
+		foreign key (fkFicha)
+		references ficha(idFicha)
 );
 
 create table campanha (
@@ -56,11 +56,13 @@ create table campanha (
 create table fichaCampanha (
 	fkFichaCampanha int not null,
 	fkCampanha int not null,
-	Primary key (fkFichaCampanha, fkCampanha),
-	Constraint fkFichaCampanha
-		Foreign key (fkFichaCampanha)
-		References ficha(idFicha),
-	Constraint fkCampanha
-		Foreign key (fkCampanha)
-		References campanha(idCampanha)
+	primary key (fkFichaCampanha, fkCampanha),
+	constraint fkFichaCampanha
+		foreign key (fkFichaCampanha)
+		references ficha(idFicha),
+	constraint fkCampanha
+		foreign key (fkCampanha)
+		references campanha(idCampanha)
 );
+
+

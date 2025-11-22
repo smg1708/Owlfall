@@ -23,7 +23,7 @@ function buscarFicha(req, res) {
             ).catch(
                 function (erro) {
                     console.log(erro);
-                    console.log("\nHouve um erro ao realizar o login! Erro: ", erro.sqlMessage);
+                    console.log("\nHouve um erro ao carregar a ficha! Erro: ", erro.sqlMessage);
                     res.status(500).json(erro.sqlMessage);
                 }
             );
@@ -43,7 +43,18 @@ function salvarImagem(req, res) {
   });
 }
 
+function atualizarFicha(req, res) {
+  
+  fichaModel.atualizarFicha(req.body)
+  .then(resultado => {
+    res.status(201).send("Ficha atualizada com sucesso!");
+  }).catch(err => {
+    res.status(500).send(err);
+  });
+}
+
 module.exports = {
     buscarFicha,
-    salvarImagem
+    salvarImagem,
+    atualizarFicha
 }

@@ -402,6 +402,29 @@
         var presenca = Number(inp_presenca_atributo.value)
         var vigor = Number(inp_vigor_atributo.value)
 
+        var pericias = [{
+            'adestramento': 0,
+            'artes': 0, 
+            'atletismo_acrobacia': 0, 
+            'ciencias': 0, 
+            'diplomacia': 0, 
+            'enganacao': 0, 
+            'fortitude': 0, 
+            'furtividade': 0, 
+            'iniciativa': 0, 
+            'intimidacao': 0, 
+            'investigacao': 0, 
+            'luta': 0, 
+            'medicina': 0, 
+            'percepcao': 0, 
+            'pilotagem': 0, 
+            'pontaria': 0, 
+            'profissao': 0, 
+            'reflexos': 0, 
+            'sobrevivencia': 0, 
+            'espirito': 0,
+        }]
+
         atributos.push(agilidade, forca, intelecto, presenca, vigor)
 
         dadosPersonagem.push( {
@@ -413,7 +436,8 @@
             'aparencia': aparencia,
             'personalidade': personalidade,
             'descricao': descricao,
-            'objetivo': objetivo
+            'objetivo': objetivo,
+            'pericias': pericias
         })
 
       fetch("/criando/criarFicha", {
