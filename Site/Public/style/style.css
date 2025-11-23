@@ -2139,3 +2139,256 @@ input[type=number]::-webkit-inner-spin-button {
   left: 55%;
   text-align: left;
 }
+
+.atualizar-ficha {
+  background-color: #41210A;
+  position: relative;
+  font-family: "Kavoon";
+  font-size: 15px;
+  color: #ffffff;
+  bottom: 125px;
+  height: 48px;
+  width: 200px;
+  border-radius: 5px;
+  border-style: none;
+  left: 30px;
+}
+
+/* Usuario - Quiz */
+
+.janela {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  background: #0d0d0d;
+  color: #fff;
+}
+
+.header-left {
+    background: #111;
+    position: fixed;
+    width: 260px;
+    height: 100vh;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-right: 5px solid #41210A;
+}
+
+.header-left h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hello {
+    text-align: center;
+}
+
+.btn-nav,
+.btn-nav-white,
+.btn-logout {
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: .3s;
+}
+
+.btn-nav-white a, 
+.btn-nav a, 
+.btn-logout {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-nav {
+    border: 5px solid #41210A;
+  }
+  
+  .btn-nav-white {
+    border: 5px solid #41210A;
+}
+
+.btn-logout {
+    background: #c62828;
+}
+
+.dash {
+    padding: 20px;
+    width: 100%;
+    margin-left: 16.5%;
+    text-align: center;
+}
+
+.container-meio-1 {
+    background: #1f1f1f;
+    border-radius: 12px;
+    padding:25px;
+    margin-bottom: 50px;
+}
+
+.titulo-meio-1 h3 {
+    font-size: 26px;
+  }
+  
+  .titulo-meio-1 img {
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.texto-meio-1 p {
+    font-size: 18px;
+}
+
+.botao_quiz {
+    border: none;
+    padding: 12px 20px;
+    background: #41210A;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.jogo {
+    margin-top: 40px;
+    min-width: 100%;
+}
+
+.flex-colunar {
+    display: flex;
+    flex-direction: column;
+}
+
+.padding-8 {
+    padding: 8px;
+}
+
+.border-secondary {
+    border: 2px solid #41210A;
+    border-radius: 12px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+#jogo, #jogo2 {
+    margin-top: 20px;
+    background: #0f0f0f;
+}
+
+#opcoes span,
+#opcoes2 span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 6px 0;
+}
+
+#botoes button,
+#botoes2 button {
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#btnSubmeter, #btnSubmeter2 {
+    background: #41662c;
+    color: #fff;
+}
+
+#btnTentarNovamente,
+#btnTentarNovamente2 {
+    background: #c62828;
+    color: #fff;
+}
+
+#pontuacaoFinalJogo,
+#pontuacaoFinalJogo2 {
+    margin-top: 15px;
+}
+
+#pontuacaoFinal,
+#pontuacaoFinal2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#msgFinal, 
+#msgFinal2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btnTentarDepois {
+  position: relative;
+  top: 100px;
+  height: 35px;
+  opacity: 0;
+}
+
+/* Usuario - dashboard */
+
+/* ================================
+   ESTILO DOS CARDS DE GRÁFICOS
+   (compatível com o layout atual)
+===================================*/
+
+.card-grafico {
+    width: 82%;
+    margin-left: 17%;
+    margin-bottom: 40px;
+    padding: 25px;
+
+    background: #0d0d0d;
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+/* título interno */
+.card-grafico h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* área que abriga o canvas */
+.card-grafico .grafico-area {
+    background: #1e1e1e;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.04);
+}
+
+/* canvas ajustado para responsividade */
+.card-grafico canvas {
+    width: 100% !important;
+    max-height: 350px;
+}
+
+
+/* =====================================
+   GRID PARA ORGANIZAR OS 3 PRIMEIROS KPI
+========================================*/
+
+.grid-kpis {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-left: 17%;
+    margin-bottom: 40px;
+}
+
+.grid-kpis .btns-dash {
+    width: 30%;
+}
+
+
+body {
+    background: #0d0d0d;
+}

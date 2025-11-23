@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="shortcut icon" href="/assets/icon/Pinguim_do_ep.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OwlFall | Usuario</title>
+
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+
+    <script src="../js/sessao.js"></script>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"><link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onload="validarSessao(), atualizacaoPeriodica(), onloadEsconder(), onloadEsconder2(),onloadEsconder3(),onloadEsconder4(), onloadEsconder5()">
+
+    <div class="janela">
+
+
+        <div class="header-left">
+
+            <h1>Usuario</h1>
+
+            <div class="hello">
+                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+            </div>
+            
+            <div class="btn-nav">
+                <a href="./personagens.html">
+                    <h3>Personagens</h3>
+                </a>
+            </div>
+            
+            <div class="btn-nav">
+                <a href="./campanhas.html">
+                    <h3>Campanhas</h3>
+                </a>
+            </div>
+            
+            <div class="btn-nav">
+                <a href="./poder.html">
+                    <h3>Poder</h3>
+                </a>
+            </div>
+
+            <div class="btn-nav-white">
+                <a href="Quiz.html">
+                    <h3>Quizes</h3>
+                </a>
+            </div>
+    
+            <div class="btn-nav-white">
+                <a href="./dashboard.html">
+                    <h3>Dashboard</h3>
+                </a>
+            </div>
+            
+            <div class="btn-logout" onclick="limparSessao()">
+                <h3>Sair</h3>
+            </div>
+            
+        </div>
+        
+        <div class="dash">
+            <div id="alerta"><div class="container-meio-1">
+        <div class="titulo-meio-1">
+            <h3>Teste seus conhecimentos - Hunter x Hunter</h3>
+            <img src="assets/imgs/hunterxhunter.jpg" alt="Imagem Hunter x Hunter" width="500px">
+        </div>
+                <button class="botao_quiz" id="btnIniciarQuiz" onclick="iniciarQuiz()">INICIAR QUIZ</button>
+            <div id="pontuacaoEJogo" style="display: none;">
+
+                <div class="jogo">
+                    <div id="pontuacao" class="flex-colunar width-fit-content border-primary">
+                        <div id="pontuacaoFinalJogo" class="flex-colunar padding-8">
+                        </div>
+                    </div>
+                    <div id="jogo" class="width-fit-content flex-colunar border-secondary">
+                        <div id="infoQuestao" class="padding-8">
+                            <span>Questão atual: <span id="spanNumeroDaQuestaoAtual"></span> de <span
+                                    id="qtdQuestoes"></span>
+                                questões.</span>
+                        </div>
+                        <div id="perguntaDaQuestaoAtual" class="padding-8">
+                            <span id="spanQuestaoExibida" class="text-bold"></span>
+                        </div>
+                        <div id="infoAlternativas" class="padding-8">
+                            <span><em>Escolha uma opção dentre as abaixo:</em></span>
+                        </div>
+                        <div id="opcoes" class="flex-colunar padding-8">
+                            <div>
+                                <span>
+                                    <input type="radio" id="primeiraOpcao" name="option" class="radio" value="alternativaA" />
+                                    <label for="primeiraOpcao" class="option" id="labelOpcaoUm"></label>
+                                </span>
+                                <span>
+                                    <input type="radio" id="segundaOpcao" name="option" class="radio" value="alternativaB" />
+                                    <label for="segundaOpcao" class="option" id="labelOpcaoDois"></label>
+                                </span>
+                                <span>
+                                    <input type="radio" id="terceiraOpcao" name="option" class="radio" value="alternativaC" />
+                                    <label for="terceiraOpcao" class="option" id="labelOpcaoTres"></label>
+                                </span>
+                                <span>
+                                    <input type="radio" id="quartaOpcao" name="option" class="radio" value="alternativaD" />
+                                    <label for="quartaOpcao" class="option" id="labelOpcaoQuatro"></label>
+                                </span>
+                            </div>
+                        </div>
+                </div>
+
+                        <div id="botoes" class="flex-colunar padding-8">
+                        <button onclick="submeter()" id="btnSubmeter">Submeter resposta</button>
+                        <!-- <button onclick="finalizar()" id="btnConcluir" disabled>Finalizar Quiz</button> -->
+                        <button onclick="tentarNovamente()" id="btnTentarNovamente" disabled>Tentar novamente</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-meio-1">
+        <div class="titulo-meio-1">
+            <h3>Quem você seria dos protagonistas - Hunter x Hunter?</h3>
+            <img src="assets/imgs/sobre_1_hunterxhunter.jpg" alt="" width="500px">
+        </div>
+        <div class="texto-meio-1">
+            <h2 style="text-align: center;">Você é um candidato à Prova Hunter. O sol nasce atrás das montanhas <br>
+                Yasabe, e você sente que o destino está prestes a mudar. <br>
+                Sua jornada começa agora.</h2 style="text-align: center;">
+                <button class="botao_quiz" id="btnIniciarQuiz2" onclick="iniciarQuiz2()">INICIAR QUIZ</button>
+            <div class="jogo">
+                <div id="pontuacaoEJogo2" style="display: none;">
+                    <div id="pontuacao2" class="flex-colunar width-fit-content border-primary">
+                        <div id="pontuacaoDuranteJogo2" class="flex-colunar padding-8">
+                        </div>
+                    </div>
+                    <div id="jogo2" class="width-fit-content flex-colunar border-secondary">
+                        <div id="infoQuestao2" class="padding-8">
+                            <span>Questão atual: <span id="spanNumeroDaQuestaoAtual2"></span> de <span
+                                    id="qtdQuestoes2"></span>
+                                questões.</span> <br>
+                        </div>
+                        <div id="perguntaDaQuestaoAtual2" class="padding-8">
+                            <span id="spanQuestaoExibida2" class="text-bold"></span>
+                        </div>
+                        <div id="infoAlternativas2" class="padding-8">
+                            <span><em>Escolha uma opção dentre as abaixo:</em></span>
+                        </div>
+                        <div id="opcoes2" class="flex-colunar padding-8">
+                            <span>
+                                <input type="radio" id="primeiraOpcao2" name="option2" class="radio" value="alternativaA" />
+                                <label for="primeiraOpcao2" class="option" id="labelOpcaoUm2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" id="segundaOpcao2" name="option2" class="radio" value="alternativaB" />
+                                <label for="segundaOpcao2" class="option" id="labelOpcaoDois2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" id="terceiraOpcao2" name="option2" class="radio" value="alternativaC" />
+                                <label for="terceiraOpcao2" class="option" id="labelOpcaoTres2"></label>
+                            </span>
+                            <span>
+                                <input type="radio" id="quartaOpcao2" name="option2" class="radio" value="alternativaD" />
+                                <label for="quartaOpcao2" class="option" id="labelOpcaoQuatro2"></label>
+                            </span>
+                        </div>
+            </div>
+
+                    <div id="botoes2" class="flex-colunar padding-8">
+                        <button onclick="submeter2()" id="btnSubmeter2">Submeter resposta</button>
+                        <button onclick="tentarNovamente2()" id="btnTentarNovamente2" >Tentar novamente</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+<script>
+
+    const pontuacaoEJogo = document.getElementById('pontuacaoEJogo');
+    const btnSubmeter = document.getElementById('btnSubmeter');
+    const btnTentarNovamente = document.getElementById('btnTentarNovamente');
+
+    const primeiraOpcao = document.getElementById('primeiraOpcao');
+    const segundaOpcao = document.getElementById('segundaOpcao');
+    const terceiraOpcao = document.getElementById('terceiraOpcao');
+    const quartaOpcao = document.getElementById('quartaOpcao');
+
+    const spanNumeroDaQuestaoAtual = document.getElementById('spanNumeroDaQuestaoAtual');
+    const spanQuestaoExibida = document.getElementById('spanQuestaoExibida');
+    const labelOpcaoUm = document.getElementById('labelOpcaoUm');
+    const labelOpcaoDois = document.getElementById('labelOpcaoDois');
+    const labelOpcaoTres = document.getElementById('labelOpcaoTres');
+    const labelOpcaoQuatro = document.getElementById('labelOpcaoQuatro');
+
+    const pontuacaoEJogo2 = document.getElementById('pontuacaoEJogo2');
+    const btnSubmeter2 = document.getElementById('btnSubmeter2');
+    const btnTentarNovamente2 = document.getElementById('btnTentarNovamente2');
+
+    const primeiraOpcao2 = document.getElementById('primeiraOpcao2');
+    const segundaOpcao2 = document.getElementById('segundaOpcao2');
+    const terceiraOpcao2 = document.getElementById('terceiraOpcao2');
+    const quartaOpcao2 = document.getElementById('quartaOpcao2');
+
+    const spanNumeroDaQuestaoAtual2 = document.getElementById('spanNumeroDaQuestaoAtual2');
+    const spanQuestaoExibida2 = document.getElementById('spanQuestaoExibida2');
+    const labelOpcaoUm2 = document.getElementById('labelOpcaoUm2');
+    const labelOpcaoDois2 = document.getElementById('labelOpcaoDois2');
+    const labelOpcaoTres2 = document.getElementById('labelOpcaoTres2');
+    const labelOpcaoQuatro2 = document.getElementById('labelOpcaoQuatro2');
+
+    const listaDeQuestoes = [ 
+        { 
+            pergunta: "Quem é o pai de Killua?", 
+            alternativaA: "Ging", 
+            alternativaB: "Silva", 
+            alternativaC: "Kite", 
+            alternativaD: "Leorio", 
+            alternativaCorreta: "alternativaB" 
+        }, 
+        
+        { 
+            pergunta: "Quem lidera a Trupe Fantasma (Phantom Troupe)?", 
+            alternativaA: "Hisoka", 
+            alternativaB: "Chrollo Lucilfer", 
+            alternativaC: "Feitan", 
+            alternativaD: "Machi", 
+            alternativaCorreta: "alternativaB" 
+        }, 
+        
+        { 
+            pergunta: "Qual das seguintes habilidades é usada por Hisoka?", 
+            alternativaA: "Godspeed", 
+            alternativaB: "Jajanken", 
+            alternativaC: "Chain Jail", 
+            alternativaD: "Bungee Gum", 
+            alternativaCorreta: "alternativaD" 
+        }, 
+        
+        { 
+            pergunta: "Quem derrota Pitou durante o arco das Formigas Quimera?", 
+            alternativaA: "Gon", 
+            alternativaB: "Netero", 
+            alternativaC: "Killua", 
+            alternativaD: "Pouf", 
+            alternativaCorreta: "alternativaA" 
+        }, 
+        
+        { 
+            pergunta: "Quem é o mestre de batalha de Gon e Killua em Heaven’s Arena?", 
+            alternativaA: "Biscuit", 
+            alternativaB: "Kite", 
+            alternativaC: "Wing", 
+            alternativaD: "Knuckle", 
+            alternativaCorreta: "alternativaC" 
+        }, 
+        
+        { 
+            pergunta: "Quem é o único membro da Trupe Fantasma que não usa Nen ofensivamente?", 
+            alternativaA: "Chrollo", 
+            alternativaB: "Shalnark", 
+            alternativaC: "Pakunoda", 
+            alternativaD: "Machi", 
+            alternativaCorreta: "alternativaC" 
+        }, 
+        
+        { 
+            pergunta: "Qual é o maior ponto fraco de Meruem após o arco da Chimera Ant?", 
+            alternativaA: "Ele se torna vulnerável emocionalmente por Komugi", 
+            alternativaB: "Sua aura diminui drasticamente após absorver inimigos", 
+            alternativaC: "Perde a habilidade de voar", 
+            alternativaD: "Não consegue usar Nen ofensivo", 
+            alternativaCorreta: "alternativaA" 
+        }, 
+        
+        { 
+            pergunta: "Quem tentou envenenar Leorio e seus amigos no exame dos caçadores? ", 
+            alternativaA: "Ponzu", 
+            alternativaB: "Wing", 
+            alternativaC: "Ging", 
+            alternativaD: "Tompa", 
+            alternativaCorreta: "alternativaD" 
+        }, 
+        
+        { 
+            pergunta: "Qual membro da aranha é da família Zoldyck? ", 
+            alternativaA: "Illumi", 
+            alternativaB: "Kalluto", 
+            alternativaC: "Killua", 
+            alternativaD: "Milluki", 
+            alternativaCorreta: "alternativaD" 
+        }, 
+        
+        { 
+            pergunta: "Em que ano foi lançado o ultimo episodio do anime atualmente de hxh", 
+            alternativaA: "2025", 
+            alternativaB: "2014", 
+            alternativaC: "2009", 
+            alternativaD: "2019", 
+            alternativaCorreta: "alternativaB" 
+        }, 
+    ]
+
+    let numeroDaQuestaoAtual = 0;
+    let pontuacaoFinal = 0;
+    let quantidadeDeQuestoes = listaDeQuestoes.length;
+
+    function onloadEsconder() {
+        pontuacaoEJogo.style.display = "none";
+    }
+
+    function iniciarQuiz() {
+        pontuacaoEJogo.style.display = 'flex';
+        document.getElementById('btnIniciarQuiz').style.display = "none";
+        spanNumeroDaQuestaoAtual.innerHTML = numeroDaQuestaoAtual + 1;
+
+        preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual);
+
+        btnSubmeter.disabled = false;
+        btnTentarNovamente.disabled = true;
+    }
+
+    function preencherHTMLcomQuestaoAtual(index) {
+        habilitarAlternativas(true);
+        const questaoAtual = listaDeQuestoes[index];
+
+        spanNumeroDaQuestaoAtual.innerHTML = index + 1;
+        spanQuestaoExibida.innerHTML = questaoAtual.pergunta;
+
+        labelOpcaoUm.innerHTML = questaoAtual.alternativaA;
+        labelOpcaoDois.innerHTML = questaoAtual.alternativaB;
+        labelOpcaoTres.innerHTML = questaoAtual.alternativaC;
+        labelOpcaoQuatro.innerHTML = questaoAtual.alternativaD;
+
+        desmarcarRadioButtons();
+        limparCoresBackgroundOpcoes();
+    }
+
+    function habilitarAlternativas(ativar) {
+        primeiraOpcao.disabled = !ativar;
+        segundaOpcao.disabled = !ativar;
+        terceiraOpcao.disabled = !ativar;
+        quartaOpcao.disabled = !ativar;
+    }
+
+    function submeter() {
+        const options = document.getElementsByName("option");
+        const hasChecked = Array.from(options).some(opt => opt.checked);
+
+        if (!hasChecked) {
+            alert("Escolha uma opção!");
+            return;
+        }
+
+        btnSubmeter.disabled = true;
+        habilitarAlternativas(false);
+        checarResposta();
+        avancar();
+    }
+
+    function checarResposta() {
+        const questaoAtual = listaDeQuestoes[numeroDaQuestaoAtual];
+
+        const idsLabels = [
+            "labelOpcaoUm",
+            "labelOpcaoDois",
+            "labelOpcaoTres",
+            "labelOpcaoQuatro"
+        ];
+
+        const values = ["alternativaA", "alternativaB", "alternativaC", "alternativaD"];
+
+        for (let i = 0; i < values.length; i++) {
+            const label = document.getElementById(idsLabels[i]);
+            if (values[i] === questaoAtual.alternativaCorreta) {
+                label.classList.add("text-success-with-bg");
+            }
+
+            const radio = document.getElementsByName("option")[i];
+            if (radio.checked && radio.value !== questaoAtual.alternativaCorreta) {
+                label.classList.add("text-danger-with-bg");
+            }
+        }
+
+        // pontuação
+        const checkedOption = Array.from(document.getElementsByName("option")).find(opt => opt.checked);
+        if (checkedOption.value === questaoAtual.alternativaCorreta) {
+            pontuacaoFinal++;
+        }
+    }
+
+    function avancar() {
+        desmarcarRadioButtons();
+        limparCoresBackgroundOpcoes();
+        habilitarAlternativas(true);
+
+        if (numeroDaQuestaoAtual < quantidadeDeQuestoes - 1) {
+            numeroDaQuestaoAtual++;
+            preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual);
+            btnSubmeter.disabled = false;
+        } else {
+            finalizarJogo();
+        }
+    }
+
+    function limparCoresBackgroundOpcoes() {
+        const options = document.getElementsByName("option");
+        options.forEach(option => {
+            document.getElementById(option.labels[0].id).classList.remove("text-success-with-bg");
+            document.getElementById(option.labels[0].id).classList.remove("text-danger-with-bg");
+        });
+    }
+
+    function desmarcarRadioButtons() {
+        const options = document.getElementsByName("option");
+        options.forEach(opt => opt.checked = false);
+    }
+
+    function finalizarJogo() {
+
+        document.getElementById("pontuacaoFinalJogo").innerHTML = `
+            <h2>Fim do Quiz!</h2>
+            <p>Você acertou ${pontuacaoFinal} de ${quantidadeDeQuestoes} questões.</p>
+        `;
+
+        btnSubmeter.disabled = true;
+        habilitarAlternativas(false);
+
+        btnTentarNovamente.disabled = false;
+
+        fetch("/quiz/salvarResultado", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                idUsuario: sessionStorage.ID_USUARIO,
+                idQuiz: 16,
+                pontuacao: pontuacaoFinal
+            })
+        })
+        .then(res => res.json())
+        .then(json => console.log("RESULTADO SALVO:", json))
+        .catch(erro => console.error("Erro:", erro));
+    }
+
+    function tentarNovamente() {
+
+        numeroDaQuestaoAtual = 0;
+        pontuacaoFinal = 0;
+
+        document.getElementById("pontuacaoFinalJogo").innerHTML = "";
+        
+        preencherHTMLcomQuestaoAtual(numeroDaQuestaoAtual);
+
+        btnSubmeter.disabled = false;
+        btnTentarNovamente.disabled = true;
+        habilitarAlternativas(true);
+    }
+
+    const listaDeQuestoes2 = [
+
+        {
+            pergunta: `O examinador observa você e os outros participantes <br> Ele aponta para três rotas possíveis. <br>Qual rota você segue?`,
+            alternativaA: "A Floresta das Feras",
+            alternativaB: "O Vale das Sombras",
+            alternativaC: "O Caminho das Luzes",
+            alternativaD: "A Estrada da Ruína",
+            valorA: "Gon_Freecss",
+            valorB: "Killua_Zoldyck",
+            valorC: "Leorio",
+            valorD: "Kurapika"
+        },
+
+        {
+            pergunta: `Você encontra um NPC misterioso: um viajante ferido com um mapa. <br> Ele estende o mapa para você e pergunta:<br> “Você veio aqui atrás de que?”`,
+            alternativaA: "Quero desafiar meus limites.",
+            alternativaB: "Quero liberdade. Coisas que só a força pode oferecer",
+            alternativaC: "Quero um futuro melhor para mim e para os outros.",
+            alternativaD: "Quero respostas. Quero justiça.",
+            valorA: "Gon_Freecss",
+            valorB: "Killua_Zoldyck",
+            valorC: "Leorio",
+            valorD: "Kurapika"
+        },
+
+        {
+            pergunta: `Você é atacado por um examinador disfarçado, testando seus reflexos.<br>Como você reage?`,
+            alternativaA: "Parte pra cima com impulsividade e coragem.",
+            alternativaB: "Analisa o movimento, se esquiva e procura um contra-ataque certeiro",
+            alternativaC: "Tenta dialogar primeiro, e luta apenas se necessário.",
+            alternativaD: "Assume uma postura defensiva e espera o momento perfeito.",
+            valorA: "Gon_Freecss",
+            valorB: "Killua_Zoldyck",
+            valorC: "Leorio",
+            valorD: "Kurapika"
+        },
+
+        {
+            pergunta: `Você entra numa sala com três portões. <br> Para abrir um deles, precisa resolver um enigma:<br>“O que torna uma pessoa verdadeiramente forte?”`,
+            alternativaA: "A vontade de seguir em frente, não importa o quê.",
+            alternativaB: "A capacidade de tomar decisões difíceis.",
+            alternativaC: "O desejo de proteger os outros.",
+            alternativaD: "A determinação de nunca trair seu ideal.",
+            valorA: "Gon_Freecss",
+            valorB: "Killua_Zoldyck",
+            valorC: "Leorio",
+            valorD: "Kurapika"
+        },
+
+        {
+            pergunta: `Você encontra dois personagens presos:<br>Um inocente ferido e um ladrão perigoso.<br>Quem você escolhe?`,
+            alternativaA: "Salva o inocente sem hesitar",
+            alternativaB: "Salva o ladrão todos merecem uma chance.",
+            alternativaC: "Ignora os dois e segue em frente foco é tudo.",
+            alternativaD: "Salva quem vai te dar mais respostas.",
+            valorA: "Leorio",
+            valorB: "Gon_Freecss",
+            valorC: "Killua_Zoldyck",
+            valorD: "Kurapika"
+        },
+
+        {
+            pergunta: "Se você dominasse o Nen hoje… Qual seria o motivo?",
+            alternativaA: "Buscar aventuras e novos horizontes.",
+            alternativaB: "Ser forte o suficiente para nunca depender de ninguém",
+            alternativaC: "Ajudar pessoas e mudar o mundo.",
+            alternativaD: "Fazer justiça mesmo que custe caro.",
+            valorA: "Gon_Freecss",
+            valorB: "Killua_Zoldyck",
+            valorC: "Leorio",
+            valorD: "Kurapika"
+        }
+
+    ];
+
+    let numeroDaQuestaoAtual2 = 0;
+    let quantidadeDeQuestoes2 = listaDeQuestoes2.length;
+
+    let pontuacao2 = {
+        Gon_Freecss: 0,
+        Killua_Zoldyck: 0,
+        Leorio: 0,
+        Kurapika: 0
+    };
+
+
+    function onloadEsconder2() {
+        document.getElementById('pontuacao2').style.display = "none";
+        document.getElementById('jogo2').style.display = "none";
+    }
+
+    function iniciarQuiz2() {
+        pontuacaoEJogo2.style.display = 'block';
+        document.getElementById('pontuacao2').style.display = "flex";
+        document.getElementById('jogo2').style.display = "flex";
+        document.getElementById('btnIniciarQuiz2').style.display = "none";
+
+        document.getElementById('qtdQuestoes2').innerHTML = quantidadeDeQuestoes2;
+
+        preencherHTMLcomQuestaoAtual2(0);
+
+        btnSubmeter2.disabled = false;
+        btnTentarNovamente2.disabled = true;
+    }
+
+    function preencherHTMLcomQuestaoAtual2(index) {
+        habilitarAlternativas2(true);
+        const questaoAtual = listaDeQuestoes2[index];
+        numeroDaQuestaoAtual2 = index;
+
+        document.getElementById("spanNumeroDaQuestaoAtual2").innerHTML = Number(index) + 1;
+        document.getElementById("spanQuestaoExibida2").innerHTML = questaoAtual.pergunta;
+        document.getElementById("labelOpcaoUm2").innerHTML = questaoAtual.alternativaA;
+        document.getElementById("labelOpcaoDois2").innerHTML = questaoAtual.alternativaB;
+        document.getElementById("labelOpcaoTres2").innerHTML = questaoAtual.alternativaC;
+        document.getElementById("labelOpcaoQuatro2").innerHTML = questaoAtual.alternativaD;
+    }
+
+    function submeter2() {
+        const options = document.getElementsByName("option2");
+
+        let hasChecked = false;
+        for (let i = 0; i < options.length; i++) {
+            if (options[i].checked) {
+                hasChecked = true;
+                break;
+            }
+        }
+
+        if (!hasChecked) {
+            alert("Não há alternativas escolhidas. Escolha uma opção.");
+        } else {
+            checarResposta2();
+            avancar2();
+        }
+    }
+
+    function habilitarAlternativas2(habilitar) {
+        primeiraOpcao2.disabled = !habilitar;
+        segundaOpcao2.disabled = !habilitar;
+        terceiraOpcao2.disabled = !habilitar;
+        quartaOpcao2.disabled = !habilitar;
+    }
+
+    function avancar2() {
+        desmarcarRadioButtons2();
+        habilitarAlternativas2(true);
+
+        if (numeroDaQuestaoAtual2 < quantidadeDeQuestoes2 - 1) {
+            numeroDaQuestaoAtual2++;
+            preencherHTMLcomQuestaoAtual2(numeroDaQuestaoAtual2);
+            btnSubmeter2.disabled = false;
+        } else {
+            finalizarJogo2();
+        }
+    }
+
+
+    function tentarNovamente2() {
+
+        numeroDaQuestaoAtual2 = 0;
+        pontuacao2 = {
+            Gon_Freecss: 0,
+            Killua_Zoldyck: 0,
+            Leorio: 0,
+            Kurapika: 0
+        };
+
+        document.getElementById("pontuacao2").innerHTML = "";
+        document.getElementById('jogo2').style.display = "flex";
+        document.getElementById('pontuacao2').style.display = "flex";
+
+        preencherHTMLcomQuestaoAtual2(numeroDaQuestaoAtual2);
+
+        btnSubmeter2.disabled = false;
+        btnTentarNovamente2.disabled = true;
+        habilitarAlternativas2(true);
+
+        desmarcarRadioButtons2();
+    }
+
+
+    function finalizarJogo2() {
+        document.getElementById('jogo2').style.display = "none";
+
+        const resultadoFinal = Object.entries(pontuacao2).sort((a, b) => b[1] - a[1])[0][0];
+
+        let mensagem = "";
+
+        if (resultadoFinal == "Gon_Freecss") {
+            mensagem = `Você age pelo coração. Corajoso, impulsivo, leal e cheio de vida.<br>Você é guiado pela curiosidade e pela vontade de crescer..<br>
+        <img src="assets/imgs/Gon.jpg" alt="" width="300px">`;
+        }
+        if (resultadoFinal == "Killua_Zoldyck") {
+            mensagem = `Você é estrategista, inteligente e perigoso quando precisa.<br>Mesmo com uma fachada fria, tem um enorme coração.<br>
+        <img src="assets/imgs/Killua.jpg" alt="" width="300px">`;
+        }
+        if (resultadoFinal == "Kurapika") {
+            mensagem = `Você é focado, disciplinado, emocionalmente intenso.<br>Sua justiça é inabalável, e seu Nen nasce de convicções profundas.<br>
+        <img src="assets/imgs/Kurapika.jfif" alt="" width="300px">`;
+        }
+        if (resultadoFinal == "Leorio") {
+            mensagem = `Você se importa. De verdade.<br>Sua força está em ajudar, curar e proteger as pessoas.<br>
+        <img src="assets/imgs/Leorio.jpg" alt="" width="300px">`;
+        }
+
+        document.getElementById("pontuacao2").innerHTML = `
+        <h2 style="margin-bottom: 10px;">Resultado do Quiz</h2>
+        <p style="font-size: 20px; margin-bottom: 20px;">${mensagem}</p>
+        <button onclick="tentarNovamente2()" class="btnTentarDepois">Tentar novamente</button>
+        `;
+
+        document.getElementById('pontuacao2').style.display = "flex";
+
+        fetch("/quiz/salvarResultado", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+            idUsuario: sessionStorage.ID_USUARIO,
+            idQuiz: 20,
+            pontuacao: resultadoFinal
+        })
+    })
+    .then(res => res.json())
+    .then((dados) => console.log("Resultado salvo:", dados))
+    .catch((erro) => console.error("Erro ao salvar:", erro));
+    }
+
+    function checarResposta2() {
+        const options = document.getElementsByName("option2");
+        const questaoAtual = listaDeQuestoes2[numeroDaQuestaoAtual2];
+
+        let valorEscolhido = null;
+
+        options.forEach((option) => {
+            if (option.checked) {
+                if (option.value === "alternativaA") valorEscolhido = questaoAtual.valorA;
+                if (option.value === "alternativaB") valorEscolhido = questaoAtual.valorB;
+                if (option.value === "alternativaC") valorEscolhido = questaoAtual.valorC;
+                if (option.value === "alternativaD") valorEscolhido = questaoAtual.valorD;
+            }
+        });
+
+        if (!valorEscolhido) {
+            alert("Por favor, selecione uma resposta!");
+            return;
+        }
+
+        pontuacao2[valorEscolhido]++; 
+    }
+
+    function desmarcarRadioButtons2() {
+        const options = document.getElementsByName("option2");
+        for (let i = 0; i < options.length; i++) {
+            options[i].checked = false;
+        }
+    }
+
+</script>

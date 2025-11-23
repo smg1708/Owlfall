@@ -23,38 +23,48 @@ function atualizarFicha(dados) {
     `;
 
     var sqlCaracs = `
-        UPDATE caracteristicas SET descricao = '${dados.aparencia}' WHERE fkFicha = ${dados.idFicha} AND nome = 'aparencia';
-        UPDATE caracteristicas SET descricao = '${dados.personalidade}' WHERE fkFicha = ${dados.idFicha} AND nome = 'personalidade';
-        UPDATE caracteristicas SET descricao = '${dados.historia}' WHERE fkFicha = ${dados.idFicha} AND nome = 'descricao';
-        UPDATE caracteristicas SET descricao = '${dados.objetivo}' WHERE fkFicha = ${dados.idFicha} AND nome = 'objetivo';
+        UPDATE caracteristicas SET descricao = CASE nome
+            WHEN 'classe' THEN '${dados.classe}'
 
-        UPDATE caracteristicas SET descricao = '${dados.agilidade}' WHERE fkFicha = ${dados.idFicha} AND nome = 'agilidade';
-        UPDATE caracteristicas SET descricao = '${dados.forca}' WHERE fkFicha = ${dados.idFicha} AND nome = 'forca';
-        UPDATE caracteristicas SET descricao = '${dados.intelecto}' WHERE fkFicha = ${dados.idFicha} AND nome = 'intelecto';
-        UPDATE caracteristicas SET descricao = '${dados.presenca}' WHERE fkFicha = ${dados.idFicha} AND nome = 'presenca';
-        UPDATE caracteristicas SET descricao = '${dados.vigor}' WHERE fkFicha = ${dados.idFicha} AND nome = 'vigor';
+            WHEN 'aparencia' THEN '${dados.aparencia}'
+            WHEN 'personalidade' THEN '${dados.personalidade}'
+            WHEN 'descricao' THEN '${dados.descricao}'
+            WHEN 'objetivo' THEN '${dados.objetivo}'
 
-        UPDATE caracteristicas SET descricao = '${dados.adestramento}' WHERE fkFicha = ${dados.idFicha} AND nome = 'adestramento';
-        UPDATE caracteristicas SET descricao = '${dados.artes}' WHERE fkFicha = ${dados.idFicha} AND nome = 'artes';
-        UPDATE caracteristicas SET descricao = '${dados.acrob_atlet}' WHERE fkFicha = ${dados.idFicha} AND nome = 'acrob_atlet';
-        UPDATE caracteristicas SET descricao = '${dados.ciencias}' WHERE fkFicha = ${dados.idFicha} AND nome = 'ciencias';
-        UPDATE caracteristicas SET descricao = '${dados.diplomacia}' WHERE fkFicha = ${dados.idFicha} AND nome = 'diplomacia';
-        UPDATE caracteristicas SET descricao = '${dados.enganacao}' WHERE fkFicha = ${dados.idFicha} AND nome = 'enganacao';
-        UPDATE caracteristicas SET descricao = '${dados.fortitude}' WHERE fkFicha = ${dados.idFicha} AND nome = 'fortitude';
-        UPDATE caracteristicas SET descricao = '${dados.furtividade}' WHERE fkFicha = ${dados.idFicha} AND nome = 'furtividade';
-        UPDATE caracteristicas SET descricao = '${dados.iniciativa}' WHERE fkFicha = ${dados.idFicha} AND nome = 'iniciativa';
-        UPDATE caracteristicas SET descricao = '${dados.intimidacao}' WHERE fkFicha = ${dados.idFicha} AND nome = 'intimidacao';
-        UPDATE caracteristicas SET descricao = '${dados.investigacao}' WHERE fkFicha = ${dados.idFicha} AND nome = 'investigacao';
-        UPDATE caracteristicas SET descricao = '${dados.luta}' WHERE fkFicha = ${dados.idFicha} AND nome = 'luta';
-        UPDATE caracteristicas SET descricao = '${dados.medicina}' WHERE fkFicha = ${dados.idFicha} AND nome = 'medicina';
-        UPDATE caracteristicas SET descricao = '${dados.percepcao}' WHERE fkFicha = ${dados.idFicha} AND nome = 'percepcao';
-        UPDATE caracteristicas SET descricao = '${dados.pilotagem}' WHERE fkFicha = ${dados.idFicha} AND nome = 'pilotagem';
-        UPDATE caracteristicas SET descricao = '${dados.pontaria}' WHERE fkFicha = ${dados.idFicha} AND nome = 'pontaria';
-        UPDATE caracteristicas SET descricao = '${dados.profissao}' WHERE fkFicha = ${dados.idFicha} AND nome = 'profissao';
-        UPDATE caracteristicas SET descricao = '${dados.reflexos}' WHERE fkFicha = ${dados.idFicha} AND nome = 'reflexos';
-        UPDATE caracteristicas SET descricao = '${dados.sobrevivencia}' WHERE fkFicha = ${dados.idFicha} AND nome = 'sobrevivencia';
-        UPDATE caracteristicas SET descricao = '${dados.espirito}' WHERE fkFicha = ${dados.idFicha} AND nome = 'espirito';
-    `;
+            WHEN 'agilidade' THEN '${dados.agilidade}'
+            WHEN 'forca' THEN '${dados.forca}'
+            WHEN 'intelecto' THEN '${dados.intelecto}'
+            WHEN 'presenca' THEN '${dados.presenca}'
+            WHEN 'vigor' THEN '${dados.vigor}'
+
+            WHEN 'adestramento' THEN '${dados.adestramento}'
+            WHEN 'artes' THEN '${dados.artes}'
+            WHEN 'acrob_atletismo' THEN '${dados.acrob_atlet}'
+            WHEN 'ciencias' THEN '${dados.ciencias}'
+            WHEN 'diplomacia' THEN '${dados.diplomacia}'
+
+            WHEN 'enganacao' THEN '${dados.enganacao}'
+            WHEN 'fortitude' THEN '${dados.fortitude}'
+            WHEN 'furtividade' THEN '${dados.furtividade}'
+            WHEN 'iniciativa' THEN '${dados.iniciativa}'
+            WHEN 'intimidacao' THEN '${dados.intimidacao}'
+
+            WHEN 'investigacao' THEN '${dados.investigacao}'
+            WHEN 'luta' THEN '${dados.luta}'
+            WHEN 'medicina' THEN '${dados.medicina}'
+            WHEN 'percepcao' THEN '${dados.percepcao}'
+            WHEN 'pilotagem' THEN '${dados.pilotagem}'
+
+            WHEN 'pontaria' THEN '${dados.pontaria}'
+            WHEN 'profissao' THEN '${dados.profissao}'
+            WHEN 'reflexos' THEN '${dados.reflexos}'
+            WHEN 'sobrevivencia' THEN '${dados.sobrevivencia}'
+            WHEN 'espirito' THEN '${dados.espirito}'
+
+            else descricao
+        END
+        WHERE fkFicha = ${dados.idFicha};
+        `;
 
     var sql = sqlCaracs + sqlFicha
 

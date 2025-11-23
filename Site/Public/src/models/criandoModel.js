@@ -33,7 +33,7 @@ function criarFicha(dados) {
                 ('${idFicha}', 'vigor', 'atributo', "${dados[0].atributos[4]}"),
                 ('${idFicha}', 'adestramento', 'pericia', "${dados[0].pericias[0].adestramento}"),
                 ('${idFicha}', 'artes', 'pericia', "${dados[0].pericias[0].artes}"),
-                ('${idFicha}', 'atletismo/acrobacia', 'pericia', "${dados[0].pericias[0].atletismo_acrobacia}"),
+                ('${idFicha}', 'acrob_atlet', 'pericia', "${dados[0].pericias[0].acrob_atlet}"),
                 ('${idFicha}', 'ciencias', 'pericia', "${dados[0].pericias[0].ciencias}"),
                 ('${idFicha}', 'diplomacia', 'pericia', "${dados[0].pericias[0].diplomacia}"),
                 ('${idFicha}', 'enganacao', 'pericia', "${dados[0].pericias[0].enganacao}"),
