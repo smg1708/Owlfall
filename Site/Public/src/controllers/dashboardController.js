@@ -9,6 +9,15 @@ function medias(req, res) {
         });
 }
 
+function tentativas(req, res) {
+    dashboardModel.obterTentativasQuiz1()
+        .then(resultado => res.status(200).json(resultado))
+        .catch(erro => {
+            console.log("Erro:", erro);
+            res.status(500).json(erro);
+        });
+}
+
 function personagens(req, res) {
     dashboardModel.buscarResultadosPersonagem()
         .then(resultado => res.status(200).json(resultado))
@@ -30,5 +39,6 @@ function classes(req, res) {
 module.exports = {
     medias,
     personagens,
-    classes
+    classes,
+    tentativas
 };

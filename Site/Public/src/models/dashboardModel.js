@@ -7,7 +7,16 @@ function buscarMediasQuizzes() {
             Round(avg(pontuacao)) as media
         from resultadoQuiz
         where idQuiz = 1
-        group by idQuiz;
+        order by dataHora
+    `;
+    return database.executar(instrucao);
+}
+
+function obterTentativasQuiz1() {
+    var instrucao = `
+        select *
+        from resultadoQuiz
+        where idQuiz = 1
     `;
     return database.executar(instrucao);
 }
@@ -34,7 +43,6 @@ function buscarResultadosClasse() {
         where nome = 'classe'
         group by descricao
         order by quantidade desc
-        limit 1;
     `;
     return database.executar(instrucao);
 }
@@ -42,6 +50,7 @@ function buscarResultadosClasse() {
 module.exports = {
     buscarMediasQuizzes,
     buscarResultadosPersonagem,
-    buscarResultadosClasse
+    buscarResultadosClasse,
+    obterTentativasQuiz1
 };
 

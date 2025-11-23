@@ -56,7 +56,6 @@ function obterTopClasses() {
         where nome = 'classe'
         group by descricao
         order by quantidade desc
-        limit 1;
     `;
     return database.executar(instrucao);
 }
