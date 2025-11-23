@@ -27,8 +27,16 @@
                 <a onclick="if (verificarLoginAntes()) personagens()" > Personagens </a>
                 <a onclick="if (verificarLoginAntes()) campanhas()" > Campanhas </a>
                 <a href="login.html"> Login </a>
+                <div><a class="circulo-login" onclick="if (verificarLoginAntes()) quiz()"><img src="assets/imgs/icon_sem_personagem.jpg" alt="" ></a></div>
             </div>
-        </div>        
+        </div>
+        <img src="assets/imgs/gus.png" alt="" class="div-imagem-nav-index">
+        <div class="div-slogan-index">
+            <div class="div-card-inicio-index">
+                <h2>Fichas Digitais - Owl fall</h2>
+                <p>Acesso rápido e simplificado a todas as informações de sua ficha do Owlfall.</p>
+            </div>
+        </div>   
     </div>
     <div>
         <div class="container1 parte1">
@@ -113,6 +121,10 @@
 
     function campanhas() {
       window.location = "campanhas.html"
+    }
+
+    function quiz() {
+      window.location = "quiz.html"
     }
 
     </script>

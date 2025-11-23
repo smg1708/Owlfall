@@ -364,9 +364,10 @@ body {
 
 .div-header-index {
   color: white;
-  background-image: url('../assets/imgs/fundo_index.jpg');
+  background-image: url('../assets/imgs/fundo_teste.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 680px;
 }
 
@@ -399,16 +400,52 @@ body {
   font-size: 18px;
 }
 
-.div-traco-index {
-  background-color: #ffffff;
-  width: 100%;
-  height: 10px;
+.circulo-login img {
+  padding-left: 320px;
+  height: 35px;
+  width: 35px;
+  border-radius: 10px;
 }
 
-.div-traco-personagens-cima {
-  background-color: #ffffff;
+.div-imagem-nav-index {
+  margin-top: 21.5%;
+  margin-left: 5%;            
+  width: 20%; 
+  position: absolute;
+}
+
+.div-card-inicio-index {
+  background-color: #41210A;
+  width: 30%;
+  height: 20%;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 55%;
+}
+
+.div-slogan-index h2 {
+  margin: 0;
+  font-size: 32px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.div-slogan-index p {
+  margin-top: 20px;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.div-header-index .div-slogan-index {
+  height: 100px;
   width: 100%;
-  height: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 37%;
+  padding-top: 150px;
+  color: #ffffff;
+  border-width: 150px;
 }
 
 .container1 {

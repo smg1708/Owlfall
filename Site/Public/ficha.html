@@ -28,6 +28,7 @@
                 <a onclick="if (verificarLoginAntes()) personagens()" > Personagens </a>
                 <a onclick="if (verificarLoginAntes()) campanhas()" > Campanhas </a>
                 <a href="login.html"> Login </a>
+                <div><a class="circulo-login" onclick="if (verificarLoginAntes()) quiz()"><img src="assets/imgs/icon_sem_personagem.jpg" alt="" ></a></div>
             </div>
         </div>
         <div class="div-traco-ficha"></div>
@@ -408,6 +409,10 @@
       window.location = "campanhas.html"
     }
 
+    function quiz() {
+      window.location = "quiz.html"
+    }
+    
     function carregarFicha() {
 
         fetch(`/ficha/buscar?idFicha=${idFicha}`, {
