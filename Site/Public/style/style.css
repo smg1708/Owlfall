@@ -2426,62 +2426,139 @@ input[type=number]::-webkit-inner-spin-button {
 
 /* Usuario - dashboard */
 
-/* ================================
-   ESTILO DOS CARDS DE GRÁFICOS
-   (compatível com o layout atual)
-===================================*/
 
-.card-grafico {
-    width: 82%;
-    margin-left: 17%;
-    margin-bottom: 40px;
+.janela-dash {
+    background-color: #0d0d0d;
+    color: #fff;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-left {
+    position: fixed;
+    width: 260px;
+    height: 100vh;
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-right: 5px solid #41210A;
+}
 
-    background: #0d0d0d;
-    border-radius: 15px;
+.header-left h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
 
+.hello {
     text-align: center;
 }
 
-/* título interno */
-.card-grafico h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
+.hello h3 {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.hello h3 span {
+    font-weight: 800;
+}
+
+.btn-nav,
+.btn-nav-white,
+.btn-logout {
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn-nav a,
+.btn-nav-white a,
+.btn-logout {
+    text-decoration: none;
     color: white;
 }
 
-/* área que abriga o canvas */
-.card-grafico .grafico-area {
-    background: #1e1e1e;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.04);
+.btn-nav {
+    border: 5px solid #41210A;
 }
 
-/* canvas ajustado para responsividade */
+.btn-nav-white {
+    border: 5px solid #41210A;
+}
+
+.btn-logout {
+    background: #c62828;
+}
+
+.dash {
+    padding: 20px;
+    width: 100%;
+    margin-left: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-grafico {
+    width: 80%;
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #1b1b1b;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card-grafico h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.card-grafico .grafico-area {
+    background: #2b2b2b;
+    border-radius: 12px;
+    padding: 20px;
+  }
+
 .card-grafico canvas {
     width: 100% !important;
     max-height: 350px;
 }
 
+/* ================================
+   KPIs
+===================================*/
 
-/* =====================================
-   GRID PARA ORGANIZAR OS 3 PRIMEIROS KPI
-========================================*/
-
-.grid-kpis {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-left: 17%;
-    margin-bottom: 40px;
+.kpi {
+    width: 80%;
+    background-color: #1b1b1b;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
 }
 
-.grid-kpis .btns-dash {
-    width: 30%;
+.kpi h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
 }
 
+.kpi span {
+    font-size: 48px;
+    font-weight: 700;
+    color: #e3b062;
+}
 
-body {
-    background: #0d0d0d;
+#top1Personagem img {
+    width: 200px;
+    border-radius: 12px;
+}
+
+#top1Classe h2 {
+    font-size: 36px;
+    color: #e3b062;
 }

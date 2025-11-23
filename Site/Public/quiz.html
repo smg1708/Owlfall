@@ -445,7 +445,7 @@
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 idUsuario: sessionStorage.ID_USUARIO,
-                idQuiz: 16,
+                idQuiz: 1,
                 pontuacao: pontuacaoFinal
             })
         })
@@ -688,8 +688,9 @@
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
             idUsuario: sessionStorage.ID_USUARIO,
-            idQuiz: 20,
-            pontuacao: resultadoFinal
+            idQuiz: 2,
+            pontuacao: 0,
+            personagemEscolhido: resultadoFinal
         })
     })
     .then(res => res.json())
