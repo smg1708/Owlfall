@@ -1407,7 +1407,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .div-container-navbar-ficha .div-navbar {
-  padding-left: 26%;
+  padding-left: 18%;
 }
 
 .div-logo-navbar a {
@@ -1449,13 +1449,17 @@ input[type=number]::-webkit-inner-spin-button {
   padding: 2% 20%;
 }
 
+.foto-personagem {
+  position: absolute;
+  left: 260px;
+  top: 100px;
+  width: 45px;
+  opacity: 0;
+}
+
 .box-personagem-ficha img {
-  width: 60px;
-  height: 60px;
-  margin-right: -2%;
-  object-fit: cover;
-  object-position: top;
-  border: 1px, solid, white;
+  width: 5.5%;
+  margin-right: 2%;
 }
 
 .box-personagem-ficha h3 {
@@ -1467,14 +1471,6 @@ input[type=number]::-webkit-inner-spin-button {
 
 .box-personagem-ficha input {
   font-size: 16px;
-}
-
-.foto-personagem {
-  position: relative;
-  width: 60px;
-  top: 20px;
-  right: 47px;
-  opacity: 0;
 }
 
 .input-personagem {
@@ -1500,9 +1496,9 @@ input[type=number]::-webkit-inner-spin-button {
 
 #img-atributos-ficha {
   position: absolute;
-  width: 90%;
-  height: 180%;
-  right: 115%;
+  width: 120%;
+  height: 240%;
+  right: 93%;
   top: -30%;
   pointer-events: none;
 }
@@ -1529,37 +1525,37 @@ input[type=number]::-webkit-inner-spin-button {
 
 #inp_agilidade_ficha {
   position: absolute;
-  right: 155.6%;
-  bottom: 83%;
+  right: 147.6%;
+  bottom: 73%;
 }
 
 #inp_forca_ficha {
   position: absolute;
-  right: 180.2%;
-  bottom: 50%;
+  right: 181.2%;
+  bottom: 27%;
 }
 
 #inp_intelecto_ficha {
   position: absolute;
-  right: 130.2%;
-  bottom: 50%;
+  right: 114.2%;
+  bottom: 27%;
 }
 
 #inp_vigor_ficha {
   position: absolute;
-  right: 137.6%;
-  top: 87%;
+  right: 124.2%;
+  top: 129%;
 }
 
 #inp_presenca_ficha {
   position: absolute;
-  right: 173.6%;
-  top: 87%;
+  right: 171.6%;
+  top: 129%;
 }
 
 .span-nivel {
   margin-right: 0.5%;
-  margin-top: 0.5%;
+  margin-top: 3.5%;
 }
 
 #select_nivel {
@@ -1569,12 +1565,17 @@ input[type=number]::-webkit-inner-spin-button {
   height: 25px;
   appearance: none;
   margin-right: 2%;
-  margin-top: 0.2%;
+  margin-top: 3.2%;
 }
 
 #inp_classe {
   font-size: 14px;
-  margin-top: 0.2%;
+  margin-top: 3.7%;
+  width: 10%;
+}
+
+.h3-classe-ficha {
+  padding-top: 3.5%;
 }
 
 .box-personagem-ficha-tecnica {
@@ -1604,7 +1605,7 @@ input[type=number]::-webkit-inner-spin-button {
   border-style: none;
   width: 7%;
   height: 20px;
-  margin-top: 0.3%;
+  margin-top: 5.3%;
   border: none; 
   outline: none; 
   border-bottom: 1px solid white;
@@ -1614,8 +1615,8 @@ input[type=number]::-webkit-inner-spin-button {
 .div-status-ficha {
   display: flex;
   flex-direction: column;
-  padding-top: 4%;
-  margin-left: -15%;
+  padding-top: 8%;
+  margin-left: -20%;
   
 }
 
@@ -1742,18 +1743,15 @@ input[type=number]::-webkit-inner-spin-button {
 .box-abas-caracteristicas textarea {
   background-color: #1e1e1e;
   border-color: transparent;
-  color: white;
-  font-size: 16px;
   height: 100px;
   width: 95%;
-  margin-top: 5px;
 }
 
 .div-barra-vida {
   background-color: red;
-  width: 260%;
-  height: 4vh;
-  margin-left: -75%;
+  width: 180%;
+  height: 6vh;
+  margin-left: -40%;
 }
 
 .div-barra-vida .input-vida-ficha {
@@ -1770,19 +1768,19 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .input-esquerda-vida {
-  left: 51%;
+  left: 58%;
 }
 
 .input-direita-vida {
-  left: 55%;
+  left: 52.5%;
   text-align: left;
 }
 
 .div-barra-sanidade {
   background-color: rgb(109, 19, 212);
-  width: 260%;
-  height: 4vh;
-  margin-left: -75%;
+  width: 180%;
+  height: 6vh;
+  margin-left: -40%;
 }
 
 .div-barra-sanidade .input-sanidade-ficha {
@@ -1799,19 +1797,19 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .input-esquerda-sanidade {
-  left: 51%;
+  left: 58%;
 }
 
 .input-direita-sanidade {
-  left: 55%;
+  left: 52.5%;
   text-align: left;
 }
 
 .div-barra-nen {
   background-color: #0f3f8d;
-  width: 260%;
-  height: 4vh;
-  margin-left: -75%;
+  width: 180%;
+  height: 6vh;
+  margin-left: -40%;
 }
 
 .div-barra-nen .input-nen-ficha {
@@ -1828,26 +1826,12 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .input-esquerda-nen {
-  left: 51%;
+  left: 58%;
 }
 
 .input-direita-nen {
-  left: 55%;
+  left: 52.5%;
   text-align: left;
-}
-
-.atualizar-ficha {
-  background-color: #41210A;
-  position: relative;
-  font-family: "Kavoon";
-  font-size: 15px;
-  color: #ffffff;
-  bottom: 125px;
-  height: 48px;
-  width: 200px;
-  border-radius: 5px;
-  border-style: none;
-  left: 30px;
 }
 
 /* Usuario - Quiz */
