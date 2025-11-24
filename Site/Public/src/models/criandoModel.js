@@ -1,15 +1,15 @@
 var database = require("../database/config")
 
 // Coloque os mesmos parâmetros aqui. Vá para a var instrucaoSql
-function criarFicha(dados) {
+function criarFicha(dados, idUsuario) {
     // console.log("ACESSEI OS DADOS MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha);
     
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
-    
+    console.log("Dados enviados para criarFicha:", dados);
     var sqlFicha = `
     INSERT INTO ficha (fkUsuario, nome, jogador, nivel, vdAtual, vdMax, sanAtual, sanMax, nenAtual, nenMax ) VALUES 
-        ('1', '${dados[0].nome}', '${dados[0].jogador}', '1','${dados[0].statusMax.vida}','${dados[0].statusMax.vida}','${dados[0].statusMax.sanidade}','${dados[0].statusMax.sanidade}','${dados[0].statusMax.nen}','${dados[0].statusMax.nen}');
+        (${idUsuario}, '${dados[0].nome}', '${dados[0].jogador}', '1','${dados[0].statusMax.vida}','${dados[0].statusMax.vida}','${dados[0].statusMax.sanidade}','${dados[0].statusMax.sanidade}','${dados[0].statusMax.nen}','${dados[0].statusMax.nen}');
     `;
     
     console.log("Executando a instrução SQL: \n" + sqlFicha);

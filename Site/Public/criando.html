@@ -250,6 +250,7 @@
 
 <script>
 
+    var idUsuario = sessionStorage.ID_USUARIO
     var statusMax = {}
     var dadosPersonagem = []
     var classe = []
@@ -452,6 +453,7 @@
         },
         body: JSON.stringify({
           dadosPersonagemServer: dadosPersonagem,
+          idUsuarioServer: idUsuario
         }),
       })
       .then(function(res) {
@@ -460,8 +462,8 @@
       .then(function(resposta) {
         sessionStorage.ID_FICHA = resposta.idFicha;
         window.location.href = "ficha.html";
-      });
-
+      })
+        .catch(erro => console.error("Erro no fetch:", erro));
     }
 
 </script>
