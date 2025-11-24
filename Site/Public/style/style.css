@@ -44,7 +44,7 @@ body {
 }
 
 .circulo-login img {
-  padding-left: 225px;
+  padding-left: 195px;
   height: 30px;
   width: 30px;
   border-radius: 10px;
@@ -464,7 +464,7 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     width: 60%;
-    margin: 40px auto;
+    margin: 40px 14%;
 }
 
 .div-box-ficha-personagens {
@@ -730,7 +730,7 @@ body {
 }
 
 .div-container-navbar-campanhas .div-navbar {
-  padding-left: 26%;
+  padding-left: 18%;
 }
 
 .div-logo-navbar a {
@@ -795,8 +795,8 @@ body {
 
 .div-lupa-campanhas img {
   position: absolute;
-  width: 3%;
-  padding: 0.9% 0;
+  width: 4%;
+  padding: 1.6% 0;
 }
 
 .div-pesquisa-campanhas {
@@ -804,8 +804,8 @@ body {
   border-style: none;
   font-size: 20px;
   margin-top: 20px;
-  width: 1130px;
-  height: 8%;
+  width: 770px;
+  height: 8vh;
   background-color: #1e1e1e;
 } 
 /* Cria Personagem - Atributo */
@@ -1848,7 +1848,7 @@ input[type=number]::-webkit-inner-spin-button {
     background: #111;
     position: fixed;
     width: 260px;
-    height: 100vh;
+    height: 60vh;
     padding: 25px;
     display: flex;
     flex-direction: column;
@@ -2026,10 +2026,10 @@ input[type=number]::-webkit-inner-spin-button {
     position: fixed;
     width: 260px;
     height: 100vh;
-    padding: 25px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 15px;
     border-right: 5px solid #41210A;
 }
 
@@ -2044,7 +2044,6 @@ input[type=number]::-webkit-inner-spin-button {
 
 .hello h3 {
     font-weight: 300;
-    font-size: 1.2rem;
 }
 
 .hello h3 span {
@@ -2114,10 +2113,6 @@ input[type=number]::-webkit-inner-spin-button {
     width: 100% !important;
     max-height: 350px;
 }
-
-/* ================================
-   KPIs
-===================================*/
 
 .kpi {
     width: 80%;
