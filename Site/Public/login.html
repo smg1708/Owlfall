@@ -28,9 +28,10 @@
             <div class="div-navbar">
                 <a href="index.html"> Sobre </a>
                 <a href="poder.html"> Poder </a>
-                <a href="personagens.html"> Personagens </a>
-                <a href="campanhas.html"> Campanhas </a>
+                <a onclick="if (verificarLoginAntes()) personagens()" > Personagens </a>
+                <a onclick="if (verificarLoginAntes()) campanhas()" > Campanhas </a>
                 <a href="login.html"> Login </a>
+                <div><a class="circulo-login" onclick="if (verificarLoginAntes()) quiz()"><img src="assets/imgs/icon_sem_personagem.jpg" alt="" ></a></div>
             </div>
         </div>
     </div>
@@ -62,11 +63,23 @@
 
 <script>
 
+    function personagens() {
+    window.location = "personagens.html"
+    }
+
+    function campanhas() {
+    window.location = "campanhas.html"
+    }
+
+    function quiz() {
+      window.location = "quiz.html"
+    }
 
     function entrar() {
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
+
 
         if (emailVar == "" || senhaVar == "") {
             alert("Campos incorretos\n Verifique os campos e tente novamente");

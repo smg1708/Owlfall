@@ -6,28 +6,36 @@
     <title >OwlFall | Personagens</title>
     <link rel="icon" href="./assets/icon/coruja.jpg" />
 
-    <link rel="stylesheet" type="text/css" href="style/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
-</head>
+    <script src="./js/sessao.js"></script>
+    <link rel="icon" href="assets/icon/coruja.jpg" />
 
-<body>
-   
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body onload="mostrarPersonagens()">
     <div class="div-header-personagens">
-        <div class="div-container-navbar-personagens">
-            <div class="div-logo-navbar">
-                <a href="index.html"> OwlFall </a>
-            </div>
-            <div class="div-navbar">
-                <a href="index.html"> Sobre </a>
-                <a href="poder.html"> Poder </a>
-                <a href="#Personagens"> Personagens </a>
-                <a href="campanhas.html"> Campanhas </a>
-                <a href="login.html"> Login </a>
-            </div>
+      <div class="div-container-navbar-personagens">
+        <div class="div-logo-navbar">
+          <a href="index.html"> OwlFall </a>
         </div>
-        <div class="div-traco-personagens"></div>
+        <div class="div-navbar">
+          <a href="index.html"> Sobre </a>
+          <a href="poder.html"> Poder </a>
+          <a onclick="if (verificarLoginAntes()) personagens()">
+            Personagens
+          </a>
+          <a onclick="if (verificarLoginAntes()) campanhas()"> Campanhas </a>
+          <a href="login.html"> Login </a>
+                <div><a class="circulo-login" onclick="if (verificarLoginAntes()) quiz()"><img src="assets/imgs/icon_sem_personagem.jpg" alt="" ></a></div>
+        </div>
+      </div>
+      <div class="div-traco-personagens"></div>
     </div>
     <div>   
         <div class="div-container-body-personagens">
@@ -38,13 +46,71 @@
                 <input type="text" placeholder="Buscar" class="div-pesquisa-personagem">
             </div>
         </div>
+        <div id="container_fichas" class="div-container-fichas"></div>
+      </div>
     </div>
 
+    <script>
+      var idUsuario = sessionStorage.ID_USUARIO;
 
-<script>
+      window.onload = mostrarPersonagens;
 
-    function criarPersonagem() {
-        window.location.href = "criando.html"
-    }
+      function mostrarPersonagens() {
+        // var enviarDados = { idUsuario: idUsuario };
+        var mensagem = "";
 
-</script>
+        fetch(`/personagens/mostrar/${idUsuario}`, {
+        })
+          .then(function (resposta) {
+            return resposta.json();
+          })
+          .then(function (fichas) {
+            container_fichas.innerHTML = "";
+
+            for (var i = 0; i < fichas.length; i++) {
+              mensagem += `
+            <div class="div-box-ficha-personagens">
+                
+                <img src="/assets/imgsBd/${fichas[i].imagem}">
+            
+                <div class="div-info-personagem">
+                    <span><b>${fichas[i].nome}</b></span>
+                    <span>Classe: ${fichas[i].classe || "???"}</span>
+            
+                   <button onclick="abrirFicha(${fichas[i].idFicha})">
+                       Acessar Ficha
+                   </button>
+               </div>
+            </div>
+            `;
+            }
+            container_fichas.innerHTML = mensagem;
+          });
+      }
+
+      function personagens() {
+        window.location = "personagens.html";
+      }
+
+      function campanhas() {
+        window.location = "campanhas.html";
+      }
+
+      function quiz() {
+        window.location = "quiz.html"
+      }
+
+      function criarPersonagem() {
+        window.location = "criando.html";
+      }
+
+      function abrirFicha(idFicha) {
+        sessionStorage.ID_FICHA = idFicha
+        window.location = "ficha.html?id=" + idFicha;
+      }
+    </script>
+
+    <!-- container.innerHTML += `
+`; -->
+  </body>
+</html>

@@ -21,10 +21,11 @@
             </div>
             <div class="div-navbar">
                 <a href="index.html"> Sobre </a>
-                <a href="#poder"> Poder </a>
-                <a href="personagens.html"> Personagens </a>
-                <a href="campanhas.html"> Campanhas </a>
+                <a href="poder.html"> Poder </a>
+                <a onclick="if (verificarLoginAntes()) personagens()" > Personagens </a>
+                <a onclick="if (verificarLoginAntes()) campanhas()" > Campanhas </a>
                 <a href="login.html"> Login </a>
+                <div><a class="circulo-login" onclick="if (verificarLoginAntes()) quiz()"><img src="assets/imgs/icon_sem_personagem.jpg" alt="" ></a></div>
             </div>
         </div>
         <img src="assets/imgs/gon&killua.png" alt="" class="div-imagem-nav-poder">
@@ -91,3 +92,19 @@
 
 </body>
 </html>
+
+<script>
+
+    function personagens() {
+      window.location = "personagens.html"
+    }
+
+    function campanhas() {
+      window.location = "campanhas.html"
+    }
+
+    function quiz() {
+      window.location = "quiz.html"
+    }
+
+</script>

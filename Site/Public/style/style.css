@@ -1,5 +1,5 @@
+/* PC  */
 
-/* Notebook  */
 
 body {
   margin: 0;
@@ -12,7 +12,7 @@ body {
 
 .div-header-index {
   color: white;
-  background-image: url('../assets/imgs/fundo_index.jpg');
+  background-image: url('../assets/imgs/fundo_teste.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -27,7 +27,7 @@ body {
 }
 
 .div-container-navbar-index .div-navbar {
-  padding-left: 22%;
+  padding-left: 26%;
 }
 
 .div-logo-navbar a {
@@ -48,17 +48,18 @@ body {
   font-size: 18px;
 }
 
+.circulo-login img {
+  padding-left: 320px;
+  height: 35px;
+  width: 35px;
+  border-radius: 10px;
+}
+
 .div-imagem-nav-index {
   margin-top: 21.5%;
   margin-left: 5%;            
   width: 20%; 
   position: absolute;
-}
-
-.div-traco-index {
-  background-color: #41210A;
-  width: 100%;
-  height: 20px;
 }
 
 .div-card-inicio-index {
@@ -67,6 +68,7 @@ body {
   height: 23%;
   border-radius: 20px;
   position: absolute;
+  bottom: 55%;
 }
 
 .div-slogan-index h2 {
@@ -94,1713 +96,95 @@ body {
   border-width: 150px;
 }
 
- /* CSS - Poder */
-
-.div-header-poder {
-  color: white;
-  background-image: url('../assets/imgs/fundo.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 77vh;
-}
-
-.div-container-navbar-poder {
+.container1 {
   display: flex;
-  align-items: center;
-  padding: 10px 5%;
-  background-color: #220101;
-}
-
-.div-container-navbar-poder .div-navbar {
-  padding-left: 22%;
-}
-
-.div-logo-navbar a {
-  font-size: 32px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.div-navbar {
-  display: flex;
-  align-items: center;
-  gap: 11%;
-}
-
-.div-navbar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.div-imagem-nav-poder {
-  margin-top: 14.5%;
-  margin-left: -2%;            
-  width: 40%; 
-  position: absolute;
-}
-
-.div-traco-poder {
-  background-color: #220101;
   width: 100%;
-  height: 20px;
-}
-
-.div-card-inicio-poder {
-  background-color: #220101;
-  width: 30%;
-  height: 27%;
-  border-radius: 20px;
-  position: absolute;
-}
-
-.div-slogan-poder h2 {
-  margin: 0;
-  font-size: 32px;
-  padding-left: 20px;
-  padding-top: 20px;
-}
-
-.div-slogan-poder p {
-  margin-top: 20px;
-  font-size: 20px;
-  padding-left: 20px;
-}
-
-.div-header-poder .div-slogan-poder {
-  height: 100px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 60%;
-  padding-top: 150px;
-  color: #ffffff;
-  border-width: 150px;
-}
-
-.div-container-poder {
+  height: 60vh;
   color: white;
+  font-family: 'Kavoon', arial;
 }
 
-.div-fundo-poder {
-  background-color: #000000;
-  min-height: 301vh;
-  position: absolute;
+.container1.parte1 {
+  background-color: #e6d3bd; 
+  color: #452816;
 }
 
-.div-body-poder img {
-  width: 500px;
-  height: 280px;
-  display: inline-block;
+.container1.parte2 {
+  background-color: #452816; 
+  color: #e6d3bd;
 }
 
-.div-body-poder {
-  display: flex;
-  flex-direction: column;
-  margin-top: 160px;
-}
-
-.div-traco-meio-poder {
-  background-color: white;
-  width: 10px;
-  height: 275vh;
-  position: absolute;
-  display: flex;
-  margin-top: 45px;
-  margin-left: 50.55%;
-  border-radius: 5px;
-}
-
-.div-circulo-meio-poder {
-  background-color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-left: 49%;
-}
-.div-body-poder .img8-poder {
-  height: 480px;
-}
-
-.box-direita-poder {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-}
-
-.box-direita-poder img {
-  margin-right: 7%;
-  border-radius: 20px;
-}
-
-.box-esquerda-poder {
-  display: flex;
-  align-items: center;
-}
-
-.box-esquerda-poder img {
-  border-radius: 20px;
-}
-
-.box-esquerda-poder img {
-  margin-left: 8%;
-}
-
-.box-text-direita-poder {
-  padding-left: 10%;
-  padding-right: 5%;
-  display: inline-block;
-  flex-wrap: wrap;
-  text-align: justify;
-}
-
-.box-text-esquerda-poder {
-  padding-left: 7%;
-  padding-right: 9%;
-}
-
- /* Personagens  */
-
-.div-header-personagens {
-  color: white;
-}
-
-.div-container-navbar-personagens {
-  display: flex;
-  align-items: center;
-  padding: 10px 5%;
-  background-color: #0c0c0c;
-}
-
-.div-container-navbar-personagens .div-navbar {
-  padding-left: 22%;
-}
-
-.div-logo-navbar a {
-  font-size: 32px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.div-navbar {
-  display: flex;
-  align-items: center;
-  gap: 11%;
-}
-
-.div-navbar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.div-traco-personagens {
-  background-color: #ffffff;
-  width: 100%;
-  height: 5px;
-}
-
-.div-container-body-personagens {
-  display: flex;
-  color: white;
-  background-color: #121212;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 94vh;
-}
-
-.div-novo-personagem {
-  height: 5.8%;
-  border-radius: 5px;
-  position: absolute;
-  font-size: 15px;
-  font-family: "Kavoon";
-  right: 19%;
-  top: 15%;
-  color: #ffffff;
-  background-color: #41210A;
-  border-style: none;
-}
-
-.div-box-personagens {
-  padding: 9% 20.8%;
-}
-
-.div-box-personagens .div-pesquisa-personagem {
-  color: white;
-  padding-left: 20%;
-}
-
-.div-box-personagens span {
-  font-size: 20px;
-}
-
-.div-lupa-personagens img {
-  position: absolute;
-  width: 3%;
-  padding: 1.8% 0;
-}
-
-.div-pesquisa-personagem {
-  border-radius: 5px;
-  border-style: none;
-  font-size: 20px;
-  margin-top: 20px;
-  width: 310%;
-  height: 12%;
-  background-color: #1e1e1e;
-} 
-
-
-/* Login */
-
-.div-header-login {
-  color: white;
-}
-
-.div-container-navbar-login {
-  display: flex;
-  align-items: center;
-  padding: 10px 5%;
-  background-color: #0c0c0c;
-}
-
-.div-container-navbar-login .div-navbar {
-  padding-left: 22%;
-}
-
-.div-logo-navbar a {
-  font-size: 32px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.div-navbar {
-  display: flex;
-  align-items: center;
-  gap: 11%;
-}
-
-.div-navbar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.container-login{
-  display: flex;
-  width: 45%;
-  margin: 0 auto;
-  height: auto;
-  background-color: #0c0c0cc9;
-  color: white;
-  max-width: auto;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 20px;
-}
-  
-.fundo-login {
-  background-image: url('../assets/imgs/fundo_login2.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 94.4vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-direita a {
-  text-decoration: none;
-  outline: none;
-  color: white;
-}
-
-.registrar-login {
-  color: white;
-  text-decoration: none;
-}
-
-#imagem-esquerda{
-  width: 50%;
-}
-  
-#imagem-esquerda img{
-  width: 100%;
-  height: 50%;
-  border-radius: 2%;
-}
-
-#login-direita{
-  width: 45%;
-  margin-right: 20px;
-}
-
-#login-direita input{
-  padding: 10px;
-  width: 90%;
-  border-radius: 20px;
-  border-color: transparent;
-}
-
-#login-direita input:focus{
-  outline: none;
-}
-
-#login-direita button{
-  padding: 10px;
-  width: 95%;
-  background-color: #41662c;
-  color: white;
-  border-radius: 20px;
-  border-color: transparent;
-}
-
-/* Cadastro */
-
-.div-header-login {
-  color: white;
-}
-
-.div-container-navbar-login {
-  display: flex;
-  align-items: center;
-  padding: 0.7% 5%;
-  background-color: #0c0c0c;
-}
-
-.div-container-navbar-login .div-navbar {
-  padding-left: 28.5%;
-}
-
-.div-logo-navbar a {
-  font-size: 32px;
-  color: #ffffff;
-  text-decoration: none;
-}
-.div-navbar {
-  display: flex;
-  align-items: center;
-  gap: 11%;
-}
-
-.div-navbar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.container-cadastro{
-  display: flex;
-  width: 45%;
-  padding: 2%;
-  margin: 0 auto;
-  height: auto;
-  background-color: #0c0c0cc9;
-  color: white;
-  max-width: auto;
-  align-items: center;
-  justify-content: space-between;
-  border-radius: 20px;
-  font-size: 15px;
-}
-  
-.fundo-cadastro {
-  background-image: url('../assets/imgs/fundo_cadastro1.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 94.4vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.registrar-cadastro {
-  color: white;
-  text-decoration: none;
-}
-
-#imagem-esquerda{
-  width: 50%;
-}
-  
-#imagem-esquerda img{
-  width: 100%;
-  height: 50%;
-  border-radius: 2%;
-}
-
-#cadastro-direita{
-  width: 45%;
-  margin-right: 20px;
-}
-
-#cadastro-direita input{
-  padding: 2.5%;
-  width: 90%;
-  border-radius: 20px;
-  border-color: transparent;
-}
-
-#cadastro-direita input:focus{
-  outline: none;
-}
-
-#cadastro-direita button{
-  padding: 10px;
-  width: 95%;
-  background-color: #007bff40;
-  color: white;
-  border-radius: 20px;
-  border-color: transparent;
-}
-
-/* Campanha */
-
-.div-header-campanhas {
-  color: white;
-}
-
-.div-container-navbar-campanhas {
-  display: flex;
-  align-items: center;
-  padding: 10px 5%;
-  background-color: #0c0c0c;
-}
-
-.div-container-navbar-campanhas .div-navbar {
-  padding-left: 22%;
-}
-
-.div-logo-navbar a {
-  font-size: 32px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.div-navbar {
-  display: flex;
-  align-items: center;
-  gap: 11%;
-}
-
-.div-navbar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.div-traco-campanhas {
-  background-color: #ffffff;
-  width: 100%;
-  height: 5px;
-}
-
-.div-container-body-campanhas {
-  display: flex;
-  color: white;
-  background-color: #121212;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 94vh;
-}
-
-.div-novo-campanhas {
-  height: 5.8%;
-  border-radius: 5px;
-  position: absolute;
-  font-size: 15px;
-  font-family: "Kavoon";
-  right: 19%;
-  top: 15%;
-  color: #ffffff;
-  background-color: #41210A;
-  border-style: none;
-}
-
-.div-box-campanhas {
-  padding: 9% 20.8%;
-}
-
-.div-box-campanhas .div-pesquisa-campanhas {
-  color: white;
-  padding-left: 20.5%;
-}
-
-.div-box-campanhas span {
-  font-size: 20px;
-}
-
-.div-lupa-campanhas img {
-  position: absolute;
-  width: 3%;
-  padding: 1.8% 0;
-}
-
-.div-pesquisa-campanhas {
-  border-radius: 5px;
-  border-style: none;
-  font-size: 20px;
-  margin-top: 20px;
-  width: 310%;
-  height: 12%;
-  background-color: #1e1e1e;
-}  
-
-/* Cria Personagem - Atributo */
-
-.div-header-atributos {
-  color: white;
-}
-
-.div-container-navbar-atributos {
-  display: flex;
-  align-items: center;
-  padding: 10px 5%;
-  background-color: #0c0c0c;
-}
-
-.div-container-navbar-atributos .div-navbar {
-  padding-left: 22%;
-}
-
-.div-logo-navbar a {
-  font-size: 32px;
-  text-decoration: none;
-}
-
-.div-navbar {
-  display: flex;
-  align-items: center;
-  gap: 11%;
-}
-
-.div-navbar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.div-traco-atributos {
-  background-color: #ffffff;
-  width: 100%;
-  height: 5px;
-}
-
-.div-container-body-atributos {
-  display: block;
-  color: white;
-  background-color: #121212;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 94vh;
-}
-
-.div-botoes-atributos {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 0 31.5%;
-  padding-top: 5%;
-  padding-left: 37.5%;
-  white-space: nowrap;
-}
-
-.div-botoes-atributos button {
-  color: white;
-  font-weight: bold;
-  border: none;
-  background: none;
-  font-size: 24px;
-}
-
-.div-traco-atributos-separando {
-  width: 50px;
-  height: 2px;
-  margin: 2.5% 0;
-  background-color: white;
-}
-
-.div-box-atributos {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-top: 4%;
-}
-
-.div-texto-esquerda-atributos {
-  font-size: 16px;
-  font-family: Arial;
-  margin-top: 5%;
-  padding-left: 19%;
-  padding-right: 50%;
-}
-
-.div-atributos-direita {
-  position: relative;
-}
-
-#img-atributos {
-  position: absolute;
-  width: 140%;
-  height: 280%;
-  left: 70%;
-}
-
-.div-atributos-direita {
-  position: absolute;
-  width: 20%;
-  height: 20%;
-  top: 35%;
-  left: 42%;
-}
-
-.div-atributos-direita input {
-  width: 12%;
-  color: white;
-  height: 50%;
-  font-size: 38px;
-  text-align: center;
-  background-color: transparent;
-  border-color: transparent;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-input[type=number]::-webkit-inner-spin-button { 
-  -webkit-appearance: none;
-}
-
-#inp_agilidade_atributo {
-  position: absolute;
-  left: 132%;
-  bottom: 17%;
-}
-
-#inp_forca_atributo {
-  position: absolute;
-  left: 93%;
-  top: 80%;
-}
-
-#inp_intelecto_atributo {
-  position: absolute;
-  left: 170.5%;
-  top: 80%;
-}
-
-#inp_vigor_atributo {
-  position: absolute;
-  left: 158.8%;
-  top: 173%;
-}
-
-#inp_presenca_atributo {
-  position: absolute;
-  left: 103.6%;
-  top: 172%;
-}
-
-/* Cria Personagem - Classe */
-
-.div-header-classes {
-  color: white;
-}
-
-.div-container-navbar-classes {
-  display: flex;
-  align-items: center;
-  padding: 10px 5%;
-  background-color: #0c0c0c;
-}
-
-.div-container-navbar-classes .div-navbar {
-  padding-left: 22%;
-}
-
-.div-logo-navbar a {
-  font-size: 32px;
-  text-decoration: none;
-}
-
-.div-navbar {
-  display: flex;
-  align-items: center;
-  gap: 11%;
-}
-
-.div-navbar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.div-traco-classes {
-  background-color: #ffffff;
-  width: 100%;
-  height: 5px;
-}
-
-.div-container-body-classes {
-  display: block;
-  color: white;
-  background-color: #121212;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-}
-
-.div-botoes-classes {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 0 31.5%;
-  padding-top: 5%;
-  padding-left: 37.5%;
-  white-space: nowrap;
-}
-
-.div-botoes-classes button {
-  color: white;
-  font-weight: bold;
-  border: none;
-  background: none;
-  font-size: 24px;
-}
-
-.div-traco-classes-separando {
-  width: 50px;
-  height: 2px;
-  margin: 2.5% 0;
-  background-color: white;
-}
-
-.div-classes {
-  font-family: "Kavoon", arial;
-}
-
-.div-mundano p {
-  padding: 2% 19%;
-  white-space: nowrap;
-}
-
-.div-classes button{
-  background: none;
-  background-color: #41210A;
-  color: white;
-  border: 5px, solid;
+#imagem_mapa {
   border-radius: 10px;
-  border-color: transparent;
-  font-size: 16px;
-  font-family: "Kavoon", arial;
-  margin-left: 1%;
+  height: 45vh;
+  align-self: center;
+  margin-right: 60px;
 }
 
-.boxPai-classes {
-  display: flex;
-  flex-direction: column;
-  gap: 30%;
-  padding: 0 10%;
+.parte1-esquerda h2 {
+  margin: 0;
+  margin-bottom: 25px;
 }
 
-.box1-classes-cima {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 0%;
-  gap: 2%;
+.parte1-esquerda p {
+  margin: 0;
 }
 
-.box1-classes-baixo {
-  display: flex;
-  margin-top: 5%;
-  justify-content: space-between;
-  padding: 0 0%;
-  gap: 2%;
+.parte1-esquerda {
+  font-size: 25px;
+  margin-left: 80px;
+  margin-right: 80px;
+  align-self: center;
 }
 
-.div-traco-classes-box {
-  width: 93%;
-  margin-top: -5%;
-  margin-left: 3%;
-  height: 3px;
-  background-color: #41210A;
-}
-
-.div-mensagem-classes {
-  text-align: justify;
-}
-
-.box1-classes {
-  font-family: arial;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  height: 50%;
-  width: 50%;
-  border-radius: 5px;
-  background-color: #1e1e1e;
-}
-
-.box1-classes h2, p {
-  margin-top: 2%;
-  margin-left: 5%;
-  margin-right: 5%;
-  line-height: 150%;
-}
-
-.box1-classes h2 {
-  font-size: 32px;
-}
-
-.box1-classes p {
-  font-size: 16px;
-}
-
-.box1-classes button {
-  margin-left: 22%;
-  margin-bottom: 5%;
-  width: 50%;
-}
-
-.box2-classes {
-  font-family: arial;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  height: 50%;
-  width: 50%;
-  border-radius: 5px;
-  background-color: #1e1e1e;
-}
-
-.box2-classes h2, p {
-  margin-top: 2%;
-  margin-left: 5%;
-  margin-right: 5%;
-  line-height: 150%;
-}
-
-.box2-classes h2 {
-  font-size: 32px;
-}
-
-.box2-classes p {
-  font-size: 16px;
-}
-
-.box2-classes button {
-  margin-left: 22%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  width: 50%;
-}
-
-.box3-classes {
-  font-family: arial;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  height: 50%;
-  width: 50%;
-  border-radius: 5px;
-  background-color: #1e1e1e;
-}
-
-.box3-classes h2, p {
-  margin-top: 2%;
-  margin-left: 5%;
-  margin-right: 5%;
-  line-height: 150%;
-}
-
-.box3-classes h2 {
-  font-size: 32px;
-}
-
-.box3-classes p {
-  font-size: 16px;
-}
-
-.box3-classes button {
-  margin-left: 22%;
-  margin-bottom: 5%;
-  margin-top: 10%;
-  width: 50%;
-}
-
-.box4-classes {
-  font-family: arial;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  height: 50%;
-  width: 50%;
-  border-radius: 5px;
-  background-color: #1e1e1e;
-}
-
-.box4-classes h2, p {
-  margin-top: 2%;
-  margin-left: 5%;
-  margin-right: 5%;
-  line-height: 150%;
-}
-
-.box4-classes h2 {
-  font-size: 32px;
-}
-
-.box4-classes p {
-  font-size: 16px;
-}
-
-.box4-classes button {
-  margin-left: 22%;
-  margin-bottom: 5%;
-  margin-top: 10%;
-  width: 50%;
-}
-
-.box5-classes {
-  font-family: arial;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  height: 50%;
-  width: 50%;
-  border-radius: 5px;
-  background-color: #1e1e1e;
-}
-
-.box5-classes h2, p {
-  margin-top: 2%;
-  margin-left: 5%;
-  margin-right: 5%;
-  line-height: 150%;
-}
-
-.box5-classes h2 {
-  font-size: 32px;
-}
-
-.box5-classes p {
-  font-size: 16px;
-}
-
-.box5-classes button {
-  margin-left: 22%;
-  margin-bottom: 5%;
-  margin-top: 5%;
-  width: 50%;
-}
-
-.box6-classes {
-  font-family: arial;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  height: 50%;
-  width: 50%;
-  border-radius: 5px;
-  background-color: #1e1e1e;
-}
-
-.box6-classes h2, p {
-  margin-top: 2%;
-  margin-left: 5%;
-  margin-right: 5%;
-  line-height: 150%;
-}
-
-.box6-classes h2 {
-  font-size: 32px;
-}
-
-.box6-classes p {
-  font-size: 16px;
-}
-
-.box6-classes button {
-  margin-left: 22%;
-  margin-bottom: 5%;
-  width: 50%;
-}
-
-/* Cria Personagem - Caracteristicas */
-
-.div-header-caracteristicas {
-  color: white;
-}
-
-.div-container-navbar-caracteristicas {
-  display: flex;
-  align-items: center;
-  padding: 10px 5%;
-  background-color: #0c0c0c;
-}
-
-.div-container-navbar-caracteristicas .div-navbar {
-  padding-left: 22%;
-}
-
-.div-logo-navbar a {
-  font-size: 32px;
-  text-decoration: none;
-}
-
-.div-navbar {
-  display: flex;
-  align-items: center;
-  gap: 11%;
-}
-
-.div-navbar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.div-traco-caracteristicas {
-  background-color: #ffffff;
-  width: 100%;
-  height: 5px;
-}
-
-.div-container-body-caracteristicas {
-  display: block;
-  color: white;
-  background-color: #121212;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 150vh;
-}
-
-.div-botoes-caracteristicas {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 0 31.5%;
-  padding-top: 5%;
-  padding-left: 37.5%;
-  white-space: nowrap;
-}
-
-.div-botoes-caracteristicas button {
-  color: white;
-  font-weight: bold;
-  border: none;
-  background: none;
-  font-size: 24px;
-}
-
-.div-traco-caracteristicas-separando {
-  width: 50px;
-  height: 2px;
-  margin: 2.5% 0;
-  background-color: white;
-}
-
-.div-caracteristicas {
-  font-family: "Kavoon", arial;
-}
-
-.div-caracteristicas-inicio p {
-  padding-top: 2%;
-  margin-left: 25%;
-  margin-right: 20%;
-  padding-bottom: 1%;
-  text-align: justify;
-}
-
-.div-caracteristicas button{
-  background: none;
-  background-color: #41210A;
-  color: white;
-  border: 5px, solid;
+#imagem_ordemparanormal {
   border-radius: 10px;
-  border-color: transparent;
-  font-size: 20px;
-  font-family: "Kavoon", arial;
-  margin-left: 76%;
-  margin-bottom: 2%;
+  height: 45vh;
+  align-self: center;
+  margin-left: 70px;
 }
 
-.div-box-caracteristicas {
-  padding: 0 22%;
-}
-
-#nome-espaco-caracteristicas {
-  margin-right: 29%;
-}
-
-.div-box-caracteristicas span {
-  font-size: 18px;
-}
-
-.div-box-caracteristicas input {
-  font-size: 18px;
-  color: white;
-  background-color: #1e1e1e;
-  border-style: none;
-  border-color: white;
-  height: 150px;
-  width: 108%;
-  margin-top: 1.5%;
-  line-height: normal;
-  padding: 5px 10px;
-}
-
-#inp_nome {
-  margin-right: 7%;
-  height: 35px;
-  width: 28.5%
-}
-
-#inp_jogador  {
-  margin-right: 7%;
-  height: 35px;
-  width: 28.5%
-}
-
-/* Ficha */
-
-.div-header-ficha {
-  color: white;
-}
-
-.div-container-navbar-ficha {
-  display: flex;
-  align-items: center;
-  padding: 10px 5%;
-  background-color: #0c0c0c;
-}
-
-.div-container-navbar-ficha .div-navbar {
-  padding-left: 22%;
-}
-
-.div-logo-navbar a {
-  font-size: 32px;
-  text-decoration: none;
-}
-
-.div-navbar {
-  display: flex;
-  align-items: center;
-  gap: 11%;
-}
-
-.div-navbar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.div-traco-ficha {
-  background-color: #ffffff;
-  width: 100%;
-  height: 5px;
-}
-
-.div-container-body-ficha {
-  display: block;
-  color: white;
-  background-color: #121212;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 94vh;
-}
-
-.box-personagem-ficha {
-  display: flex;
-  font-family: arial;
-  padding: 2% 20%;
-}
-
-.box-personagem-ficha img {
-  width: 5.5%;
-  margin-right: 2%;
-}
-
-.box-personagem-ficha h3 {
-  font-size: 14px;
-  color: #ffffff;
-  margin-right: 1.5%;
-  margin-top: 1.5%;
-}
-
-.box-personagem-ficha input {
-  font-size: 16px;
-}
-
-.input-personagem {
-  background-color: transparent;
-  border-color: transparent;
-  color: white;
-  border-style: none;
-  width: 10%;
-  height: 5%;
-  margin-right: 1.5%;
-  margin-top: 1.5%;
-  border: none; 
-  outline: none; 
-  border-bottom: 1px solid white;
-}
-
-.div-box-atributos-ficha {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-top: 4%;
-}
-
-#img-atributos-ficha {
-  position: absolute;
-  width: 120%;
-  height: 240%;
-  right: 93%;
-  top: -30%;
-  pointer-events: none;
-}
-
-.div-atributos-ficha {
-  position: absolute;
-  width: 20%;
-  height: 20%;
-  top: 25%;
-  left: 42%;
-}
-
-.div-atributos-ficha input {
-  width: 8%;
-  color: white;
-  height: 20%;
-  font-size: 32px;
-  text-align: center;
-  background-color: transparent;
-  border-color: transparent;
-  -webkit-appearance: none;
-  appearance: none;
-}
-
-#inp_agilidade_ficha {
-  position: absolute;
-  right: 147.6%;
-  bottom: 73%;
-}
-
-#inp_forca_ficha {
-  position: absolute;
-  right: 181.2%;
-  bottom: 27%;
-}
-
-#inp_intelecto_ficha {
-  position: absolute;
-  right: 114.2%;
-  bottom: 27%;
-}
-
-#inp_vigor_ficha {
-  position: absolute;
-  right: 124.2%;
-  top: 129%;
-}
-
-#inp_presenca_ficha {
-  position: absolute;
-  right: 171.6%;
-  top: 129%;
-}
-
-.span-nivel {
-  margin-right: 0.5%;
-  margin-top: 3.5%;
-}
-
-#select_nivel {
-  font-size: 16px;
-  text-align: center;
-  width: 3.5%;
-  height: 25px;
-  appearance: none;
-  margin-right: 2%;
-  margin-top: 3.2%;
-}
-
-#inp_classe {
-  font-size: 14px;
-  margin-top: 3.7%;
-  width: 10%;
-}
-
-.h3-classe-ficha {
-  padding-top: 3.5%;
-}
-
-.box-personagem-ficha-tecnica {
-  display: flex;
-  font-family: arial;
-  margin-top: 13%;
-  margin-left: 22%;
-  position: relative;
-  
-}
-
-.box-personagem-ficha-tecnica h3 {
-  font-size: 16px;
-  color: #ffffff;
-  margin-right: 0.8%;
-  margin-top: 0.3%;
-}
-
-.box-personagem-ficha-pericias h1 {
-  margin-left: 8%;
-}
-
-.area1 {
-  background-color: transparent;
-  border-color: transparent;
-  color: white;
-  border-style: none;
-  width: 7%;
-  height: 20px;
-  margin-top: 5.3%;
-  border: none; 
-  outline: none; 
-  border-bottom: 1px solid white;
-  position: relative;
-}
-
-.div-status-ficha {
-  display: flex;
-  flex-direction: column;
-  padding-top: 8%;
-  margin-left: -20%;
-  
-}
-
-.div-status-ficha h2 {
-  font-size: 16px;
-  text-align: center;
-  margin-bottom: 2%;
-  margin-left: -40%;
-}
-
-.div-status-ficha input {
-  color: #ffffff;
-  font-size: 18px;
-  width: 150%;
-  height: 35px;
-  margin-left: -45%;
-  border-color: #ffffff99;
-  border-width: 1px;
-  text-align: center;
-}
-
-
-.box-personagem-ficha-pericias {
-  padding-left: 45%;
-  margin-top: -34.5%;
-  font-size: 9px;
-}
-
-.div-pericias-ficha {
-  display: flex;
-  width: 100%;
-}
-
-.coluna-pericias {
-  width: 48%;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.box-pericia-linha {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.box-pericia-linha span {
-  font-size: 16px;
-  min-width: 120px;
-}
-
-.inp-pericia-valor {
-    width: 40px;
-    text-align: center;
-    font-size: 16px;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid white;
-    color: white;
-    outline: none;
-  }
-
-  .inp-pericia-bonus {
-  appearance: none;
-  width: 60px;
-  height: 25px;
-  text-align: center;
-  background-color: #121212;
-  border: none;
-  border-bottom: 1px solid white;
-  color: white;
-  outline: none;
-}
-
-.select-pericia {
-  appearance: none;
-  width: 60px;
-  height: 25px;
-  text-align: center;
-  background-color: #121212;
-  border: none;
-  border-bottom: 1px solid white;
-  color: white;
-  outline: none;
-  position: relative;
-}
-
-.box-caracteristicas-abas {
-  position: absolute;
-  top: 22%;
-  right: 13%;
-  width: 23%;
-  color: white;
-  font-family: Arial;
-}
-
-.box-botoes-ficha {
-  display: flex;
-  gap: 6px;
-  margin-bottom: 12px;
-}
-
-.box-botoes-ficha button {
-  padding: 6px 10px;
-  border: 1px solid white;
-  background: transparent;
-  color: white;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.box-botoes-ficha .ativo {
-  background: white;
-  color: black;
-}
-
-.box-abas-caracteristicas {
-  display: none;
-  padding: 10px;
-  border: 1px solid white;
-  min-height: 60vh;
-}
-  
-.box-abas-caracteristicas input {
-  background-color: #1e1e1e;
-  border-color: transparent;
-  height: 100px;
-  width: 95%;
-}
-
-.div-barra-vida {
-  background-color: red;
-  width: 180%;
-  height: 5vh;
-  margin-left: -40%;
-}
-
-.div-barra-vida .input-vida-ficha {
-  position: absolute ;
-  height: 32px;
-  width: 4%;
-  background-color: transparent;
-  border-color: transparent;
-}
-
-.div-barra-vida span {
-  font-size: 29px;
-  padding-left: 48%;
-}
-
-.input-esquerda-vida {
-  left: 56%;
-}
-
-.input-direita-vida {
-  left: 53.5%;
-  text-align: left;
-}
-
-.div-barra-sanidade {
-  background-color: rgb(109, 19, 212);
-  width: 180%;
-  height: 5vh;
-  margin-left: -40%;
-}
-
-.div-barra-sanidade .input-sanidade-ficha {
-  position: absolute ;
-  height: 32px;
-  width: 4%;
-  background-color: transparent;
-  border-color: transparent;
-}
-
-.div-barra-sanidade span {
-  font-size: 29px;
-  padding-left: 48%;
-}
-
-.input-esquerda-sanidade {
-  left: 56%;
-}
-
-.input-direita-sanidade {
-  left: 53.5%;
-  text-align: left;
-}
-
-.div-barra-nen {
-  background-color: #0f3f8d;
-  width: 180%;
-  height: 5vh;
-  margin-left: -40%;
-}
-
-.div-barra-nen .input-nen-ficha {
-  position: absolute ;
-  height: 32px;
-  width: 4%;
-  background-color: transparent;
-  border-color: transparent;
-}
-
-.div-barra-nen span {
-  font-size: 29px;
-  padding-left: 48%;
-}
-
-.input-esquerda-nen {
-  left: 56%;
-}
-
-.input-direita-nen {
-  left: 53.5%;
-  text-align: left;
-}
-
-/* PC  
-
-
-body {
+.parte2-direita h2 {
   margin: 0;
-  padding: 0;
-  font-family: "Kavoon", arial;
-  overflow-x: hidden /* Não permite rolagem lateral 
+  margin-bottom: 25px;
 }
 
- /* CSS - Index  
-
-.div-header-index {
-  color: white;
-  background-image: url('../assets/imgs/fundo_index.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 680px;
-}
-
-.div-container-navbar-index {
-  display: flex;
-  align-items: center;
-  padding: 10px 5%;
-  background-color: #41210A;
-}
-
-.div-container-navbar-index .div-navbar {
-  padding-left: 30%;
-}
-
-.div-logo-navbar a {
-  font-size: 32px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.div-navbar {
-  display: flex;
-  align-items: center;
-  gap: 11%;
-}
-
-.div-navbar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
-.div-imagem-nav-index {
-  margin-top: 21.5%;
-  margin-left: 5%;            
-  width: 20%; 
-  position: absolute;
-}
-
-.div-traco-index {
-  background-color: #41210A;
-  width: 100%;
-  height: 20px;
-}
-
-.div-card-inicio-index {
-  background-color: #41210A;
-  width: 30%;
-  height: 20%;
-  border-radius: 20px;
-  position: absolute;
-}
-
-.div-slogan-index h2 {
+.parte2-direita p {
   margin: 0;
-  font-size: 32px;
-  padding-left: 20px;
-  padding-top: 20px;
 }
 
-.div-slogan-index p {
-  margin-top: 20px;
-  font-size: 20px;
-  padding-left: 20px;
+.parte2-direita {
+  font-size: 25px;
+  margin-left: 120px;
+  margin-right: 80px;
+  align-self: center;
 }
 
-.div-header-index .div-slogan-index {
-  height: 100px;
-  width: 100%;
+#imagem_sentido {
+  border-radius: 10px;
+  height: 45vh;
+  align-self: center;
+  margin-right: 100px;
+}
+
+.containerFinal {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-left: 37%;
-  padding-top: 150px;
-  color: #ffffff;
-  border-width: 150px;
+  width: 100%;
+  height: 80vh;
+  color: white;
+  font-family: 'Kavoon', arial;
+}
+
+.containerFinal.parte2 {
+  background-color: #452816; 
+  color: #e6d3bd;
+}
+
+#imagem_eu {
+  border-radius: 10px;
+  height: 65vh;
+  align-self: center;
+  margin-left: 70px;
 }
 
  /* CSS - Poder 
@@ -1822,7 +206,7 @@ body {
 }
 
 .div-container-navbar-poder .div-navbar {
-  padding-left: 30%;
+  padding-left: 26%;
 }
 
 .div-logo-navbar a {
@@ -1984,7 +368,7 @@ body {
 }
 
 .div-container-navbar-personagens .div-navbar {
-  padding-left: 30%;
+  padding-left: 26%;
 }
 
 .div-logo-navbar a {
@@ -2018,32 +402,33 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 94vh;
+  min-height: 826px;
 }
 
 .div-novo-personagem {
-  height: 4.8%;
+  height: 48px;
   border-radius: 5px;
-  position: absolute;
+  position: relative;
   font-size: 15px;
   font-family: "Kavoon";
-  right: 18%;
-  top: 15%;
+  left: 76.5%;
+  top: 75px;
   color: #ffffff;
   background-color: #41210A;
   border-style: none;
 }
 
-.div-box-personagens {
-  padding: 9% 20.8%;
+.div-box-personagens-pesquisa {
+  padding: 2% 15%;
+  padding-top: 9%;
 }
 
-.div-box-personagens .div-pesquisa-personagem {
+.div-box-personagens-pesquisa .div-pesquisa-personagem {
   color: white;
-  padding-left: 25%;
+  padding-left: 5%;
 }
 
-.div-box-personagens span {
+.div-box-personagens-pesquisa span {
   font-size: 20px;
 }
 
@@ -2058,13 +443,70 @@ body {
   border-style: none;
   font-size: 20px;
   margin-top: 20px;
-  width: 438%;
-  height: 8%;
+  width: 93.5%;
+  height: 55px;
   background-color: #1e1e1e;
 } 
 
+.div-container-body-personagens {
+    display: block;
+    background-color: #121212;
+    color: white;
+    padding-bottom: 50px;
+}
 
-/* Login
+.div-container-fichas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 60%;
+    margin: 40px auto;
+}
+
+.div-box-ficha-personagens {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    height: 140px;
+}
+
+.div-box-ficha-personagens img {
+    width: 110px;
+    height: 110px;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: top;
+    background-color: #333;
+}
+
+.div-info-personagem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.div-info-personagem span {
+    font-size: 18px;
+}
+
+.div-info-personagem button {
+    margin-top: 10px;
+    width: 120px;
+    background-color: #41210A;
+    color: white;
+    border: none;
+    padding: 8px 0;
+    border-radius: 8px;
+    font-family: "Kavoon";
+    font-size: 15px;
+}
+
+/* Login  */
 
 .div-header-login {
   color: white;
@@ -2078,7 +520,7 @@ body {
 }
 
 .div-container-navbar-login .div-navbar {
-  padding-left: 30%;
+  padding-left: 26%;
 }
 
 .div-logo-navbar a {
@@ -2236,6 +678,7 @@ body {
 
 #imagem-esquerda{
   width: 50%;
+  margin-right: 40px;
 }
   
 #imagem-esquerda img{
@@ -2283,7 +726,7 @@ body {
 }
 
 .div-container-navbar-campanhas .div-navbar {
-  padding-left: 30%;
+  padding-left: 26%;
 }
 
 .div-logo-navbar a {
@@ -2334,12 +777,12 @@ body {
 }
 
 .div-box-campanhas {
-  padding: 9% 20.8%;
+  padding: 9% 10.8%;
 }
 
 .div-box-campanhas .div-pesquisa-campanhas {
   color: white;
-  padding-left: 25%;
+  padding-left: 8%;
 }
 
 .div-box-campanhas span {
@@ -2357,12 +800,11 @@ body {
   border-style: none;
   font-size: 20px;
   margin-top: 20px;
-  width: 438%;
+  width: 1130px;
   height: 8%;
   background-color: #1e1e1e;
 } 
-
-/* Cria Personagem - Atributo 
+/* Cria Personagem - Atributo */
 
 .div-header-atributos {
   color: white;
@@ -2376,7 +818,7 @@ body {
 }
 
 .div-container-navbar-atributos .div-navbar {
-  padding-left: 30%;
+  padding-left: 26%;
 }
 
 .div-logo-navbar a {
@@ -2532,7 +974,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .div-container-navbar-classes .div-navbar {
-  padding-left: 30%;
+  padding-left: 26%;
 }
 
 .div-logo-navbar a {
@@ -2859,7 +1301,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .div-container-navbar-caracteristicas .div-navbar {
-  padding-left: 30%;
+  padding-left: 26%;
 }
 
 .div-logo-navbar a {
@@ -2949,7 +1391,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 #nome-espaco-caracteristicas {
-  margin-right: 29%;
+  margin-right: 25%;
 }
 
 .div-box-caracteristicas span {
@@ -2969,16 +1411,30 @@ input[type=number]::-webkit-inner-spin-button {
   padding: 5px 10px;
 }
 
+.div-box-caracteristicas textarea {
+  font-size: 18px;
+  font-family: arial;
+  color: white;
+  background-color: #1e1e1e;
+  border-style: none;
+  border-color: white;
+  height: 150px;
+  width: 108%;
+  margin-top: 1.5%;
+  line-height: normal;
+  padding: 5px 10px;
+}
+
 #inp_nome {
   margin-right: 7%;
   height: 35px;
-  width: 25.5%
+  width: 21.5%
 }
 
 #inp_jogador  {
   margin-right: 7%;
   height: 35px;
-  width: 25.5%
+  width: 18.5%
 }
 
 /* Ficha 
@@ -2995,7 +1451,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .div-container-navbar-ficha .div-navbar {
-  padding-left: 30%;
+  padding-left: 26%;
 }
 
 .div-logo-navbar a {
@@ -3038,8 +1494,12 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .box-personagem-ficha img {
-  width: 5.5%;
-  margin-right: 2%;
+  width: 60px;
+  height: 60px;
+  margin-right: -2%;
+  object-fit: cover;
+  object-position: top;
+  border: 1px, solid, white;
 }
 
 .box-personagem-ficha h3 {
@@ -3051,6 +1511,14 @@ input[type=number]::-webkit-inner-spin-button {
 
 .box-personagem-ficha input {
   font-size: 16px;
+}
+
+.foto-personagem {
+  position: relative;
+  width: 60px;
+  top: 20px;
+  right: 47px;
+  opacity: 0;
 }
 
 .input-personagem {
@@ -3315,11 +1783,14 @@ input[type=number]::-webkit-inner-spin-button {
   min-height: 60vh;
 }
   
-.box-abas-caracteristicas input {
+.box-abas-caracteristicas textarea {
   background-color: #1e1e1e;
   border-color: transparent;
+  color: white;
+  font-size: 16px;
   height: 100px;
   width: 95%;
+  margin-top: 5px;
 }
 
 .div-barra-vida {
@@ -3343,11 +1814,11 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .input-esquerda-vida {
-  left: 52%;
+  left: 51%;
 }
 
 .input-direita-vida {
-  left: 54.5%;
+  left: 55%;
   text-align: left;
 }
 
@@ -3372,11 +1843,11 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .input-esquerda-sanidade {
-  left: 52%;
+  left: 51%;
 }
 
 .input-direita-sanidade {
-  left: 54.5%;
+  left: 55%;
   text-align: left;
 }
 
@@ -3401,10 +1872,341 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .input-esquerda-nen {
-  left: 52%;
+  left: 51%;
 }
 
 .input-direita-nen {
-  left: 54.5%;
+  left: 55%;
   text-align: left;
+}
+
+.atualizar-ficha {
+  background-color: #41210A;
+  position: relative;
+  font-family: "Kavoon";
+  font-size: 15px;
+  color: #ffffff;
+  bottom: 125px;
+  height: 48px;
+  width: 200px;
+  border-radius: 5px;
+  border-style: none;
+  left: 30px;
+}
+
+/* Usuario - Quiz */
+
+.janela {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  background: #0d0d0d;
+  color: #fff;
+}
+
+.header-left {
+    background: #111;
+    position: fixed;
+    width: 260px;
+    height: 100vh;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-right: 5px solid #41210A;
+}
+
+.header-left h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hello {
+    text-align: center;
+}
+
+.btn-nav,
+.btn-nav-white,
+.btn-logout {
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: .3s;
+}
+
+.btn-nav-white a, 
+.btn-nav a, 
+.btn-logout {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-nav {
+    border: 5px solid #41210A;
+  }
+  
+  .btn-nav-white {
+    border: 5px solid #41210A;
+}
+
+.btn-logout {
+    background: #c62828;
+}
+
+.dash {
+    padding: 20px;
+    width: 100%;
+    margin-left: 16.5%;
+    text-align: center;
+}
+
+.container-meio-1 {
+    background: #1f1f1f;
+    border-radius: 12px;
+    padding:25px;
+    margin-bottom: 50px;
+}
+
+.titulo-meio-1 h3 {
+    font-size: 26px;
+  }
+  
+  .titulo-meio-1 img {
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.texto-meio-1 p {
+    font-size: 18px;
+}
+
+.botao_quiz {
+    border: none;
+    padding: 12px 20px;
+    background: #41210A;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.jogo {
+    margin-top: 40px;
+    min-width: 100%;
+}
+
+.flex-colunar {
+    display: flex;
+    flex-direction: column;
+}
+
+.padding-8 {
+    padding: 8px;
+}
+
+.border-secondary {
+    border: 2px solid #41210A;
+    border-radius: 12px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+#jogo, #jogo2 {
+    margin-top: 20px;
+    background: #0f0f0f;
+}
+
+#opcoes span,
+#opcoes2 span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 6px 0;
+}
+
+#botoes button,
+#botoes2 button {
+    padding: 12px;
+    border: none;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#btnSubmeter, #btnSubmeter2 {
+    background: #41662c;
+    color: #fff;
+}
+
+#btnTentarNovamente,
+#btnTentarNovamente2 {
+    background: #c62828;
+    color: #fff;
+}
+
+#pontuacaoFinalJogo,
+#pontuacaoFinalJogo2 {
+    margin-top: 15px;
+}
+
+#pontuacaoFinal,
+#pontuacaoFinal2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#msgFinal, 
+#msgFinal2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btnTentarDepois {
+  position: relative;
+  top: 100px;
+  height: 35px;
+  opacity: 0;
+}
+
+/* Usuario - dashboard */
+
+
+.janela-dash {
+    background-color: #0d0d0d;
+    color: #fff;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-left {
+    position: fixed;
+    width: 260px;
+    height: 100vh;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-right: 5px solid #41210A;
+}
+
+.header-left h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hello {
+    text-align: center;
+}
+
+.hello h3 {
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.hello h3 span {
+    font-weight: 800;
+}
+
+.btn-nav,
+.btn-nav-white,
+.btn-logout {
+    padding: 12px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.btn-nav a,
+.btn-nav-white a,
+.btn-logout {
+    text-decoration: none;
+    color: white;
+}
+
+.btn-nav {
+    border: 5px solid #41210A;
+}
+
+.btn-nav-white {
+    border: 5px solid #41210A;
+}
+
+.btn-logout {
+    background: #c62828;
+}
+
+.dash {
+    padding: 20px;
+    width: 100%;
+    margin-left: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-grafico {
+    width: 80%;
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #1b1b1b;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.card-grafico h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.card-grafico .grafico-area {
+    background: #2b2b2b;
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+.card-grafico canvas {
+    width: 100% !important;
+    max-height: 350px;
+}
+
+/* ================================
+   KPIs
+===================================*/
+
+.kpi {
+    width: 80%;
+    background-color: #1b1b1b;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.kpi h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.kpi span {
+    font-size: 48px;
+    font-weight: 700;
+    color: #e3b062;
+}
+
+#top1Personagem img {
+    width: 500px;
+    margin-top: 15px;
+    border-radius: 12px;
+}
+
+#top1Classe h2 {
+    font-size: 36px;
+    color: #e3b062;
 }

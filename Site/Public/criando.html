@@ -24,9 +24,10 @@
                 <div class="div-navbar">
                     <a href="index.html"> Sobre </a>
                     <a href="poder.html"> Poder </a>
-                    <a href="personagens.html"> Personagens </a>
-                    <a href="campanhas.html"> Campanhas </a>
+                    <a onclick="if (verificarLoginAntes()) personagens()" > Personagens </a>
+                    <a onclick="if (verificarLoginAntes()) campanhas()" > Campanhas </a>
                     <a href="login.html"> Login </a>
+                <div><a class="circulo-login" onclick="if (verificarLoginAntes()) quiz()"><img src="assets/imgs/icon_sem_personagem.jpg" alt="" ></a></div>
                 </div>
             </div>
             <div class="div-traco-atributos"></div>
@@ -214,7 +215,7 @@
                         Agora, vamos trabalhar na descrição de seu personagem, definindo aspectos como nome, gênero e idade. Esses aspectos não 
                         possuem efeito em regras, mas deixam o jogo mais envolvente e divertido.
                     </p>
-                    <button onclick="finalizar()">Finalizar</button>
+                    <button onclick="criarFicha()">Finalizar</button>
                 </div>
 
                 <div class="div-box-caracteristicas">
@@ -224,16 +225,16 @@
                     <input type="text" id="inp_jogador" placeholder="Nome do jogador"> <br> <br>
 
                     <span>Aparência</span> <br>
-                    <input type="text" id="inp_aparencia"> <br> <br>
+                    <textarea type="text" id="inp_aparencia" placeholder="Nome, gênero, idade, descrição fisica..."></textarea> <br> <br>
 
                     <span>Personalidade</span> <br>
-                    <input type="text" id="inp_personalidade"> <br> <br>
+                    <textarea type="text" id="inp_personalidade" placeholder="Traços marcantes, opinões, ideias..."></textarea> <br> <br>
 
                     <span>Histórico</span> <br>
-                    <input type="text" id="inp_descricao"> <br> <br>
+                    <textarea type="text" id="inp_descricao" placeholder="Infancia, relação com a familia, eventos bons e ruins..."></textarea> <br> <br>
 
                     <span>Objetivo</span> <br>
-                    <input type="text" id="inp_objetivo"> 
+                    <textarea type="text" id="inp_objetivo" placeholder="Qual o objetivo do seu personagem"></textarea> 
                 </div>
 
             </div>
@@ -247,10 +248,23 @@
 
 <script>
 
+    var idUsuario = sessionStorage.ID_USUARIO
     var statusMax = {}
     var dadosPersonagem = []
     var classe = []
+
+    function personagens() {
+      window.location = "personagens.html"
+    }
+
+    function campanhas() {
+      window.location = "campanhas.html"
+    }
     
+    function quiz() {
+      window.location = "quiz.html"
+    }
+
     function mostrarAtributos() {
         
         tela_atributos.style.display = "block";
@@ -366,7 +380,23 @@
 
     }
     
-    function finalizar() {
+    function criarFicha() {
+
+        if (classe == "") {
+            classe.push('mundano')
+            statusMax =  {
+                'vida': 150,
+                'sanidade': 8,
+                'nen': 0
+            }
+        }
+
+        var nome = inp_nome.value
+        var jogador = inp_jogador.value
+        var aparencia = inp_aparencia.value
+        var personalidade = inp_personalidade.value
+        var descricao = inp_descricao.value
+        var objetivo = inp_objetivo.value
         
         var atributos = []
 
@@ -376,28 +406,62 @@
         var presenca = Number(inp_presenca_atributo.value)
         var vigor = Number(inp_vigor_atributo.value)
 
+        var pericias = [{
+            'adestramento': 0,
+            'artes': 0, 
+            'acrob_atlet': 0, 
+            'ciencias': 0, 
+            'diplomacia': 0, 
+            'enganacao': 0, 
+            'fortitude': 0, 
+            'furtividade': 0, 
+            'iniciativa': 0, 
+            'intimidacao': 0, 
+            'investigacao': 0, 
+            'luta': 0, 
+            'medicina': 0, 
+            'percepcao': 0, 
+            'pilotagem': 0, 
+            'pontaria': 0, 
+            'profissao': 0, 
+            'reflexos': 0, 
+            'sobrevivencia': 0, 
+            'espirito': 0,
+        }]
+
         atributos.push(agilidade, forca, intelecto, presenca, vigor)
 
         dadosPersonagem.push( {
+            'nome': nome,
+            'jogador': jogador,
             'classe': classe[classe.length - 1],
             'statusMax': statusMax,
-            'atributos': atributos
+            'atributos': atributos,
+            'aparencia': aparencia,
+            'personalidade': personalidade,
+            'descricao': descricao,
+            'objetivo': objetivo,
+            'pericias': pericias
         })
 
-      fetch("/usuarios/cadastrar", {
+      fetch("/criando/criarFicha", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
           dadosPersonagemServer: dadosPersonagem,
+          idUsuarioServer: idUsuario
         }),
       })
-
-        window.location.href = "ficha.html"
-        
+      .then(function(res) {
+        return res.json();
+      })
+      .then(function(resposta) {
+        sessionStorage.ID_FICHA = resposta.idFicha;
+        window.location.href = "ficha.html";
+      })
+        .catch(erro => console.error("Erro no fetch:", erro));
     }
-
-
 
 </script>
