@@ -1,14 +1,9 @@
-/* PC  */
-
-
 body {
   margin: 0;
   padding: 0;
   font-family: "Kavoon", arial;
-  overflow-x: hidden /* Não permite rolagem lateral */
+  overflow-x: hidden;
 }
-
- /* CSS - Index  */
 
 .div-header-index {
   color: white;
@@ -16,22 +11,22 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 480px;
+  height: 485px;
 }
 
 .div-container-navbar-index {
   display: flex;
   align-items: center;
-  padding: 10px 3%;
+  padding: 10px 5%;
   background-color: #41210A;
 }
 
 .div-container-navbar-index .div-navbar {
-  padding-left: 20%;
+  padding-left: 16%;
 }
 
 .div-logo-navbar a {
-  font-size: 32px;
+  font-size: 24px;
   color: #ffffff;
   text-decoration: none;
 }
@@ -39,25 +34,25 @@ body {
 .div-navbar {
   display: flex;
   align-items: center;
-  gap: 11%;
+  gap: 8%;
 }
 
 .div-navbar a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .circulo-login img {
-  padding-left: 230px;
-  height: 30px; 
+  padding-left: 225px;
+  height: 30px;
   width: 30px;
   border-radius: 10px;
 }
 
 .div-imagem-nav-index {
-  margin-top: 18%;
-  margin-left: 4%;
+  margin-top: 19.5%;
+  margin-left: 5%;
   width: 22%;
   position: absolute;
 }
@@ -65,23 +60,24 @@ body {
 .div-card-inicio-index {
   background-color: #41210A;
   width: 35%;
-  height: 18%;
+  height: 24%;
   border-radius: 20px;
   position: absolute;
-  bottom: 59%;
+  bottom: 50%;
+  right: 400px;
 }
 
 .div-slogan-index h2 {
   margin: 0;
-  font-size: 32px;
-  padding-left: 20px;
-  padding-top: 20px;
+  font-size: 28px;
+  padding-left: 15px;
+  padding-top: 15px;
 }
 
 .div-slogan-index p {
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 20px;
-  padding-left: 20px;
+  padding-left: 15px;
 }
 
 .div-header-index .div-slogan-index {
@@ -91,26 +87,25 @@ body {
   flex-direction: column;
   align-items: flex-start;
   padding-left: 28%;
-  padding-top: 120px;
+  padding-top: 100px;
   color: #ffffff;
-  border-width: 150px;
 }
 
 .container1 {
   display: flex;
   width: 100%;
-  height: 50vh;
+  height: 65vh;
   color: white;
   font-family: 'Kavoon', arial;
 }
 
 .container1.parte1 {
-  background-color: #e6d3bd; 
+  background-color: #e6d3bd;
   color: #452816;
 }
 
 .container1.parte2 {
-  background-color: #452816; 
+  background-color: #452816;
   color: #e6d3bd;
 }
 
@@ -131,9 +126,9 @@ body {
 }
 
 .parte1-esquerda {
-  font-size: 25px;
-  margin-left: 80px;
-  margin-right: 80px;
+  font-size: 20px;
+  margin-left: 50px;
+  margin-right: 60px;
   align-self: center;
 }
 
@@ -141,7 +136,7 @@ body {
   border-radius: 10px;
   height: 35vh;
   align-self: center;
-  margin-left: 40px;
+  margin-left: 50px;
 }
 
 .parte2-direita h2 {
@@ -154,9 +149,9 @@ body {
 }
 
 .parte2-direita {
-  font-size: 25px;
-  margin-left: 120px;
-  margin-right: 80px;
+  font-size: 20px;
+  margin-left: 80px;
+  margin-right: 60px;
   align-self: center;
 }
 
@@ -164,19 +159,19 @@ body {
   border-radius: 10px;
   height: 35vh;
   align-self: center;
-  margin-right: 40px;
+  margin-right: 70px;
 }
 
 .containerFinal {
   display: flex;
   width: 100%;
-  height: 60vh;
+  height: 65vh;
   color: white;
   font-family: 'Kavoon', arial;
 }
 
 .containerFinal.parte2 {
-  background-color: #452816; 
+  background-color: #452816;
   color: #e6d3bd;
 }
 
@@ -187,6 +182,7 @@ body {
   margin-left: 50px;
 }
 
+
  /* CSS - Poder */
 
 .div-header-poder {
@@ -195,22 +191,22 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 550px;
+  height: 80vh;
 }
 
 .div-container-navbar-poder {
   display: flex;
   align-items: center;
-  padding: 10px 3%;
+  padding: 10px 5%;
   background-color: #220101;
 }
 
 .div-container-navbar-poder .div-navbar {
-  padding-left: 20%;
+  padding-left: 16%;
 }
 
 .div-logo-navbar a {
-  font-size: 32px;
+  font-size: 24px;
   color: #ffffff;
   text-decoration: none;
 }
@@ -218,47 +214,47 @@ body {
 .div-navbar {
   display: flex;
   align-items: center;
-  gap: 11%;
+  gap: 8%;
 }
 
 .div-navbar a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .div-imagem-nav-poder {
-  margin-top: 14.5%;
-  margin-left: -2%;            
-  width: 40%; 
+  margin-top: 10%;
+  margin-left: -2%;
+  width: 45%;
   position: absolute;
 }
 
 .div-traco-poder {
   background-color: #220101;
   width: 100%;
-  height: 20px;
+  height: 15px;
 }
 
 .div-card-inicio-poder {
   background-color: #220101;
-  width: 30%;
-  height: 20%;
+  width: 40%;
+  height: 24%;
   border-radius: 20px;
   position: absolute;
 }
 
 .div-slogan-poder h2 {
   margin: 0;
-  font-size: 32px;
-  padding-left: 20px;
-  padding-top: 20px;
+  font-size: 26px;
+  padding-left: 15px;
+  padding-top: 15px;
 }
 
 .div-slogan-poder p {
-  margin-top: 20px;
-  font-size: 20px;
-  padding-left: 20px;
+  margin-top: 10px;
+  font-size: 18px;
+  padding-left: 15px;
 }
 
 .div-header-poder .div-slogan-poder {
@@ -267,10 +263,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 60%;
-  padding-top: 150px;
+  padding-left: 45%;
+  padding-top: 110px;
   color: #ffffff;
-  border-width: 150px;
 }
 
 .div-container-poder {
@@ -279,42 +274,43 @@ body {
 
 .div-fundo-poder {
   background-color: #000000;
-  min-height: 301vh;
+  min-height: 330vh;
   position: absolute;
 }
 
 .div-body-poder img {
-  width: 500px;
-  height: 280px;
+  width: 355px;
+  height: 200px;
   display: inline-block;
 }
 
 .div-body-poder {
   display: flex;
   flex-direction: column;
-  margin-top: 160px;
+  margin-top: 120px;
 }
 
 .div-traco-meio-poder {
   background-color: white;
-  width: 10px;
-  height: 275vh;
+  width: 7px;
+  height: 295vh;
   position: absolute;
   display: flex;
-  margin-top: 45px;
+  margin-top: 30px;
   margin-left: 50.95%;
   border-radius: 5px;
 }
 
 .div-circulo-meio-poder {
   background-color: white;
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   margin-left: 49.9%;
 }
+
 .div-body-poder .img8-poder {
-  height: 480px;
+  height: 340px;
 }
 
 .box-direita-poder {
@@ -324,7 +320,7 @@ body {
 }
 
 .box-direita-poder img {
-  margin-right: 8%;
+  margin-right: 11%;
   border-radius: 20px;
 }
 
@@ -335,15 +331,14 @@ body {
 
 .box-esquerda-poder img {
   border-radius: 20px;
-}
-
-.box-esquerda-poder img {
-  margin-left: 8%;
+  margin-left: 10%;
 }
 
 .box-text-direita-poder {
-  padding-left: 25%;
+  padding-left: 21%;
   padding-right: 5%;
+  margin-bottom: 35px;
+  margin-top: 35px;
   display: inline-block;
   flex-wrap: wrap;
   text-align: justify;
@@ -351,7 +346,9 @@ body {
 
 .box-text-esquerda-poder {
   padding-left: 5%;
-  padding-right: 25%;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  padding-right: 18.5%;
 }
 
  /* Personagens  */
@@ -363,16 +360,16 @@ body {
 .div-container-navbar-personagens {
   display: flex;
   align-items: center;
-  padding: 10px 3%;
+  padding: 10px 5%;
   background-color: #0c0c0c;
 }
 
 .div-container-navbar-personagens .div-navbar {
-  padding-left: 20%;
+  padding-left: 16%;
 }
 
 .div-logo-navbar a {
-  font-size: 32px;
+  font-size: 24px;
   color: #ffffff;
   text-decoration: none;
 }
@@ -380,13 +377,20 @@ body {
 .div-navbar {
   display: flex;
   align-items: center;
-  gap: 11%;
+  gap: 8%;
 }
 
 .div-navbar a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
+}
+
+.div-imagem-nav-personagens {
+  margin-top: 10%;
+  margin-left: -2%;
+  width: 45%;
+  position: absolute;
 }
 
 .div-traco-personagens {
@@ -411,7 +415,7 @@ body {
   position: relative;
   font-size: 15px;
   font-family: "Kavoon";
-  left: 76.5%;
+  left: 74.5%;
   top: 75px;
   color: #ffffff;
   background-color: #41210A;
@@ -425,7 +429,7 @@ body {
 
 .div-box-personagens-pesquisa .div-pesquisa-personagem {
   color: white;
-  padding-left: 5%;
+  padding-left: 6.5%;
 }
 
 .div-box-personagens-pesquisa span {
@@ -434,8 +438,8 @@ body {
 
 .div-lupa-personagens img {
   position: absolute;
-  width: 3%;
-  padding: 0.9% 0;
+  width: 4%;
+  padding: 1.6% 0;
 }
 
 .div-pesquisa-personagem {
@@ -515,12 +519,12 @@ body {
 .div-container-navbar-login {
   display: flex;
   align-items: center;
-  padding: 10px 3%;
+  padding: 10px 5%;
   background-color: #0c0c0c;
 }
 
 .div-container-navbar-login .div-navbar {
-  padding-left: 20%;
+  padding-left: 26%;
 }
 
 .div-logo-navbar a {
@@ -721,12 +725,12 @@ body {
 .div-container-navbar-campanhas {
   display: flex;
   align-items: center;
-  padding: 10px 3%;
+  padding: 10px 5%;
   background-color: #0c0c0c;
 }
 
 .div-container-navbar-campanhas .div-navbar {
-  padding-left: 20%;
+  padding-left: 26%;
 }
 
 .div-logo-navbar a {
@@ -813,29 +817,37 @@ body {
 .div-container-navbar-atributos {
   display: flex;
   align-items: center;
-  padding: 10px 3%;
+  padding: 10px 5%;
   background-color: #0c0c0c;
 }
 
 .div-container-navbar-atributos .div-navbar {
-  padding-left: 20%;
+  padding-left: 16%;
 }
 
 .div-logo-navbar a {
-  font-size: 32px;
+  font-size: 24px;
+  color: #ffffff;
   text-decoration: none;
 }
 
 .div-navbar {
   display: flex;
   align-items: center;
-  gap: 11%;
+  gap: 8%;
 }
 
 .div-navbar a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
+}
+
+.div-imagem-nav-atributos {
+  margin-top: 10%;
+  margin-left: -2%;
+  width: 45%;
+  position: absolute;
 }
 
 .div-traco-atributos {
@@ -910,7 +922,7 @@ body {
   position: absolute;
   width: 20%;
   height: 20%;
-  top: 25%;
+  top: 40%;
   left: 42%;
 }
 
@@ -966,34 +978,6 @@ input[type=number]::-webkit-inner-spin-button {
   color: white;
 }
 
-.div-container-navbar-classes {
-  display: flex;
-  align-items: center;
-  padding: 10px 3%;
-  background-color: #0c0c0c;
-}
-
-.div-container-navbar-classes .div-navbar {
-  padding-left: 20%;
-}
-
-.div-logo-navbar a {
-  font-size: 32px;
-  text-decoration: none;
-}
-
-.div-navbar {
-  display: flex;
-  align-items: center;
-  gap: 11%;
-}
-
-.div-navbar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
 .div-traco-classes {
   background-color: #ffffff;
   width: 100%;
@@ -1041,7 +1025,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .div-mundano p {
-  padding: 2% 27%;
+  padding: 2% 20%;
   white-space: nowrap;
 }
 
@@ -1293,34 +1277,6 @@ input[type=number]::-webkit-inner-spin-button {
   color: white;
 }
 
-.div-container-navbar-caracteristicas {
-  display: flex;
-  align-items: center;
-  padding: 10px 3%;
-  background-color: #0c0c0c;
-}
-
-.div-container-navbar-caracteristicas .div-navbar {
-  padding-left: 20%;
-}
-
-.div-logo-navbar a {
-  font-size: 32px;
-  text-decoration: none;
-}
-
-.div-navbar {
-  display: flex;
-  align-items: center;
-  gap: 11%;
-}
-
-.div-navbar a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 18px;
-}
-
 .div-traco-caracteristicas {
   background-color: #ffffff;
   width: 100%;
@@ -1334,7 +1290,7 @@ input[type=number]::-webkit-inner-spin-button {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 150vh;
+  min-height: 210vh;
 }
 
 .div-botoes-caracteristicas {
@@ -1368,7 +1324,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .div-caracteristicas-inicio p {
-  padding: 2% 22%;
+  padding: 2% 10%;
   padding-bottom: 1%;
   white-space: nowrap;
 }
@@ -1382,12 +1338,12 @@ input[type=number]::-webkit-inner-spin-button {
   border-color: transparent;
   font-size: 16px;
   font-family: "Kavoon", arial;
-  margin-left: 72%;
+  margin-left: 78%;
   margin-bottom: 2%;
 }
 
 .div-box-caracteristicas {
-  padding: 0 27%;
+  padding: 0 17%;
 }
 
 #nome-espaco-caracteristicas {
@@ -1446,12 +1402,12 @@ input[type=number]::-webkit-inner-spin-button {
 .div-container-navbar-ficha {
   display: flex;
   align-items: center;
-  padding: 10px 3%;
+  padding: 10px 5%;
   background-color: #0c0c0c;
 }
 
 .div-container-navbar-ficha .div-navbar {
-  padding-left: 20%;
+  padding-left: 26%;
 }
 
 .div-logo-navbar a {
