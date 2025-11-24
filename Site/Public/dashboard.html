@@ -91,7 +91,6 @@
     var graficoLinha
 
     function obterDados() {
-        // KPI de média
         fetch("/dashboard/medias")
             .then(function(r) { return r.json(); })
             .then(function(dados) {
@@ -100,10 +99,8 @@
                 }
             });
 
-        // Gráfico de linha
         plotarGraficoLinha();
 
-        // Gráfico de classes
         fetch("/dashboard/classes")
             .then(function(r) { return r.json(); })
             .then(function(dados) {
@@ -113,7 +110,6 @@
                 }
             });
 
-        // Gráfico de personagens
         fetch("/dashboard/personagens")
             .then(function(r) { return r.json(); })
             .then(function(dados) {
@@ -169,7 +165,6 @@
             });
     }
 
-    // Funções KPI e gráficos de barras (mantém iguais)
     function plotarGraficoBarrasClasse(dados) {
         var labels = [];
         var valores = [];
