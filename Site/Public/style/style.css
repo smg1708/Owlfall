@@ -16,18 +16,18 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 680px;
+  height: 480px;
 }
 
 .div-container-navbar-index {
   display: flex;
   align-items: center;
-  padding: 10px 5%;
+  padding: 10px 3%;
   background-color: #41210A;
 }
 
 .div-container-navbar-index .div-navbar {
-  padding-left: 26%;
+  padding-left: 20%;
 }
 
 .div-logo-navbar a {
@@ -49,26 +49,26 @@ body {
 }
 
 .circulo-login img {
-  padding-left: 320px;
-  height: 35px;
-  width: 35px;
+  padding-left: 230px;
+  height: 30px; 
+  width: 30px;
   border-radius: 10px;
 }
 
 .div-imagem-nav-index {
-  margin-top: 21.5%;
-  margin-left: 5%;            
-  width: 20%; 
+  margin-top: 18%;
+  margin-left: 4%;
+  width: 22%;
   position: absolute;
 }
 
 .div-card-inicio-index {
   background-color: #41210A;
-  width: 30%;
-  height: 20%;
+  width: 35%;
+  height: 18%;
   border-radius: 20px;
   position: absolute;
-  bottom: 55%;
+  bottom: 59%;
 }
 
 .div-slogan-index h2 {
@@ -90,8 +90,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-left: 37%;
-  padding-top: 150px;
+  padding-left: 28%;
+  padding-top: 120px;
   color: #ffffff;
   border-width: 150px;
 }
@@ -99,7 +99,7 @@ body {
 .container1 {
   display: flex;
   width: 100%;
-  height: 60vh;
+  height: 50vh;
   color: white;
   font-family: 'Kavoon', arial;
 }
@@ -116,9 +116,9 @@ body {
 
 #imagem_mapa {
   border-radius: 10px;
-  height: 45vh;
+  height: 35vh;
   align-self: center;
-  margin-right: 60px;
+  margin-right: 40px;
 }
 
 .parte1-esquerda h2 {
@@ -139,9 +139,9 @@ body {
 
 #imagem_ordemparanormal {
   border-radius: 10px;
-  height: 45vh;
+  height: 35vh;
   align-self: center;
-  margin-left: 70px;
+  margin-left: 40px;
 }
 
 .parte2-direita h2 {
@@ -162,15 +162,15 @@ body {
 
 #imagem_sentido {
   border-radius: 10px;
-  height: 45vh;
+  height: 35vh;
   align-self: center;
-  margin-right: 100px;
+  margin-right: 40px;
 }
 
 .containerFinal {
   display: flex;
   width: 100%;
-  height: 80vh;
+  height: 60vh;
   color: white;
   font-family: 'Kavoon', arial;
 }
@@ -182,9 +182,9 @@ body {
 
 #imagem_eu {
   border-radius: 10px;
-  height: 65vh;
+  height: 50vh;
   align-self: center;
-  margin-left: 70px;
+  margin-left: 50px;
 }
 
  /* CSS - Poder */
@@ -195,18 +195,18 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 77vh;
+  height: 550px;
 }
 
 .div-container-navbar-poder {
   display: flex;
   align-items: center;
-  padding: 10px 5%;
+  padding: 10px 3%;
   background-color: #220101;
 }
 
 .div-container-navbar-poder .div-navbar {
-  padding-left: 26%;
+  padding-left: 20%;
 }
 
 .div-logo-navbar a {
@@ -363,12 +363,12 @@ body {
 .div-container-navbar-personagens {
   display: flex;
   align-items: center;
-  padding: 10px 5%;
+  padding: 10px 3%;
   background-color: #0c0c0c;
 }
 
 .div-container-navbar-personagens .div-navbar {
-  padding-left: 26%;
+  padding-left: 20%;
 }
 
 .div-logo-navbar a {
@@ -515,12 +515,12 @@ body {
 .div-container-navbar-login {
   display: flex;
   align-items: center;
-  padding: 10px 5%;
+  padding: 10px 3%;
   background-color: #0c0c0c;
 }
 
 .div-container-navbar-login .div-navbar {
-  padding-left: 26%;
+  padding-left: 20%;
 }
 
 .div-logo-navbar a {
@@ -721,12 +721,12 @@ body {
 .div-container-navbar-campanhas {
   display: flex;
   align-items: center;
-  padding: 10px 5%;
+  padding: 10px 3%;
   background-color: #0c0c0c;
 }
 
 .div-container-navbar-campanhas .div-navbar {
-  padding-left: 26%;
+  padding-left: 20%;
 }
 
 .div-logo-navbar a {
@@ -813,12 +813,12 @@ body {
 .div-container-navbar-atributos {
   display: flex;
   align-items: center;
-  padding: 10px 5%;
+  padding: 10px 3%;
   background-color: #0c0c0c;
 }
 
 .div-container-navbar-atributos .div-navbar {
-  padding-left: 26%;
+  padding-left: 20%;
 }
 
 .div-logo-navbar a {
@@ -969,12 +969,12 @@ input[type=number]::-webkit-inner-spin-button {
 .div-container-navbar-classes {
   display: flex;
   align-items: center;
-  padding: 10px 5%;
+  padding: 10px 3%;
   background-color: #0c0c0c;
 }
 
 .div-container-navbar-classes .div-navbar {
-  padding-left: 26%;
+  padding-left: 20%;
 }
 
 .div-logo-navbar a {
@@ -1296,12 +1296,12 @@ input[type=number]::-webkit-inner-spin-button {
 .div-container-navbar-caracteristicas {
   display: flex;
   align-items: center;
-  padding: 10px 5%;
+  padding: 10px 3%;
   background-color: #0c0c0c;
 }
 
 .div-container-navbar-caracteristicas .div-navbar {
-  padding-left: 26%;
+  padding-left: 20%;
 }
 
 .div-logo-navbar a {
@@ -1446,12 +1446,12 @@ input[type=number]::-webkit-inner-spin-button {
 .div-container-navbar-ficha {
   display: flex;
   align-items: center;
-  padding: 10px 5%;
+  padding: 10px 3%;
   background-color: #0c0c0c;
 }
 
 .div-container-navbar-ficha .div-navbar {
-  padding-left: 26%;
+  padding-left: 20%;
 }
 
 .div-logo-navbar a {
