@@ -16,7 +16,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 515px;
+  height: 680px;
 }
 
 .div-container-navbar-index {
@@ -64,8 +64,8 @@ body {
 
 .div-card-inicio-index {
   background-color: #41210A;
-  width: 28%;
-  height: 23%;
+  width: 30%;
+  height: 20%;
   border-radius: 20px;
   position: absolute;
   bottom: 55%;
@@ -73,14 +73,14 @@ body {
 
 .div-slogan-index h2 {
   margin: 0;
-  font-size: 28px;
+  font-size: 32px;
   padding-left: 20px;
   padding-top: 20px;
 }
 
 .div-slogan-index p {
   margin-top: 20px;
-  font-size: 16px;
+  font-size: 20px;
   padding-left: 20px;
 }
 
@@ -187,7 +187,7 @@ body {
   margin-left: 70px;
 }
 
- /* CSS - Poder 
+ /* CSS - Poder */
 
 .div-header-poder {
   color: white;
@@ -354,7 +354,7 @@ body {
   padding-right: 25%;
 }
 
- /* Personagens  
+ /* Personagens  */
 
 .div-header-personagens {
   color: white;
@@ -611,7 +611,7 @@ body {
   border-color: transparent;
 }
 
-/* Cadastro 
+/* Cadastro */
 
 .div-header-login {
   color: white;
@@ -712,7 +712,7 @@ body {
   border-color: transparent;
 }
 
-/* Campanha 
+/* Campanha */
 
 .div-header-campanhas {
   color: white;
@@ -960,7 +960,7 @@ input[type=number]::-webkit-inner-spin-button {
   top: 146%;
 }
 
-/* Cria Personagem - Classe 
+/* Cria Personagem - Classe */
 
 .div-header-classes {
   color: white;
@@ -1287,7 +1287,7 @@ input[type=number]::-webkit-inner-spin-button {
   width: 50%;
 }
 
-/* Cria Personagem - Caracteristicas 
+/* Cria Personagem - Caracteristicas */
 
 .div-header-caracteristicas {
   color: white;
@@ -1437,7 +1437,7 @@ input[type=number]::-webkit-inner-spin-button {
   width: 18.5%
 }
 
-/* Ficha 
+/* Ficha */
 
 .div-header-ficha {
   color: white;
