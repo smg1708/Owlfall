@@ -217,4 +217,4 @@ select * from caracteristicas;
 
 select * from resultadoQuiz;
 
-select * from questao
+select * from questao;
