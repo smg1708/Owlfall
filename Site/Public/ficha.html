@@ -553,19 +553,13 @@
             espirito: select_espirito.value
         };
 
-        fetch("/ficha/atualizar", {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(dadosAtualizados)
-        })
-        .then(res => {
-        })
-        .catch(function (err) {
-            console.log(err);
-        });
-
+        navigator.sendBeacon(
+            `/ficha/atualizar?idFicha=${idFicha}`,
+            new Blob([JSON.stringify({ 
+                dadosPersonagemServer: dadosAtualizados 
+            })], 
+            { type: "application/json" })
+        );
     }
                 
     var vdTotalNivel = inp_vida_total.value

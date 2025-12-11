@@ -45,7 +45,10 @@ function salvarImagem(req, res) {
 
 function atualizarFicha(req, res) {
   
-  fichaModel.atualizarFicha(req.body)
+  var dados = req.body.dadosPersonagemServer;
+
+  
+  fichaModel.atualizarFicha(dados)
   .then(resultado => {
     res.status(201).send("Ficha atualizada com sucesso!");
   }).catch(err => {
