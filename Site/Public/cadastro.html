@@ -17,7 +17,6 @@
   </head>
 
   <body onload="listar()">
-    <!--header inicio-->
       <div class="div-header-personagens">
           <div class="div-container-navbar-personagens">
               <div class="div-logo-navbar">
@@ -33,7 +32,6 @@
               </div>
           </div>
       </div>
-    <!--header fim-->
 
       <div class="fundo-cadastro">
         <div class="container-cadastro">
@@ -67,8 +65,6 @@
 
   <script>
 
-    // Array para armazenar empresas cadastradas para validação de código de ativação 
-    let listaEmpresasCadastradas = [];
     var caracteresEspeciais = ['@','#','$','%','&','*']
 
     function personagens() {
@@ -85,15 +81,12 @@
 
     function cadastrar() {
 
-      //Recupere o valor da nova input pelo nome do id
-      // Agora vá para o método fetch logo abaixo
       var nomeVar = nome_input.value;
       var emailVar = email_input.value;
       var senhaVar = senha_input.value;
       var confirmacaoSenhaVar = confirmacao_senha_input.value;
       var validacaoCaracter = ""
 
-      // Verificando se há algum campo em branco
       if (
         nomeVar == "" ||
         emailVar == "" ||
@@ -130,8 +123,6 @@
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          // crie um atributo que recebe o valor recuperado aqui
-          // Agora vá para o arquivo routes/usuario.js
           nomeServer: nomeVar,
           emailServer: emailVar,
           senhaServer: senhaVar,

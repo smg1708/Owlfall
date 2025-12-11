@@ -1,11 +1,7 @@
 var database = require("../database/config")
 
-// Coloque os mesmos parâmetros aqui. Vá para a var instrucaoSql
 function criarFicha(dados, idUsuario) {
-    // console.log("ACESSEI OS DADOS MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha);
-    
-    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
-    //  e na ordem de inserção dos dados.
+
     console.log("Dados enviados para criarFicha:", dados);
     var sqlFicha = `
     INSERT INTO ficha (fkUsuario, nome, jogador, nivel, vdAtual, vdMax, sanAtual, sanMax, nenAtual, nenMax ) VALUES 
@@ -16,8 +12,6 @@ function criarFicha(dados, idUsuario) {
     return database.executar(sqlFicha)
         .then(resultado => {
             var idFicha = resultado.insertId;
-            // console.log("ACESSEI OS DADOS MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", nome, email, senha);
-
 
             var sqlCarac = `
                 INSERT INTO caracteristicas (fkFicha, nome, tipo, descricao) VALUES 

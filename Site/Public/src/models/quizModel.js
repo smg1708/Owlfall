@@ -1,8 +1,5 @@
 var database = require("../database/config");
 
-// ======================================================
-// SALVAR RESULTADO DO QUIZ
-// ======================================================
 function salvarResultado(idUsuario, idQuiz, pontuacao, personagemEscolhido = null) {
 
     let instrucao = "";
